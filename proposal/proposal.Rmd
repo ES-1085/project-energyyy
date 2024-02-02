@@ -11,7 +11,7 @@ library(broom)
 
 ## 1. Introduction
 
-This is the first sentence of our intro.
+This is the first sentence of our intro. And this is the second.
 
 
 
