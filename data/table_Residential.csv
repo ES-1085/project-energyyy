@@ -1,0 +1,1529 @@
+﻿2022 Utility Bundled Retail Sales- Residential;;;;;;
+(Data from forms EIA-861- schedules 4A & 4D and EIA-861S);;;;;;
+Entity;State;Ownership;Customers (Count);Sales (Megawatthours);Revenues (Thousands Dollars);Average Price (cents/kWh)
+Alaska Electric Light & Power Co.;AK;Investor Owned;15.159;162.982;20.081,7;12,32
+Alaska Power and Telephone Co;AK;Investor Owned;5.627;26.750;9.950,0;37,20
+Alaska Village Elec Coop, Inc;AK;Cooperative;7.770;44.102;23.512,0;53,31
+Chugach Electric Assn Inc;AK;Cooperative;96.750;591.397;117.980,8;19,95
+Golden Valley Elec Assn Inc;AK;Cooperative;40.277;282.672;80.932,3;28,63
+Homer Electric Assn Inc;AK;Cooperative;28.994;171.896;49.034,7;28,53
+Ketchikan Public Utilities;AK;Municipal;6.540;77.190;9.099,9;11,79
+Kodiak Electric Assn Inc;AK;Cooperative;4.943;37.778;6.591,0;17,45
+Kotzebue Electric Assn Inc;AK;Cooperative;1.215;7.722;2.934,1;38,00
+Matanuska Electric Assn Inc;AK;Cooperative;62.094;450.988;99.099,0;21,97
+Alabama Power Co;AL;Investor Owned;1.314.594;18.413.315;2.853.361,0;15,50
+Albertville Municipal Utilities Board;AL;Municipal;8.185;122.198;13.259,0;10,85
+Arab Electric Coop Inc;AL;Cooperative;13.565;202.278;24.796,0;12,26
+Baldwin County El Member Corp;AL;Cooperative;77.977;1.043.914;132.914,0;12,73
+Black Warrior Elec Member Corp;AL;Cooperative;20.198;270.829;32.651,9;12,06
+Central Alabama Electric Coop;AL;Cooperative;44.255;613.337;89.660,0;14,62
+Cherokee Electric Coop;AL;Cooperative;18.319;247.723;36.971,0;14,92
+City of Andalusia;AL;Municipal;3.613;41.457;6.074,0;14,65
+City of Athens - (AL);AL;Municipal;45.984;729.092;82.715,0;11,34
+City of Bessemer Utilities;AL;Municipal;9.557;115.164;14.148,0;12,29
+City of Courtland;AL;Municipal;552;7.637;876,0;11,47
+City of Dothan - (AL);AL;Municipal;26.435;369.093;41.334,0;11,20
+City of Florence - (AL);AL;Municipal;41.368;635.209;75.476,2;11,88
+City of Hartselle;AL;Municipal;4.385;61.895;7.558,0;12,21
+City of Huntsville - (AL);AL;Municipal;172.205;2.651.084;311.177,0;11,74
+City of Muscle Shoals;AL;Municipal;6.997;102.882;12.346,0;12,00
+City of Opelika - (AL);AL;Municipal;12.452;149.690;18.860,0;12,60
+City of Russellville - (AL);AL;Municipal;3.957;51.390;6.898,0;13,42
+City of Scottsboro;AL;Municipal;6.879;99.020;12.901,0;13,03
+City of Tarrant;AL;Municipal;2.106;29.523;4.106,0;13,91
+City of Troy - (AL);AL;Municipal;7.671;97.606;9.412,5;9,64
+City of Tuscumbia;AL;Municipal;4.065;54.623;6.641,0;12,16
+Clarke-Washington E M C;AL;Cooperative;18.703;220.519;30.929,0;14,03
+Coosa Valley Electric Coop Inc;AL;Cooperative;15.278;223.062;31.989,0;14,34
+Covington Electric Coop, Inc;AL;Cooperative;22.854;312.074;49.118,3;15,74
+Cullman Electric Coop, Inc;AL;Cooperative;38.566;572.651;74.923,0;13,08
+Cullman Power Board;AL;Municipal;6.889;89.631;11.559,0;12,90
+Decatur Utilities;AL;Municipal;22.726;325.812;36.103,0;11,08
+Diverse Power Incorporated;AL;Cooperative;577;7.742;1.356,7;17,52
+Dixie Electric Coop;AL;Cooperative;21.448;309.434;42.109,0;13,61
+Foley Board of Utilities;AL;Municipal;47.726;695.713;86.532,0;12,44
+Fort Payne Improvement Authority;AL;Municipal;6.790;96.914;11.630,0;12,00
+Franklin Electric Coop - (AL);AL;Cooperative;5.904;79.543;10.996,0;13,82
+Guntersville Electric Board;AL;Municipal;4.841;70.282;8.874,0;12,63
+Joe Wheeler Elec Member Corp;AL;Cooperative;36.202;595.054;80.325,0;13,50
+Marshall-De Kalb Electric Coop;AL;Cooperative;16.864;249.600;31.471,0;12,61
+North Alabama Electric Coop;AL;Cooperative;13.030;197.871;25.069,0;12,67
+Pea River Electric Coop;AL;Cooperative;14.902;206.358;29.985,3;14,53
+Sand Mountain Electric Coop;AL;Cooperative;26.593;384.061;48.545,0;12,64
+Sheffield Utilities;AL;Municipal;15.493;236.660;29.220,0;12,35
+Singing River Elec Cooperative;AL;Cooperative;330;4.739;559,9;11,81
+South Alabama Elec Coop, Inc;AL;Cooperative;16.525;231.939;32.861,0;14,17
+Southern Pine Elec Coop, Inc;AL;Cooperative;20.333;260.189;33.121,0;12,73
+Tallapoosa River Elec Coop Inc;AL;Cooperative;28.460;389.540;49.029,5;12,59
+Wiregrass Electric Coop, Inc;AL;Cooperative;21.595;314.897;43.638,0;13,86
+Arkansas Valley Elec Coop Corp;AR;Cooperative;53.096;770.820;98.291,3;12,75
+C & L Electric Coop Corp;AR;Cooperative;20.000;256.435;36.250,0;14,14
+Carroll Electric Coop Corp - (AR);AR;Cooperative;94.425;1.343.474;160.222,0;11,93
+City Water and Light Plant;AR;Municipal;34.116;516.374;43.910,0;8,50
+City of Benton - (AR);AR;Municipal;12.802;155.357;15.384,0;9,90
+City of Bentonville - (AR);AR;Municipal;23.548;281.021;32.073,0;11,41
+City of Hope;AR;Municipal;5.827;65.991;9.099,0;13,79
+City of North Little Rock - (AR);AR;Municipal;34.599;380.762;46.010,0;12,08
+City of Siloam Springs - (AR);AR;Municipal;7.636;81.218;10.379,0;12,78
+City of West Memphis - (AR);AR;Municipal;10.141;141.599;13.339,0;9,42
+Clarksville Connected Utilities;AR;Municipal;3.811;46.278;5.132,3;11,09
+Clay County Electric Coop Corp;AR;Cooperative;10.468;116.688;17.863,8;15,31
+Conway Corporation;AR;Municipal;30.051;363.289;34.768,0;9,57
+Craighead Electric Coop Corp;AR;Cooperative;24.548;392.644;48.538,0;12,36
+Empire District Electric Co;AR;Investor Owned;4.508;52.903;6.938,9;13,12
+Entergy Arkansas LLC;AR;Investor Owned;602.731;8.024.677;946.715,7;11,80
+First Electric Coop Corp;AR;Cooperative;92.346;1.341.211;168.936,0;12,60
+Mississippi County Electric Co;AR;Cooperative;3.261;58.276;5.463,0;9,37
+North Arkansas Elec Coop, Inc;AR;Cooperative;35.460;445.775;62.370,0;13,99
+Oklahoma Gas & Electric Co;AR;Investor Owned;57.451;774.073;94.570,6;12,22
+Ouachita Electric Coop Corp;AR;Cooperative;8.467;93.212;11.689,0;12,54
+Ozarks Electric Coop Corp - (AR);AR;Cooperative;67.414;876.358;118.776,4;13,55
+Paragould Light & Water Comm;AR;Municipal;12.298;209.012;19.319,0;9,24
+Petit Jean Electric Coop Corp;AR;Cooperative;18.663;226.982;30.765,0;13,55
+South Central Ark El Coop, Inc;AR;Cooperative;9.271;113.703;15.927,0;14,01
+Southwest Arkansas E C C;AR;Cooperative;24.515;374.771;47.002,1;12,54
+Southwestern Electric Power Co;AR;Investor Owned;106.455;1.216.126;156.216,8;12,85
+Woodruff Electric Coop Corp;AR;Cooperative;12.153;179.383;22.317,3;12,44
+Ajo Improvement Co;AZ;Investor Owned;824;5.294;584,5;11,04
+Ak-Chin Electric Utility Authority;AZ;State;319;5.059;483,8;9,56
+Arizona Public Service Co;AZ;Investor Owned;1.202.975;14.756.798;2.046.110,7;13,87
+City of Mesa - (AZ);AZ;Municipal;14.760;151.663;20.366,4;13,43
+Dixie Escalante R E A, Inc;AZ;Cooperative;2.626;33.267;2.701,9;8,12
+Electrical Dist No2 Pinal County;AZ;Political Subdivision;5.034;63.901;7.869,0;12,31
+Electrical Dist No3 Pinal County;AZ;Political Subdivision;27.889;355.935;53.107,0;14,92
+Garkane Energy Coop, Inc;AZ;Cooperative;1.265;24.432;2.459,0;10,06
+Gila River Indian Utility Authority (GRICUA);AZ;Cooperative;2.606;39.422;5.551,2;14,08
+Mohave Electric Cooperative, Inc.;AZ;Cooperative;39.670;460.816;57.029,0;12,38
+Morenci Water and Electric;AZ;Investor Owned;2.305;19.475;1.621,9;8,33
+Navajo Tribal Utility Authority;AZ;State;27.096;169.895;26.796,0;15,77
+Navopache Electric Coop, Inc;AZ;Cooperative;39.137;279.490;40.877,0;14,63
+Salt River Project;AZ;Political Subdivision;1.009.970;14.521.787;1.725.469,2;11,88
+Spruce Finance;AZ;Behind the Meter;2.692;31.614;4.215,9;13,34
+Sulphur Springs Valley E C Inc;AZ;Cooperative;45.350;392.791;63.818,8;16,25
+SunPower Capital, LLC;AZ;Behind the Meter;11.172;122.056;17.437,9;14,29
+Sunnova;AZ;Behind the Meter;3.466;47.521;5.077,5;10,68
+Sunrun Inc.;AZ;Behind the Meter;36.005;464.157;64.613,4;13,92
+Tesla Inc.;AZ;Behind the Meter;40.231;466.768;55.923,0;11,98
+Trico Electric Cooperative Inc;AZ;Cooperative;49.544;545.157;77.842,1;14,28
+Tucson Electric Power Co;AZ;Investor Owned;403.028;3.878.044;532.576,6;13,73
+UNS Electric, Inc;AZ;Investor Owned;92.408;1.026.987;123.503,7;12,03
+USBIA-San Carlos Project;AZ;Federal;11.267;118.935;13.845,0;11,64
+Alameda Municipal Power;CA;Municipal;32.146;133.445;27.618,3;20,70
+Bear Valley Electric Service;CA;Investor Owned;23.173;85.587;26.251,7;30,67
+City & County of San Francisco;CA;Municipal;1.618;18.317;3.591,8;19,61
+City of Anaheim - (CA);CA;Municipal;104.561;618.231;100.861,0;16,31
+City of Azusa;CA;Municipal;14.986;90.894;15.417,0;16,96
+City of Burbank Water and Power;CA;Municipal;46.290;274.745;43.974,0;16,01
+City of Colton - (CA);CA;Municipal;17.291;110.736;18.232,0;16,46
+City of Corona - (CA);CA;Municipal;1.288;8.653;1.369,2;15,82
+City of Glendale - (CA);CA;Municipal;76.929;407.214;94.963,3;23,32
+City of Lodi - (CA);CA;Municipal;23.232;167.427;36.060,0;21,54
+City of Moreno Valley - (CA);CA;Municipal;6.859;48.753;15.352,1;31,49
+City of Palo Alto - (CA);CA;Municipal;25.761;157.370;27.418,0;17,42
+City of Pasadena - (CA);CA;Municipal;57.705;350.158;74.076,9;21,16
+City of Redding - (CA);CA;Municipal;38.196;381.721;63.382,0;16,60
+City of Riverside - (CA);CA;Municipal;99.639;795.300;143.611,0;18,06
+City of Roseville - (CA);CA;Municipal;59.755;503.863;82.089,3;16,29
+City of Santa Clara - (CA);CA;Municipal;50.889;261.798;36.361,9;13,89
+City of Vernon;CA;Municipal;73;326;48,1;14,75
+Imperial Irrigation District;CA;Political Subdivision;139.162;1.949.606;304.217,0;15,60
+Liberty Utilities;CA;Investor Owned;43.856;294.017;46.741,5;15,90
+Los Angeles Department of Water & Power;CA;Municipal;1.389.532;8.508.902;1.892.318,5;22,24
+Merced Irrigation District;CA;Political Subdivision;10.814;83.283;17.051,2;20,47
+Modesto Irrigation District;CA;Political Subdivision;102.397;982.856;177.268,0;18,04
+PacifiCorp;CA;Investor Owned;36.303;392.938;57.980,3;14,76
+Pacific Gas & Electric Co.;CA;Investor Owned;1.828.738;11.983.409;3.712.464,0;30,98
+Sacramento Municipal Util Dist;CA;Political Subdivision;574.344;4.766.334;797.797,4;16,74
+San Diego Gas & Electric Co;CA;Investor Owned;838.576;3.939.825;1.494.073,3;37,92
+Southern California Edison Co;CA;Investor Owned;3.339.257;22.517.867;5.543.993,0;24,62
+Spruce Finance;CA;Behind the Meter;17.808;153.412;31.973,7;20,84
+SunPower Capital, LLC;CA;Behind the Meter;57.738;409.886;92.018,4;22,45
+Sunnova;CA;Behind the Meter;53.804;427.106;61.055,7;14,30
+Sunrun Inc.;CA;Behind the Meter;235.367;1.992.670;423.762,1;21,27
+Surprise Valley Electrification;CA;Cooperative;2.828;35.932;3.607,2;10,04
+Tesla Inc.;CA;Behind the Meter;147.406;1.059.434;195.127,0;18,42
+Turlock Irrigation District;CA;Political Subdivision;78.186;813.781;130.144,0;15,99
+Valley Electric Assn, Inc;CA;Cooperative;12;117;18,3;15,64
+Black Hills Colorado Electric, LLC;CO;Investor Owned;88.112;634.576;123.042,0;19,39
+CORE Electric Cooperative;CO;Cooperative;158.050;1.701.697;243.062,0;14,28
+City of Colorado Springs - (CO);CO;Municipal;209.601;1.583.420;239.161,0;15,10
+City of Fort Collins - (CO);CO;Municipal;69.552;538.944;64.506,8;11,97
+City of Fort Morgan;CO;Municipal;5.870;54.929;3.868,3;7,04
+City of Fountain;CO;Municipal;16.795;155.081;19.399,0;12,51
+City of Longmont;CO;Municipal;39.986;337.384;37.432,7;11,09
+City of Loveland - (CO);CO;Municipal;34.917;275.613;34.426,4;12,49
+Delta Montrose Electric Assn;CO;Cooperative;31.618;282.943;41.777,1;14,77
+Empire Electric Assn, Inc;CO;Cooperative;12.536;105.840;15.866,1;14,99
+Grand Valley Power;CO;Cooperative;16.683;168.748;25.144,0;14,90
+Greenbacker Renewable Energy Corporation;CO;Behind the Meter;10;65;6,3;9,69
+High West Energy, Inc;CO;Cooperative;674;6.895;1.024,0;14,85
+Highline Electric Assn;CO;Cooperative;5.045;57.610;7.405,6;12,85
+Holy Cross Electric Assn, Inc;CO;Cooperative;49.312;688.858;83.033,1;12,05
+K C Electric Association;CO;Cooperative;3.398;41.665;5.312,1;12,75
+La Plata Electric Assn, Inc;CO;Cooperative;39.043;312.611;50.773,0;16,24
+Moon Lake Electric Assn Inc;CO;Cooperative;1.552;16.349;1.377,4;8,42
+Morgan County Rural Elec Assn;CO;Cooperative;5.743;73.654;9.931,8;13,48
+Mountain Parks Electric, Inc;CO;Cooperative;18.260;163.681;23.806,0;14,54
+Mountain View Elec Assn, Inc;CO;Cooperative;56.320;609.384;88.750,8;14,56
+Poudre Valley REA, Inc;CO;Cooperative;45.837;510.902;60.032,1;11,75
+Public Service Co of Colorado;CO;Investor Owned;1.328.979;9.847.574;1.391.226,9;14,13
+San Isabel Electric Assn, Inc;CO;Cooperative;22.826;183.552;30.008,8;16,35
+San Luis Valley R E C, Inc;CO;Cooperative;8.921;71.218;12.063,0;16,94
+San Miguel Power Assn, Inc;CO;Cooperative;11.741;114.968;18.152,3;15,79
+Southeast Colorado Power Assn;CO;Cooperative;7.989;72.404;12.103,0;16,72
+Southwestern Electric Coop Inc - (NM);CO;Cooperative;5;88;18,2;20,68
+Spruce Finance;CO;Behind the Meter;986;8.566;864,6;10,09
+SunPower Capital, LLC;CO;Behind the Meter;1.108;4.625;807,3;17,46
+Sunnova;CO;Behind the Meter;2.574;8.815;452,4;5,13
+Sunrun Inc.;CO;Behind the Meter;6.612;49.762;7.873,9;15,82
+Tesla Inc.;CO;Behind the Meter;12.911;89.945;10.542,0;11,72
+Tri-County Electric Coop, Inc (OK);CO;Cooperative;9;48;8,6;17,92
+United Power, Inc;CO;Cooperative;95.049;946.371;126.699,1;13,39
+Wheatland Electric Coop, Inc;CO;Cooperative;29;181;31,1;17,18
+White River Electric Assn, Inc;CO;Cooperative;2.623;21.678;2.963,7;13,67
+Y-W Electric Assn Inc;CO;Cooperative;4.887;48.207;7.210,0;14,96
+Yampa Valley Electric Assn Inc;CO;Cooperative;22.692;247.810;36.660,4;14,79
+Bozrah Light & Power Company;CT;Municipal;2.417;24.006;4.652,0;19,38
+City of Norwich - (CT);CT;Municipal;18.657;138.218;31.526,8;22,81
+Connecticut Light & Power Co;CT;Investor Owned;1.035.056;8.907.476;2.269.180,3;25,48
+Groton Dept of Utilities - (CT);CT;Municipal;12.244;105.850;18.710,1;17,68
+Spruce Finance;CT;Behind the Meter;1.213;9.265;1.522,9;16,44
+SunPower Capital, LLC;CT;Behind the Meter;2.308;23.935;3.941,5;16,47
+Sunnova;CT;Behind the Meter;14.930;135.739;22.494,0;16,57
+Sunrun Inc.;CT;Behind the Meter;12.732;97.657;20.187,2;20,67
+Tesla Inc.;CT;Behind the Meter;8.461;58.470;9.989,0;17,08
+Town of Wallingford - (CT);CT;Municipal;21.543;219.811;34.746,1;15,81
+United Illuminating Co;CT;Investor Owned;270.343;1.797.627;423.428,4;23,55
+Potomac Electric Power Co;DC;Investor Owned;267.819;2.061.710;261.653,5;12,69
+Sunnova;DC;Behind the Meter;32;273;15,1;5,53
+Sunrun Inc.;DC;Behind the Meter;49;259;32,6;12,59
+Tesla Inc.;DC;Behind the Meter;506;2.105;256,0;12,16
+City of Dover - (DE);DE;Municipal;21.281;216.310;30.791,0;14,23
+City of Milford - (DE);DE;Municipal;6.879;78.254;10.258,8;13,11
+City of Newark - (DE);DE;Municipal;11.725;100.064;17.014,2;17,00
+Delaware Electric Cooperative;DE;Cooperative;100.127;1.277.790;165.587,0;12,96
+Delmarva Power;DE;Investor Owned;268.944;2.959.985;395.984,5;13,38
+Sunnova;DE;Behind the Meter;72;826;52,8;6,39
+Sunrun Inc.;DE;Behind the Meter;405;3.317;395,9;11,94
+Tesla Inc.;DE;Behind the Meter;3.327;31.062;4.676,0;15,05
+Town of Middletown - (DE);DE;Municipal;8.867;97.381;13.511,7;13,88
+Beaches Energy Services;FL;Municipal;30.525;440.699;53.954,1;12,24
+Central Florida Elec Coop, Inc;FL;Cooperative;31.784;393.696;57.488,0;14,60
+Choctawhatche Elec Coop, Inc;FL;Cooperative;52.816;761.103;96.115,9;12,63
+City of Bartow - (FL);FL;Municipal;10.918;151.095;20.810,1;13,77
+City of Homestead - (FL);FL;Municipal;28.797;385.270;46.411,5;12,05
+City of Lake Worth Beach - (FL);FL;Municipal;24.432;282.450;38.966,0;13,80
+City of Lakeland - (FL);FL;Municipal;116.907;1.689.706;205.750,6;12,18
+City of Leesburg - (FL);FL;Municipal;23.558;278.088;41.272,4;14,84
+City of Ocala;FL;Municipal;44.316;550.520;58.541,9;10,63
+City of Tallahassee - (FL);FL;Municipal;106.720;1.148.688;141.823,0;12,35
+City of Winter Park - (FL);FL;Municipal;12.304;191.118;27.428,8;14,35
+Clay Electric Cooperative, Inc;FL;Cooperative;165.066;2.366.748;331.749,1;14,02
+Duke Energy Florida, LLC;FL;Investor Owned;1.730.814;21.507.943;3.335.666,2;15,51
+Florida Keys El Coop Assn, Inc;FL;Cooperative;28.179;458.435;65.700,0;14,33
+Florida Power & Light Co;FL;Investor Owned;5.079.787;69.473.785;9.349.311,5;13,46
+Florida Public Utilities Co;FL;Investor Owned;25.516;305.593;44.727,0;14,64
+Fort Pierce Utilities Authority;FL;Municipal;23.862;253.034;39.171,0;15,48
+Gainesville Regional Utilities;FL;Municipal;89.751;839.871;148.603,9;17,69
+Glades Electric Coop, Inc;FL;Cooperative;13.636;175.967;30.724,0;17,46
+Gulf Coast Electric Coop, Inc;FL;Cooperative;20.280;284.511;39.979,0;14,05
+JEA;FL;Municipal;447.308;5.723.164;810.916,0;14,17
+Kissimmee Utility Authority;FL;Municipal;74.568;1.016.798;141.220,4;13,89
+Lee County Electric Coop, Inc;FL;Cooperative;215.106;3.162.353;424.855,2;13,43
+New Smyrna Beach City of;FL;Municipal;27.014;312.973;33.835,0;10,81
+Okefenoke Rural El Member Corp;FL;Cooperative;10.695;164.475;22.037,3;13,40
+Orlando Utilities Comm;FL;Municipal;236.057;2.790.761;392.464,8;14,06
+Peace River Electric Coop, Inc;FL;Cooperative;47.390;673.803;94.869,8;14,08
+Reedy Creek Improvement Dist;FL;Municipal;9;111;12,0;10,81
+Sumter Electric Coop, Inc;FL;Cooperative;210.291;2.581.354;378.745,0;14,67
+Sunnova;FL;Behind the Meter;4.582;54.239;4.416,0;8,14
+Sunrun Inc.;FL;Behind the Meter;7.766;101.678;16.094,1;15,83
+Suwannee Valley Elec Coop Inc;FL;Cooperative;25.154;325.922;47.805,0;14,67
+Talquin Electric Coop, Inc;FL;Cooperative;52.931;697.590;98.423,0;14,11
+Tampa Electric Co;FL;Investor Owned;729.334;10.109.074;1.380.689,9;13,66
+Tesla Inc.;FL;Behind the Meter;703;4.368;359,0;8,22
+Tri-County Electric Coop, Inc (FL);FL;Cooperative;18.012;183.448;28.774,4;15,69
+Utility Board of the City of Key West, F;FL;Municipal;26.831;388.297;69.977,0;18,02
+West Florida El Coop Assn, Inc;FL;Cooperative;25.718;321.035;49.452,0;15,40
+Withlacoochee River Elec Coop;FL;Cooperative;213.311;3.093.524;410.353,6;13,26
+Albany Utility Board;GA;Municipal;29.062;339.594;37.417,3;11,02
+Altamaha Electric Member Corp;GA;Cooperative;19.261;244.092;34.611,0;14,18
+Amicalola Electric Member Corp;GA;Cooperative;47.836;699.415;83.740,6;11,97
+Blue Ridge Mountain EMC - (GA);GA;Cooperative;29.685;295.721;45.159,0;15,27
+Canoochee Electric Member Corp;GA;Cooperative;22.664;316.720;39.565,7;12,49
+Carroll Electric Member Corp - (GA);GA;Cooperative;51.513;729.989;94.360,0;12,93
+Central Georgia El Member Corp;GA;Cooperative;58.255;895.626;105.164,0;11,74
+City of Buford;GA;Municipal;2.925;37.659;4.894,8;13,00
+City of Calhoun - (GA);GA;Municipal;4.392;47.653;6.483,1;13,60
+City of Cartersville - (GA);GA;Municipal;6.532;83.025;10.439,0;12,57
+City of Chattanooga - (TN);GA;Municipal;9.815;141.918;17.202,0;12,12
+City of Chickamauga;GA;Municipal;834;10.914;1.428,0;13,08
+City of College Park - (GA);GA;Municipal;7.498;71.648;10.118,8;14,12
+City of Covington - (GA);GA;Municipal;11.289;146.826;16.944,5;11,54
+City of Douglas;GA;Municipal;4.091;56.408;5.865,3;10,40
+City of East Point - (GA);GA;Municipal;16.114;160.296;19.228,7;12,00
+City of Griffin - (GA);GA;Municipal;13.786;160.493;20.976,0;13,07
+City of La Grange - (GA);GA;Municipal;11.803;137.140;16.627,0;12,12
+City of Lawrenceville - (GA);GA;Municipal;11.670;108.057;14.123,1;13,07
+City of Marietta - (GA);GA;Municipal;35.618;351.879;41.150,0;11,69
+City of Sylvania - (GA);GA;Municipal;1.934;21.324;2.890,1;13,55
+City of Thomasville - (GA);GA;Municipal;13.668;187.490;22.330,7;11,91
+Coastal Electric Member Corp;GA;Cooperative;19.423;288.254;40.356,1;14,00
+Cobb Electric Membership Corp;GA;Cooperative;196.155;2.630.027;312.727,8;11,89
+Colquitt Electric Membership Corp;GA;Cooperative;64.493;884.946;115.976,1;13,11
+Coweta-Fayette El Member Corp;GA;Cooperative;80.242;1.170.511;145.755,9;12,45
+Crisp County Power Comm;GA;Political Subdivision;9.213;145.576;18.305,0;12,57
+Dalton Utilities;GA;Municipal;12.734;155.218;18.065,0;11,64
+Diverse Power Incorporated;GA;Cooperative;30.728;446.648;75.999,4;17,02
+Excelsior Electric Member Corp;GA;Cooperative;22.763;327.084;42.090,0;12,87
+Flint Electric Membership Corp;GA;Cooperative;79.918;1.215.797;161.300,7;13,27
+Georgia Power Co;GA;Investor Owned;2.366.818;29.085.636;4.415.254,4;15,18
+Grady Electric Membership Corp;GA;Cooperative;19.032;248.393;37.625,0;15,15
+GreyStone Power Corporation;GA;Cooperative;131.489;1.876.572;204.914,0;10,92
+Habersham Electric Membership Corp;GA;Cooperative;33.899;438.518;56.869,0;12,97
+Hart Electric Member Corp;GA;Cooperative;29.326;410.046;57.504,0;14,02
+Haywood Electric Member Corp;GA;Cooperative;421;3.612;583,0;16,14
+Irwin Electric Membership Corp;GA;Cooperative;10.863;133.760;20.398,0;15,25
+Jackson Electric Member Corp - (GA);GA;Cooperative;225.116;3.327.794;404.591,4;12,16
+Jefferson Electric Member Corp;GA;Cooperative;34.057;459.678;58.000,0;12,62
+Mitchell Electric Member Corp;GA;Cooperative;21.178;289.178;45.401,7;15,70
+Newnan Wtr, Sewer & Light Comm;GA;Municipal;8.720;94.285;11.229,0;11,91
+North Georgia Elec Member Corp;GA;Cooperative;88.361;1.435.545;171.649,0;11,96
+Oconee Electric Member Corp;GA;Cooperative;10.561;144.165;20.352,2;14,12
+Okefenoke Rural El Member Corp;GA;Cooperative;26.394;367.000;50.079,0;13,65
+Planters Electric Member Corp;GA;Cooperative;16.152;225.872;30.491,1;13,50
+Rayle Electric Membership Corp;GA;Cooperative;16.117;214.462;30.158,0;14,06
+Satilla Rural Elec Member Corporation;GA;Cooperative;52.861;739.023;99.461,5;13,46
+Sawnee Electric Membership Corporation;GA;Cooperative;174.430;2.469.224;297.589,0;12,05
+Snapping Shoals El Member Corp;GA;Cooperative;101.592;1.574.270;188.790,9;11,99
+Southern Rivers Energy;GA;Cooperative;19.704;298.542;44.102,0;14,77
+Sumter Electric Member Corp;GA;Cooperative;14.921;227.101;30.436,9;13,40
+Sunnova;GA;Behind the Meter;1;36;2,7;7,50
+Three Notch Elec Member Corp;GA;Cooperative;13.881;146.333;21.772,0;14,88
+Tri-County Elec Member Corp (GA);GA;Cooperative;20.665;289.840;42.135,6;14,54
+Tri-State Electric Member Corp;GA;Cooperative;12.740;156.534;21.465,0;13,71
+Walton Electric Member Corp;GA;Cooperative;127.193;1.932.954;242.083,3;12,52
+Washington Elec Member Corp;GA;Cooperative;14.981;187.259;27.226,0;14,54
+Hawaii Electric Light Co Inc;HI;Investor Owned;76.932;434.187;208.195,4;47,95
+Hawaiian Electric Co Inc;HI;Investor Owned;274.845;1.583.392;687.629,3;43,43
+Kauai Island Utility Cooperative;HI;Cooperative;29.936;191.955;75.466,0;39,31
+Maui Electric Co Ltd;HI;Investor Owned;63.133;397.618;174.149,3;43,80
+Spruce Finance;HI;Behind the Meter;293;3.126;610,5;19,53
+SunPower Capital, LLC;HI;Behind the Meter;1.127;4.563;2.461,5;53,94
+Sunnova;HI;Behind the Meter;1.597;17.093;3.344,6;19,57
+Sunrun Inc.;HI;Behind the Meter;12.253;94.997;26.714,4;28,12
+Tesla Inc.;HI;Behind the Meter;2.371;21.460;3.977,0;18,53
+Access Energy Coop;IA;Cooperative;8.806;119.218;15.534,8;13,03
+Amana Society Service Co;IA;Investor Owned;709;7.253;1.088,0;15,00
+Board of Water Electric & Communications;IA;Municipal;10.131;101.809;12.281,1;12,06
+Butler County Rural Elec Coop - (IA);IA;Cooperative;3.890;71.266;9.754,0;13,69
+Cedar Falls Utilities;IA;Municipal;17.555;177.578;20.765,8;11,69
+City of Ames - (IA);IA;Municipal;24.889;180.795;21.208,0;11,73
+City of Independence - (IA);IA;Municipal;2.719;23.119;3.164,3;13,69
+City of Maquoketa - (IA);IA;Municipal;2.807;24.941;3.243,5;13,00
+City of Preston;IA;Municipal;507;3.832;570,8;14,90
+Consumers Energy;IA;Cooperative;6.615;88.579;12.935,0;14,60
+East-Central Iowa Rural Elec Coop;IA;Cooperative;8.000;139.574;15.989,0;11,46
+Eastern Iowa Light & Power Coop;IA;Cooperative;20.955;301.356;40.294,9;13,37
+Federated Rural Electric Assn;IA;Cooperative;53;946;102,0;10,78
+Freeborn Mower Electric Cooperative;IA;Cooperative;6;120;16,0;13,33
+Heartland Power Coop;IA;Cooperative;4.339;87.884;10.741,1;12,22
+Interstate Power and Light Co;IA;Investor Owned;412.497;3.792.663;673.265,0;17,75
+Iowa Lakes Electric Coop;IA;Cooperative;9.592;184.628;22.558,9;12,22
+Linn County REC;IA;Cooperative;28.721;314.181;40.007,0;12,73
+Maquoketa Valley Rrl Elec Coop;IA;Cooperative;10.807;146.956;18.401,9;12,52
+MiEnergy Cooperative;IA;Cooperative;5.970;76.032;11.862,7;15,60
+MidAmerican Energy Co;IA;Investor Owned;618.886;6.292.473;692.489,1;11,01
+Midland Power Coop;IA;Cooperative;11.683;217.984;27.457,0;12,60
+North West Rural Electric Coop;IA;Cooperative;9.262;267.162;22.798,8;8,53
+Prairie Energy Coop;IA;Cooperative;3.468;58.489;7.538,3;12,89
+Avista Corp;ID;Investor Owned;123.965;1.388.385;137.048,0;9,87
+City of Idaho Falls - (ID);ID;Municipal;26.559;323.413;26.390,0;8,16
+Fall River Rural Elec Coop Inc;ID;Cooperative;14.225;207.988;20.446,0;9,83
+Idaho Power Co;ID;Investor Owned;498.920;5.854.670;626.554,7;10,70
+Inland Power & Light Company;ID;Cooperative;2.035;36.398;3.079,6;8,46
+Kootenai Electric Cooperative;ID;Cooperative;28.426;406.138;43.150,4;10,62
+Lower Valley Energy Inc;ID;Cooperative;1.533;20.455;1.450,0;7,09
+Missoula Electric Coop, Inc;ID;Cooperative;43;605;60,5;10,00
+Northern Lights, Inc;ID;Cooperative;17.343;238.766;26.959,0;11,29
+PacifiCorp;ID;Investor Owned;71.033;821.083;88.399,5;10,77
+Raft Rural Elec Coop Inc;ID;Cooperative;1.356;26.037;2.312,0;8,88
+Salmon River Electric Coop Inc;ID;Cooperative;2.317;37.401;3.430,0;9,17
+United Electric Co-op, Inc - (ID);ID;Cooperative;4.863;106.600;7.459,0;7,00
+Ameren Illinois Company;IL;Investor Owned;531.572;6.055.726;930.759,6;15,37
+City of Batavia - (IL);IL;Municipal;9.893;88.588;12.467,0;14,07
+City of Geneva- (IL);IL;Municipal;9.032;78.871;8.924,0;11,31
+City of Naperville - (IL);IL;Municipal;55.329;517.337;67.323,8;13,01
+City of Peru - (IL);IL;Municipal;4.728;37.655;4.415,0;11,72
+City of Springfield - (IL);IL;Municipal;60.222;630.517;75.071,4;11,91
+City of St Charles - (IL);IL;Municipal;13.985;120.352;17.672,2;14,68
+Coles-Moultrie Electric Coop;IL;Cooperative;8.461;121.359;18.607,0;15,33
+Commonwealth Edison Co;IL;Investor Owned;3.006.833;22.049.120;3.633.470,3;16,48
+Corn Belt Energy Corporation;IL;Cooperative;34.425;404.431;57.157,0;14,13
+Eastern Illinois Elec Coop;IL;Cooperative;11.167;177.443;26.923,0;15,17
+Egyptian Electric Coop Assn;IL;Cooperative;13.682;203.273;28.658,5;14,10
+Jo-Carroll Energy, Inc;IL;Cooperative;17.473;160.356;28.710,6;17,90
+Menard Electric Coop;IL;Cooperative;9.088;117.813;18.644,6;15,83
+MidAmerican Energy Co;IL;Investor Owned;73.704;654.994;68.423,2;10,45
+Mt Carmel Public Utility Co;IL;Investor Owned;4.349;47.349;7.942,0;16,77
+Norris Electric Coop;IL;Cooperative;18.004;256.543;32.714,0;12,75
+Rochelle Municipal Utilities;IL;Municipal;5.906;73.802;6.218,0;8,43
+Rock Energy Cooperative;IL;Cooperative;9.347;85.884;12.236,0;14,25
+Scenic Rivers Energy Coop;IL;Cooperative;12;163;21,3;13,07
+Shelby Electric Coop, Inc;IL;Cooperative;9.755;129.163;21.817,6;16,89
+Southeastern IL Elec Coop, Inc;IL;Cooperative;22.500;340.450;41.705,0;12,25
+Southwestern Electric Coop Inc - (IL);IL;Cooperative;23.557;341.559;44.328,6;12,98
+Sunnova;IL;Behind the Meter;144;949;150,9;15,90
+Sunrun Inc.;IL;Behind the Meter;16.768;132.495;17.791,1;13,43
+Tesla Inc.;IL;Behind the Meter;4;24;2,0;8,33
+Tri-County Electric Coop, Inc (IL);IL;Cooperative;16.159;242.745;34.306,1;14,13
+Wayne-White Counties Elec Coop;IL;Cooperative;11.989;154.764;23.115,2;14,94
+Bartholomew County Rural E M C;IN;Cooperative;11.262;159.466;22.519,7;14,12
+Boone County Rural EMC;IN;Cooperative;16.710;254.646;38.261,0;15,03
+Carroll-White REMC;IN;Cooperative;14.648;196.425;27.923,0;14,22
+City of Anderson - (IN);IN;Municipal;30.442;312.486;37.186,3;11,90
+City of Auburn - (IN);IN;Municipal;6.753;65.823;6.950,4;10,56
+City of Bluffton - (IN);IN;Municipal;4.900;49.705;4.757,0;9,57
+City of Frankfort - (IN);IN;Municipal;7.750;75.864;8.303,0;10,94
+City of Greenfield - (IN);IN;Municipal;11.114;104.619;11.990,0;11,46
+City of Jasper - (IN);IN;Municipal;6.346;72.285;7.430,9;10,28
+City of Lebanon - (IN);IN;Municipal;7.816;79.015;8.833,8;11,18
+City of Logansport - (IN);IN;Municipal;11.271;104.225;10.661,2;10,23
+City of Mishawaka;IN;Municipal;24.832;184.922;19.290,1;10,43
+City of Peru - (IN);IN;Municipal;8.867;91.278;10.297,0;11,28
+City of Richmond - (IN);IN;Municipal;16.261;187.915;21.580,7;11,48
+Clark County Rural E M C - (IN);IN;Cooperative;25.826;386.273;52.283,1;13,54
+Crawfordsville Elec, Lgt & Pwr;IN;Municipal;8.546;86.697;10.614,1;12,24
+Daviess Martin County R E M C;IN;Cooperative;7.824;123.628;16.964,0;13,72
+Decatur County Rural E M C;IN;Cooperative;7.960;117.739;16.734,0;14,21
+Dubois Rural Electric Coop Inc;IN;Cooperative;13.210;169.439;21.281,0;12,56
+Duke Energy Indiana, LLC;IN;Investor Owned;770.371;9.437.169;1.429.517,1;15,15
+Harrison County Rural E M C;IN;Cooperative;22.696;366.291;44.473,4;12,14
+Heartland REMC;IN;Cooperative;17.777;269.107;36.863,0;13,70
+Hendricks County Rural E M C;IN;Cooperative;35.657;520.225;66.214,7;12,73
+Indiana Michigan Power Co;IN;Investor Owned;416.618;4.331.864;683.180,0;15,77
+Indianapolis Power & Light Co;IN;Investor Owned;458.585;5.305.095;688.487,0;12,98
+Jackson County Rural E M C - (IN);IN;Cooperative;23.939;387.596;51.653,0;13,33
+Jasper County Rural E M C;IN;Cooperative;7.618;104.193;14.675,6;14,09
+Johnson County Rural E M C;IN;Cooperative;27.200;363.058;46.983,2;12,94
+Kankakee Valley Rural E M C;IN;Cooperative;18.821;220.883;30.241,2;13,69
+Kosciusko County Rural E M C;IN;Cooperative;17.347;194.129;23.628,5;12,17
+Midwest Energy Cooperative;IN;Cooperative;308;4.031;720,5;17,87
+NineStar Connect;IN;Cooperative;16.478;254.074;37.319,0;14,69
+Noble County R E M C;IN;Cooperative;10.896;139.612;17.640,8;12,64
+Northeastern Rural E M C;IN;Cooperative;28.628;360.480;51.360,1;14,25
+Northern Indiana Pub Serv Co;IN;Investor Owned;424.735;3.482.939;592.426,1;17,01
+Paulding-Putman Elec Coop, Inc;IN;Cooperative;3.624;41.311;6.194,2;14,99
+RushShelby Energy;IN;Cooperative;14.622;209.145;30.701,0;14,68
+South Central Indiana REMC;IN;Cooperative;34.203;462.724;70.666,0;15,27
+Southeastern Indiana R E M C;IN;Cooperative;25.783;369.795;53.066,0;14,35
+Southern Indiana Gas & Elec Co;IN;Investor Owned;131.706;1.398.173;242.159,8;17,32
+Southern Indiana R E C, Inc;IN;Cooperative;8.852;111.213;15.121,0;13,60
+Sunnova;IN;Behind the Meter;2;23;4,4;19,13
+Tipmont Rural Elec Member Corp;IN;Cooperative;27.354;333.992;49.662,6;14,87
+Utilities Dist-Western IN REMC;IN;Cooperative;18.666;251.643;37.025,8;14,71
+Western Indiana Energy REMC;IN;Cooperative;14.941;221.418;26.995,7;12,19
+Whitewater Valley Rural EMC;IN;Cooperative;11.936;171.945;23.102,0;13,44
+Alfalfa Electric Coop, Inc;KS;Cooperative;216;3.889;461,0;11,85
+CMS Electric Coop Inc;KS;Cooperative;3.187;27.581;5.412,4;19,62
+City of Chanute;KS;Municipal;4.583;45.837;5.354,0;11,68
+City of Coffeyville - (KS);KS;Municipal;4.769;52.025;6.352,4;12,21
+City of Garden City;KS;Municipal;10.300;86.000;12.100,0;14,07
+City of Kansas City - (KS);KS;Municipal;59.859;598.338;85.000,0;14,21
+City of McPherson - (KS);KS;Municipal;7.405;95.777;8.638,3;9,02
+City of Winfield - (KS);KS;Municipal;6.499;61.160;11.344,8;18,55
+Empire District Electric Co;KS;Investor Owned;8.249;114.286;16.391,6;14,34
+Evergy Kansas Central, Inc;KS;Investor Owned;338.432;3.623.878;513.197,3;14,16
+Evergy Kansas South, Inc;KS;Investor Owned;295.902;3.330.071;469.849,7;14,11
+Evergy Metro;KS;Investor Owned;239.597;2.967.054;385.528,5;12,99
+FreeState Electric Coop;KS;Cooperative;17.263;231.179;36.401,0;15,75
+Midwest Energy Inc;KS;Cooperative;29.822;328.352;39.737,5;12,10
+Pioneer Electric Coop, Inc - (KS);KS;Cooperative;5.033;65.859;8.292,0;12,59
+Prairie Land Electric Coop Inc;KS;Cooperative;13.399;139.236;20.310,8;14,59
+Southern Pioneer Electric Company;KS;Cooperative;12.529;122.688;21.518,0;17,54
+Tri-County Electric Coop, Inc (OK);KS;Cooperative;1.052;8.964;1.519,9;16,96
+Victory Electric Coop Assn Inc;KS;Cooperative;13.986;150.422;20.216,0;13,44
+Western Coop Electric Assn Inc;KS;Cooperative;5.766;63.685;9.412,1;14,78
+Wheatland Electric Coop, Inc;KS;Cooperative;20.323;220.824;30.796,3;13,95
+Big Sandy Rural Elec Coop Corp;KY;Cooperative;11.712;164.357;22.501,0;13,69
+Blue Grass Energy Coop Corp;KY;Cooperative;58.839;875.129;109.313,0;12,49
+City of Bardstown - (KY);KY;Municipal;3.426;42.524;4.461,0;10,49
+City of Benton - (KY);KY;Municipal;1.854;23.894;3.257,0;13,63
+City of Berea Municipal Utility;KY;Municipal;4.710;59.255;5.318,3;8,98
+City of Bowling Green - (KY);KY;Municipal;26.291;287.022;34.055,0;11,86
+City of Frankfort - (KY);KY;Municipal;16.708;209.154;22.005,0;10,52
+City of Franklin - (KY);KY;Municipal;4.371;53.996;7.152,0;13,25
+City of Fulton - (KY);KY;Municipal;1.201;14.570;1.952,0;13,40
+City of Glasgow - (KY);KY;Municipal;5.663;66.503;9.157,0;13,77
+City of Hickman;KY;Municipal;842;9.122;1.451,0;15,91
+City of Hopkinsville;KY;Municipal;9.879;121.019;14.835,0;12,26
+City of Jellico;KY;Municipal;1.772;24.093;2.965,0;12,31
+City of Mayfield Plant Board;KY;Municipal;4.245;45.026;6.008,0;13,34
+City of Murray - (KY);KY;Municipal;6.137;65.664;8.889,0;13,54
+City of Owensboro - (KY);KY;Municipal;23.057;219.311;28.304,3;12,91
+City of Paducah - (KY);KY;Municipal;18.862;209.944;32.973,7;15,71
+City of Russellville - (KY);KY;Municipal;3.292;39.244;4.705,0;11,99
+Clark Energy Coop Inc - (KY);KY;Cooperative;25.633;337.704;45.636,0;13,51
+Cumberland Valley Electric, Inc.;KY;Cooperative;22.303;309.274;39.615,0;12,81
+Duke Energy Kentucky;KY;Investor Owned;134.068;1.518.206;200.134,4;13,18
+Farmers Rural Electric Coop Corp - (KY);KY;Cooperative;24.599;327.573;41.695,0;12,73
+Fleming-Mason Energy Coop Inc;KY;Cooperative;23.667;300.658;38.034,0;12,65
+Gibson Electric Members Corp;KY;Cooperative;2.541;36.798;4.841,0;13,16
+Grayson Rural Electric Coop Corp;KY;Cooperative;14.329;172.197;28.108,0;16,32
+Henderson City Utility Comm;KY;Municipal;10.280;121.179;10.237,3;8,45
+Inter County Energy Coop Corp;KY;Cooperative;26.404;358.189;51.078,0;14,26
+Jackson Energy Coop Corp - (KY);KY;Cooperative;48.954;705.969;98.170,4;13,91
+Jackson Purchase Energy Corporation;KY;Cooperative;25.574;367.449;55.981,6;15,24
+Kenergy Corp;KY;Cooperative;47.119;707.928;103.117,0;14,57
+Kentucky Power Co;KY;Investor Owned;132.619;1.968.490;315.955,0;16,05
+Kentucky Utilities Co;KY;Investor Owned;443.576;6.169.015;752.019,4;12,19
+Licking Valley Rural E C C;KY;Cooperative;16.505;191.769;27.743,0;14,47
+Louisville Gas & Electric Co;KY;Investor Owned;378.001;4.230.691;522.265,0;12,34
+Madisonville Municipal Utils;KY;Municipal;6.914;63.582;8.191,0;12,88
+Meade County Rural E C C;KY;Cooperative;28.813;355.117;50.767,2;14,30
+Nolin Rural Electric Coop Corp;KY;Cooperative;34.725;500.681;65.724,0;13,13
+Owen Electric Coop Inc;KY;Cooperative;62.542;849.522;109.240,0;12,86
+Pennyrile Rural Electric Coop;KY;Cooperative;40.062;608.998;78.939,0;12,96
+Salt River Electric Coop Corp;KY;Cooperative;52.081;780.339;87.207,0;11,18
+Shelby Energy Co-op, Inc;KY;Cooperative;16.866;253.093;33.031,0;13,05
+South Kentucky Rural E C C;KY;Cooperative;64.149;805.936;103.745,6;12,87
+Taylor County Rural E C C;KY;Cooperative;24.578;311.990;36.951,0;11,84
+Tri-County Elec Member Corp (TN);KY;Cooperative;20.298;290.829;36.202,0;12,45
+Warren Rural Elec Coop Corp;KY;Cooperative;58.877;918.414;110.018,0;11,98
+West Kentucky Rural E C C;KY;Cooperative;30.899;449.480;59.802,0;13,30
+Beauregard Electric Coop, Inc;LA;Cooperative;39.678;634.745;78.874,0;12,43
+City of Alexandria - (LA);LA;Municipal;20.046;293.739;34.803,0;11,85
+City of Lafayette - (LA);LA;Municipal;58.774;851.520;102.150,0;12,00
+City of Natchitoches;LA;Municipal;7.280;93.276;10.705,4;11,48
+City of Ruston - (LA);LA;Municipal;9.608;110.804;4.866,0;4,39
+Claiborne Electric Coop, Inc;LA;Cooperative;21.626;313.742;35.149,0;11,20
+Cleco Power LLC;LA;Investor Owned;249.860;3.787.257;558.247,0;14,74
+Concordia Electric Coop, Inc;LA;Cooperative;11.884;141.146;17.210,0;12,19
+Dixie Electric Membership Corp;LA;Cooperative;107.079;1.685.368;243.146,3;14,43
+Entergy Louisiana LLC;LA;Investor Owned;949.440;13.986.531;1.775.551,6;12,69
+Entergy New Orleans, LLC;LA;Investor Owned;187.760;2.364.348;328.757,4;13,90
+Jefferson Davis Elec Coop, Inc;LA;Cooperative;8.718;132.052;18.578,0;14,07
+Northeast Louisiana Power Coop Inc.;LA;Cooperative;11.583;199.995;22.117,0;11,06
+Panola-Harrison Elec Coop, Inc;LA;Cooperative;8.503;135.848;18.099,8;13,32
+Pointe Coupee Elec Member Corp;LA;Cooperative;8.250;121.626;15.136,0;12,44
+South Louisiana Elec Coop Assn;LA;Cooperative;17.132;264.727;29.415,6;11,11
+Southwest Louisiana E M C;LA;Cooperative;105.517;1.819.805;199.492,7;10,96
+Southwestern Electric Power Co;LA;Investor Owned;207.487;3.029.121;402.137,7;13,28
+Spruce Finance;LA;Behind the Meter;77;603;47,5;7,88
+Sunnova;LA;Behind the Meter;27;191;27,3;14,29
+Terrebonne Parish Consol Gov't;LA;Municipal;10.716;167.412;22.053,7;13,17
+Washington-St Tammany E C, Inc;LA;Cooperative;50.076;811.765;89.766,3;11,06
+City of Chicopee - (MA);MA;Municipal;23.207;201.694;32.445,4;16,09
+City of Holyoke - (MA);MA;Municipal;14.976;110.165;15.360,0;13,94
+City of Norwood - (MA);MA;Municipal;13.791;90.880;15.681,0;17,25
+City of Peabody - (MA);MA;Municipal;22.203;196.321;24.709,3;12,59
+City of Taunton;MA;Municipal;34.401;285.649;49.193,0;17,22
+City of Westfield - (MA);MA;Municipal;16.170;133.275;23.139,3;17,36
+Fitchburg Gas & Elec Light Co;MA;Investor Owned;18.525;116.212;34.761,8;29,91
+Massachusetts Electric Co;MA;Investor Owned;611.277;4.008.052;1.143.647,4;28,53
+NSTAR Electric Company;MA;Investor Owned;432.255;2.446.486;716.965,0;29,31
+Nantucket Electric Co;MA;Investor Owned;2.033;18.578;5.502,4;29,62
+Spruce Finance;MA;Behind the Meter;2.199;15.292;2.381,7;15,57
+SunPower Capital, LLC;MA;Behind the Meter;879;6.670;1.117,0;16,75
+Sunnova;MA;Behind the Meter;12.555;104.717;17.586,7;16,79
+Sunrun Inc.;MA;Behind the Meter;40.298;292.924;54.089,9;18,47
+Tesla Inc.;MA;Behind the Meter;19.247;125.077;19.645,0;15,71
+Town of Braintree - (MA);MA;Municipal;14.006;119.243;17.572,0;14,74
+Town of Danvers;MA;Municipal;11.486;96.531;15.814,3;16,38
+Town of Hudson - (MA);MA;Municipal;11.396;105.020;12.928,3;12,31
+Town of Littleton - (MA);MA;Municipal;6.684;69.774;9.471,3;13,57
+Town of Mansfield - (MA);MA;Municipal;9.381;84.148;12.396,8;14,73
+Town of Middleborough - (MA);MA;Municipal;15.165;138.299;19.957,0;14,43
+Town of North Attleborough - (MA);MA;Municipal;12.530;114.521;17.709,3;15,46
+Town of Reading - (MA);MA;Municipal;28.410;259.411;43.930,0;16,93
+Town of Shrewsbury - (MA);MA;Municipal;15.044;137.976;18.659,0;13,52
+Town of Sterling - (MA);MA;Municipal;3.567;32.639;5.516,0;16,90
+Town of Wellesley - (MA);MA;Municipal;9.323;108.115;16.356,2;15,13
+A & N Electric Coop;MD;Cooperative;261;2.337;301,4;12,90
+Baltimore Gas & Electric Co;MD;Investor Owned;965.223;10.474.761;1.423.637,1;13,59
+Choptank Electric Cooperative, Inc;MD;Cooperative;50.069;694.080;107.786,0;15,53
+Delmarva Power;MD;Investor Owned;164.904;1.970.953;314.614,2;15,96
+Easton Utilities Comm;MD;Municipal;8.578;108.615;14.409,5;13,27
+Hagerstown Light Department;MD;Municipal;14.914;165.334;12.736,3;7,70
+Potomac Electric Power Co;MD;Investor Owned;458.433;4.769.046;730.532,7;15,32
+Southern Maryland Elec Coop Inc;MD;Cooperative;153.234;2.189.282;334.105,4;15,26
+Spruce Finance;MD;Behind the Meter;415;3.246;465,1;14,33
+Sunnova;MD;Behind the Meter;4.629;52.856;7.318,6;13,85
+Sunrun Inc.;MD;Behind the Meter;24.910;230.721;30.532,7;13,23
+Tesla Inc.;MD;Behind the Meter;26.985;221.166;33.184,0;15,00
+The Potomac Edison Company;MD;Investor Owned;228.961;3.125.996;326.578,2;10,45
+Central Maine Power Co;ME;Investor Owned;512.210;3.643.493;815.128,0;22,37
+Eastern Maine Electric Coop;ME;Cooperative;10.667;62.784;10.528,8;16,77
+Houlton Water Company;ME;Municipal;3.907;33.699;3.787,0;11,24
+Town of Madison - (ME);ME;Municipal;2.350;19.376;2.961,0;15,28
+Versant Power;ME;Investor Owned;129.433;837.572;195.376,0;23,33
+Alger-Delta Coop Electric Assn;MI;Cooperative;9.741;53.250;11.015,9;20,69
+Alpena Power Co;MI;Investor Owned;13.740;89.727;12.855,2;14,33
+Cherryland Electric Coop Inc;MI;Cooperative;34.190;291.679;43.603,5;14,95
+City of Bay City - (MI);MI;Municipal;17.936;130.071;20.821,3;16,01
+City of Crystal Falls;MI;Municipal;1.296;8.017;1.298,0;16,19
+City of Gladstone;MI;Municipal;2.535;16.860;2.341,3;13,89
+City of Grand Haven - (MI);MI;Municipal;12.991;89.722;12.577,5;14,02
+City of Holland;MI;Municipal;25.580;188.945;21.340,0;11,29
+City of Lansing - (MI);MI;Municipal;86.675;578.323;91.932,0;15,90
+City of Marquette - (MI);MI;Municipal;14.912;98.790;18.070,2;18,29
+City of Negaunee;MI;Municipal;1.962;11.479;2.160,1;18,82
+City of Norway;MI;Municipal;1.853;14.084;2.230,5;15,84
+City of Sturgis;MI;Municipal;6.060;49.802;6.254,7;12,56
+City of Traverse City - (MI);MI;Municipal;8.914;62.600;7.028,0;11,23
+City of Zeeland - (MI);MI;Municipal;5.960;49.880;4.838,3;9,70
+Cloverland Electric Co-op;MI;Cooperative;35.684;298.461;39.897,7;13,37
+Coldwater Board of Public Util;MI;Municipal;5.973;43.605;5.923,0;13,58
+Consumers Energy Co;MI;Investor Owned;1.645.580;12.976.844;2.349.950,0;18,11
+DTE Electric Company;MI;Investor Owned;2.047.944;15.844.478;2.910.745,9;18,37
+Great Lakes Energy Coop;MI;Cooperative;118.922;929.559;157.935,1;16,99
+Indiana Michigan Power Co;MI;Investor Owned;111.731;1.175.727;189.196,0;16,09
+Midwest Energy Cooperative;MI;Cooperative;29.123;346.588;63.591,7;18,35
+Northern States Power Co;MI;Investor Owned;7.605;60.287;8.847,8;14,68
+Presque Isle Elec & Gas Coop;MI;Cooperative;32.009;184.933;32.236,5;17,43
+Tri-County Electric Coop (MI);MI;Cooperative;22.837;228.865;38.550,9;16,84
+Upper Michigan Energy Resources Corp.;MI;Investor Owned;33.078;238.994;42.413,5;17,75
+Upper Peninsula Power Company;MI;Investor Owned;47.281;248.531;57.249,5;23,04
+Village of Baraga - (MI);MI;Municipal;551;2.811;402,5;14,32
+Village of L'Anse - (MI);MI;Municipal;966;5.045;869,7;17,24
+Wyandotte Municipal Serv Comm;MI;Municipal;11.624;80.731;11.521,1;14,27
+ALLETE, Inc.;MN;Investor Owned;125.243;1.053.658;145.676,9;13,83
+Agralite Electric Coop;MN;Cooperative;4.416;82.914;10.193,4;12,29
+BENCO Electric Cooperative;MN;Cooperative;17.999;220.025;32.678,0;14,85
+Beltrami Electric Coop, Inc;MN;Cooperative;20.383;301.298;40.901,0;13,57
+City of Alexandria - (MN);MN;Municipal;8.577;82.711;8.562,8;10,35
+City of Anoka;MN;Municipal;11.462;77.875;12.227,0;15,70
+City of Austin - (MN);MN;Municipal;10.643;79.141;10.928,0;13,81
+City of Chaska - (MN);MN;Municipal;9.907;84.490;14.406,1;17,05
+City of Elk River;MN;Municipal;11.295;105.883;15.890,0;15,01
+City of Lake Crystal - (MN);MN;Municipal;1.060;8.286;1.631,3;19,69
+City of Marshall - (MN);MN;Municipal;5.797;65.503;6.101,1;9,31
+City of Moorhead - (MN);MN;Municipal;18.126;188.707;20.173,6;10,69
+City of Owatonna - (MN);MN;Municipal;11.038;85.940;11.129,1;12,95
+City of Worthington - (MN);MN;Municipal;4.646;36.483;4.282,6;11,74
+Connexus Energy;MN;Cooperative;130.048;1.270.824;175.334,4;13,80
+Crow Wing Cooperative Power & Light Comp;MN;Cooperative;43.694;464.803;59.482,3;12,80
+Dakota Electric Association;MN;Cooperative;105.223;951.865;128.561,0;13,51
+East Central Energy;MN;Cooperative;52.366;552.857;86.308,5;15,61
+Federated Rural Electric Assn;MN;Cooperative;5.642;88.524;9.626,0;10,87
+Freeborn Mower Electric Cooperative;MN;Cooperative;17.799;192.699;28.206,0;14,64
+Heartland Power Coop;MN;Cooperative;37;1.030;122,1;11,85
+Hutchinson Utilities Comm;MN;Municipal;6.613;56.403;6.129,0;10,87
+Itasca-Mantrap Co-op Electrical Assn;MN;Cooperative;10.997;137.676;17.452,9;12,68
+Lake Country Power;MN;Cooperative;46.658;516.106;80.800,8;15,66
+Lake Region Electric Cooperative - (MN);MN;Cooperative;26.691;354.738;41.570,0;11,72
+Meeker Coop Light & Power Assn;MN;Cooperative;8.518;149.027;18.143,3;12,17
+MiEnergy Cooperative;MN;Cooperative;15.085;182.332;28.007,6;15,36
+Mille Lacs Energy Cooperative;MN;Cooperative;14.414;132.457;20.169,5;15,23
+Minnesota Valley Coop L&P Assn;MN;Cooperative;4.947;131.615;14.443,5;10,97
+Minnesota Valley Electric Coop;MN;Cooperative;41.967;512.490;69.808,0;13,62
+Northern States Power Co - Minnesota;MN;Investor Owned;1.199.122;9.095.482;1.419.019,4;15,60
+Northwestern Wisconsin Elec Co;MN;Investor Owned;85;525;79,5;15,14
+Otter Tail Power Co;MN;Investor Owned;49.840;560.184;65.179,0;11,64
+People's Cooperative Services;MN;Cooperative;21.355;232.061;36.721,4;15,82
+Rochester Public Utilities;MN;Municipal;53.047;376.838;58.727,9;15,58
+Runestone Electric Assn;MN;Cooperative;14.021;209.829;26.549,0;12,65
+Shakopee Public Utilities Comm;MN;Municipal;17.034;144.192;21.419,0;14,85
+Sioux Valley SW Elec Coop;MN;Cooperative;3.361;85.766;10.269,6;11,97
+South Central Electric Assn;MN;Cooperative;4.690;81.108;10.677,0;13,16
+Stearns Cooperative Elec Assn;MN;Cooperative;25.735;405.358;46.988,3;11,59
+Steele-Waseca Cooperative Electric;MN;Cooperative;10.571;126.574;18.360,5;14,51
+Sunnova;MN;Behind the Meter;4;16;0,9;5,63
+Wild Rice Electric Coop, Inc;MN;Cooperative;13.816;218.733;28.366,8;12,97
+Willmar Municipal Utilities;MN;Municipal;8.476;70.118;8.081,0;11,52
+Wright-Hennepin Coop Elec Assn;MN;Cooperative;51.517;605.549;82.538,3;13,63
+Black River Electric Coop - (MO);MO;Cooperative;21.299;300.506;33.071,0;11,01
+Boone Electric Coop;MO;Cooperative;32.968;448.656;52.258,0;11,65
+Callaway Electric Cooperative;MO;Cooperative;12.462;185.817;26.015,0;14,00
+Carroll Electric Coop Corp - (AR);MO;Cooperative;11.797;134.521;16.557,0;12,31
+Central Missouri Elec Coop Inc;MO;Cooperative;10.909;192.543;21.416,4;11,12
+Citizens Electric Corporation - (MO);MO;Cooperative;25.027;311.918;43.454,0;13,93
+City Utilities of Springfield - (MO);MO;Municipal;103.139;1.108.601;117.799,0;10,63
+City of Carthage - (MO);MO;Municipal;6.917;82.493;10.811,0;13,11
+City of Columbia - (MO);MO;Municipal;45.169;450.623;53.774,0;11,93
+City of Farmington - (MO);MO;Municipal;6.790;90.967;9.228,9;10,15
+City of Hannibal - (MO);MO;Municipal;7.537;80.652;9.184,9;11,39
+City of Independence - (MO);MO;Municipal;53.424;538.039;76.111,9;14,15
+City of Kirkwood - (MO);MO;Municipal;8.910;98.735;11.327,1;11,47
+City of Lebanon - (MO);MO;Municipal;5.909;84.843;7.876,0;9,28
+City of Monett - (MO);MO;Municipal;4.018;48.071;5.691,7;11,84
+City of Poplar Bluff - (MO);MO;Municipal;7.696;125.633;11.596,0;9,23
+City of Rolla - (MO);MO;Municipal;8.059;105.916;10.647,0;10,05
+City of Sikeston - (MO);MO;Municipal;7.044;119.975;11.813,0;9,85
+Clay County Electric Coop Corp;MO;Cooperative;47;517;81,0;15,67
+Co-Mo Electric Coop Inc;MO;Cooperative;30.444;423.306;51.850,0;12,25
+Consolidated Electric Coop;MO;Cooperative;7.602;126.534;13.870,3;10,96
+Crawford Electric Coop, Inc;MO;Cooperative;19.417;278.209;32.557,3;11,70
+Cuivre River Electric Coop Inc;MO;Cooperative;69.629;1.134.645;108.538,1;9,57
+Empire District Electric Co;MO;Investor Owned;136.488;1.840.893;279.761,9;15,20
+Evergy Metro;MO;Investor Owned;269.157;2.765.392;358.687,9;12,97
+Evergy Missouri West;MO;Investor Owned;299.085;3.807.533;447.318,8;11,75
+Farmers Electric Coop, Inc - (MO);MO;Cooperative;12.261;170.031;21.560,5;12,68
+Gascosage Electric Coop;MO;Cooperative;9.134;146.466;15.131,0;10,33
+Howell-Oregon Elec Coop, Inc;MO;Cooperative;22.666;323.867;36.376,1;11,23
+Intercounty Electric Coop Assn;MO;Cooperative;29.201;451.739;52.004,4;11,51
+Laclede Electric Coop, Inc;MO;Cooperative;34.525;560.451;57.420,0;10,25
+Macon Electric Coop;MO;Cooperative;9.893;131.036;16.289,5;12,43
+Missouri Rural Electric Coop;MO;Cooperative;4.956;70.346;7.969,0;11,33
+New-Mac Electric Coop, Inc;MO;Cooperative;18.769;315.220;37.106,0;11,77
+Osage Valley Elec Coop Assn;MO;Cooperative;16.628;268.403;34.534,0;12,87
+Ozark Border Electric Coop;MO;Cooperative;33.187;544.277;55.794,0;10,25
+Ozark Electric Coop Inc - (MO);MO;Cooperative;31.204;449.267;51.640,1;11,49
+Platte-Clay Electric Coop, Inc;MO;Cooperative;22.885;370.204;41.296,0;11,15
+SEMO Electric Cooperative;MO;Cooperative;10.716;179.894;20.093,0;11,17
+Southwest Electric Coop, Inc;MO;Cooperative;40.312;556.060;59.810,0;10,76
+Sunnova;MO;Behind the Meter;1;8;1,1;13,75
+Three Rivers Electric Coop;MO;Cooperative;22.064;319.057;35.406,0;11,10
+Union Electric Co - (MO);MO;Investor Owned;1.082.243;13.885.428;1.575.282,2;11,34
+Webster Electric Coop;MO;Cooperative;18.294;314.947;27.268,0;8,66
+West Central Electric Coop Inc - (MO);MO;Cooperative;14.738;272.287;30.840,0;11,33
+White River Valley El Coop Inc;MO;Cooperative;38.403;519.546;68.038,0;13,10
+4-County Electric Power Assn;MS;Cooperative;39.894;586.361;75.010,0;12,79
+Alcorn County Elec Power Assn;MS;Cooperative;14.803;216.127;27.579,0;12,76
+Central Electric Power Assn - (MS);MS;Cooperative;30.520;464.465;57.416,0;12,36
+City of Aberdeen - (MS);MS;Municipal;2.588;34.383;4.345,0;12,64
+City of Amory;MS;Municipal;2.877;38.463;4.646,0;12,08
+City of Columbus - (MS);MS;Municipal;8.970;121.624;15.103,0;12,42
+City of Holly Springs;MS;Municipal;9.182;135.703;16.937,0;12,48
+City of Macon - (MS);MS;Municipal;918;11.689;1.528,0;13,07
+City of New Albany - (MS);MS;Municipal;8.022;114.314;13.944,0;12,20
+City of Okolona;MS;Municipal;4.225;60.350;7.536,0;12,49
+City of Oxford - (MS);MS;Municipal;8.183;93.049;11.153,0;11,99
+City of Philadelphia - (MS);MS;Municipal;2.693;33.657;4.321,0;12,84
+City of Starkville;MS;Municipal;12.478;130.154;15.816,0;12,15
+City of Tupelo - (MS);MS;Municipal;10.552;139.313;15.475,0;11,11
+City of Water Valley - (MS);MS;Municipal;1.527;20.447;2.566,0;12,55
+City of West Point - (MS);MS;Municipal;2.994;34.345;4.381,0;12,76
+Coast Electric Power Assn;MS;Cooperative;80.125;1.196.321;147.523,0;12,33
+Delta Electric Power Assn;MS;Cooperative;21.178;253.259;32.443,6;12,81
+Dixie Electric Power Assn;MS;Cooperative;37.127;541.455;66.909,1;12,36
+East Mississippi Elec Pwr Assn;MS;Cooperative;9.815;127.026;18.018,0;14,18
+Entergy Mississippi LLC;MS;Investor Owned;383.643;5.608.027;651.455,1;11,62
+Greenwood Utilities Comm;MS;Municipal;7.537;96.788;12.216,2;12,62
+Louisville Electric System;MS;Municipal;2.460;30.299;3.389,0;11,19
+Magnolia Electric Power Assn;MS;Cooperative;30.691;409.548;53.427,0;13,05
+Mississippi Power Co;MS;Investor Owned;156.725;2.133.666;299.311,0;14,03
+Monroe County Elec Power Assn;MS;Cooperative;10.016;163.134;20.462,0;12,54
+Natchez Trace Elec Power Assn;MS;Cooperative;12.533;170.454;21.832,0;12,81
+North East Mississippi EPA;MS;Cooperative;25.119;355.154;47.059,0;13,25
+Northcentral Mississippi E P A;MS;Cooperative;28.283;481.774;59.830,0;12,42
+Pearl River Valley El Pwr Assn;MS;Cooperative;50.838;736.935;98.629,0;13,38
+Pontotoc Electric Power Assn;MS;Cooperative;16.004;237.445;30.492,0;12,84
+Prentiss County Elec Pwr Assn;MS;Cooperative;10.972;158.165;17.090,0;10,81
+Singing River Elec Cooperative;MS;Cooperative;70.297;1.040.578;121.709,3;11,70
+Southern Pine Electric Cooperative;MS;Cooperative;64.372;904.081;113.860,3;12,59
+Southwest Mississippi E P A;MS;Cooperative;23.292;287.841;39.413,1;13,69
+Tallahatchie Valley E P A;MS;Cooperative;21.477;298.738;37.158,0;12,44
+Tippah Electric Power Assn;MS;Cooperative;11.701;143.735;17.323,0;12,05
+Tishomingo County E P A;MS;Cooperative;11.049;148.291;18.453,0;12,44
+Tombigbee Electric Power Assn;MS;Cooperative;36.797;570.989;69.058,0;12,09
+Yazoo Valley Elec Power Assn;MS;Cooperative;9.495;122.299;18.528,0;15,15
+Avista Corp;MT;Investor Owned;9;223;19,0;8,52
+Black Hills Power, Inc.;MT;Investor Owned;13;163;11,0;6,75
+Fall River Rural Elec Coop Inc;MT;Cooperative;1.480;20.772;2.077,0;10,00
+Fergus Electric Coop, Inc;MT;Cooperative;6.388;69.465;10.565,0;15,21
+Flathead Electric Coop Inc;MT;Cooperative;60.335;899.004;85.136,0;9,47
+Lower Yellowstone R E A, Inc;MT;Cooperative;3.449;53.932;4.619,0;8,56
+McKenzie Electric Coop Inc;MT;Cooperative;26;469;39,0;8,32
+Missoula Electric Coop, Inc;MT;Cooperative;14.292;192.094;18.913,9;9,85
+Montana-Dakota Utilities Co;MT;Investor Owned;19.658;193.296;21.772,0;11,26
+NorthWestern Energy LLC - (MT);MT;Investor Owned;316.799;2.865.830;356.171,8;12,43
+Northern Lights, Inc;MT;Cooperative;4.611;53.113;6.571,0;12,37
+Powder River Energy Corp;MT;Cooperative;51;484;62,4;12,89
+USBIA-Mission Valley Power;MT;Federal;15.830;266.491;18.529,0;6,95
+Yellowstone Valley Elec Co-op;MT;Cooperative;20.354;236.911;29.320,0;12,38
+Albemarle Electric Member Corp;NC;Cooperative;12.370;190.321;25.950,0;13,63
+Blue Ridge Elec Member Corp - (NC);NC;Cooperative;70.401;770.827;100.803,0;13,08
+Blue Ridge Mountain EMC - (GA);NC;Cooperative;15.230;155.063;23.317,0;15,04
+Broad River Electric Coop, Inc;NC;Cooperative;473;6.284;873,5;13,90
+Brunswick Electric Member Corp;NC;Cooperative;93.375;1.124.002;156.151,5;13,89
+Carteret-Craven El Member Corp;NC;Cooperative;37.956;468.116;52.996,0;11,32
+Central Electric Membership Corp. - (NC);NC;Cooperative;21.493;336.453;45.108,9;13,41
+City of Albemarle - (NC);NC;Municipal;10.396;132.005;15.770,9;11,95
+City of Concord - (NC);NC;Municipal;28.391;351.273;41.274,5;11,75
+City of Elizabeth City - (NC);NC;Municipal;11.077;150.239;18.559,0;12,35
+City of Gastonia - (NC);NC;Municipal;25.777;287.465;36.820,3;12,81
+City of Kinston - (NC);NC;Municipal;9.927;127.732;16.692,4;13,07
+City of Lexington - (NC);NC;Municipal;17.377;228.562;27.631,6;12,09
+City of Lumberton - (NC);NC;Municipal;9.438;95.044;12.872,5;13,54
+City of Monroe - (NC);NC;Municipal;9.438;108.304;14.195,3;13,11
+City of Morganton - (NC);NC;Municipal;6.868;72.626;8.098,8;11,15
+City of New Bern - (NC);NC;Municipal;20.249;248.292;30.299,4;12,20
+City of Rocky Mount - (NC);NC;Municipal;25.018;313.889;37.729,0;12,02
+City of Statesville - (NC);NC;Municipal;11.598;124.591;13.412,7;10,77
+City of Washington - (NC);NC;Municipal;11.410;136.514;17.719,1;12,98
+City of Wilson;NC;Municipal;31.187;418.161;48.161,0;11,52
+Duke Energy Carolinas, LLC;NC;Investor Owned;1.837.991;23.015.861;2.403.248,7;10,44
+Duke Energy Progress - (NC);NC;Investor Owned;1.292.259;16.894.870;2.057.449,1;12,18
+Edgecombe-Martin County E M C;NC;Cooperative;10.571;146.716;20.867,0;14,22
+EnergyUnited Elec Member Corp;NC;Cooperative;117.713;1.746.587;189.737,0;10,86
+Fayetteville Public Works Commission;NC;Municipal;74.878;914.826;101.075,0;11,05
+Four County Elec Member Corp;NC;Cooperative;29.864;449.517;57.615,0;12,82
+French Broad Elec Member Corp;NC;Cooperative;35.438;333.401;46.041,3;13,81
+Greenville Utilities Comm;NC;Municipal;63.863;844.243;92.623,5;10,97
+Haywood Electric Member Corp;NC;Cooperative;27.518;276.206;43.924,2;15,90
+Jones-Onslow Elec Member Corp;NC;Cooperative;76.223;1.026.566;122.639,3;11,95
+Lumbee River Elec Member Corp;NC;Cooperative;62.298;999.059;116.175,7;11,63
+Mecklenburg Electric Cooperative;NC;Cooperative;131;1.775;246,8;13,90
+Mountain Electric Coop, Inc;NC;Cooperative;15.525;175.858;21.145,0;12,02
+New River Light & Power Co;NC;State;7.166;62.698;8.637,7;13,78
+Pee Dee Electric Member Corp;NC;Cooperative;19.285;270.296;35.653,3;13,19
+Piedmont Electric Member Corp;NC;Cooperative;29.709;425.478;57.119,2;13,42
+Randolph Electric Member Corp;NC;Cooperative;30.679;386.851;55.279,0;14,29
+Roanoke Electric Member Corp;NC;Cooperative;12.097;168.037;27.215,0;16,20
+Rutherford Elec Member Corp;NC;Cooperative;69.210;937.088;110.697,0;11,81
+South River Elec Member Corp;NC;Cooperative;44.604;695.898;87.954,7;12,64
+Sunnova;NC;Behind the Meter;9;141;6,7;4,75
+Surry-Yadkin Elec Member Corp;NC;Cooperative;27.585;353.422;51.602,4;14,60
+Tideland Electric Member Corp;NC;Cooperative;20.944;236.551;37.460,0;15,84
+Town of Apex- (NC);NC;Municipal;25.332;251.133;29.873,9;11,90
+Town of High Point;NC;Municipal;37.111;395.074;46.241,7;11,70
+Town of Huntersville - (NC);NC;Municipal;7.332;80.340;10.135,0;12,62
+Town of Murphy - (NC);NC;Municipal;3.605;46.346;6.071,0;13,10
+Town of Tarboro - (NC);NC;Municipal;5.363;61.735;7.746,0;12,55
+Tri-County Elec Member Corp (NC);NC;Cooperative;21.918;346.214;39.859,5;11,51
+Tri-State Electric Member Corp;NC;Cooperative;1.475;14.332;2.049,0;14,30
+Union Electric Membership Corp - (NC);NC;Cooperative;81.656;1.188.766;144.955,0;12,19
+Virginia Electric & Power Co;NC;Investor Owned;106.473;1.641.664;191.274,5;11,65
+Wake Electric Membership Corp;NC;Cooperative;50.141;658.742;84.065,0;12,76
+York Electric Coop Inc;NC;Cooperative;14;215;26,0;12,09
+Burke-Divide Electric Coop Inc;ND;Cooperative;2.244;45.376;3.785,0;8,34
+Capital Electric Coop, Inc;ND;Cooperative;18.921;244.286;25.310,5;10,36
+Cass County Elec Coop Inc;ND;Cooperative;49.333;651.336;76.949,0;11,81
+Dakota Valley Elec Coop Inc;ND;Cooperative;5.623;131.542;13.807,5;10,50
+Lower Yellowstone R E A, Inc;ND;Cooperative;787;13.410;1.178,0;8,78
+McKenzie Electric Coop Inc;ND;Cooperative;5.334;121.532;8.905,8;7,33
+McLean Electric Coop, Inc;ND;Cooperative;3.661;56.930;7.307,0;12,84
+Montana-Dakota Utilities Co;ND;Investor Owned;79.183;808.839;88.062,0;10,89
+Mountrail-Williams Elec Coop;ND;Cooperative;11.188;208.158;14.994,6;7,20
+Nodak Electric Coop Inc;ND;Cooperative;20.244;391.508;45.974,0;11,74
+North Central Elec Coop, Inc;ND;Cooperative;6.131;144.481;13.745,5;9,51
+Northern Plains Electric Coop;ND;Cooperative;10.251;237.668;24.095,0;10,14
+Northern States Power Co - Minnesota;ND;Investor Owned;82.122;796.023;100.518,6;12,63
+Otter Tail Power Co;ND;Investor Owned;45.565;627.151;65.293,9;10,41
+Roughrider Electric Cooperativ;ND;Cooperative;11.037;176.716;17.530,0;9,92
+Slope Electric Coop Inc;ND;Cooperative;3.184;46.843;5.750,0;12,28
+Verendrye Electric Coop Inc;ND;Cooperative;14.207;237.100;24.007,4;10,13
+Cedar-Knox Public Power Dist;NE;Political Subdivision;5.531;99.420;7.948,0;7,99
+City of Fremont - (NE);NE;Municipal;13.618;149.433;16.983,5;11,37
+City of Grand Island - (NE);NE;Municipal;21.994;225.320;21.921,0;9,73
+City of Hastings - (NE);NE;Municipal;11.354;113.538;11.647,0;10,26
+City of Lexington - (NE);NE;Municipal;3.645;56.603;5.562,0;9,83
+City of North Platte;NE;Municipal;11.682;123.326;13.054,0;10,58
+City of South Sioux City;NE;Municipal;4.999;50.268;6.362,6;12,66
+Cornhusker Public Power Dist;NE;Political Subdivision;7.294;137.065;14.017,8;10,23
+Dawson Power District;NE;Political Subdivision;15.939;257.777;28.982,5;11,24
+Elkhorn Rural Public Pwr Dist;NE;Political Subdivision;6.099;110.654;10.439,0;9,43
+High West Energy, Inc;NE;Cooperative;1.760;19.903;2.837,0;14,25
+Highline Electric Assn;NE;Cooperative;757;8.700;1.123,0;12,91
+Lincoln Electric System;NE;Municipal;130.067;1.345.068;130.690,8;9,72
+Loup River Public Power Dist;NE;Political Subdivision;16.047;254.288;25.251,1;9,93
+Midwest Electric Member Corp;NE;Cooperative;2.334;37.161;4.070,8;10,95
+Nebraska Public Power District;NE;Political Subdivision;72.743;881.833;90.586,0;10,27
+Norris Public Power District;NE;Political Subdivision;16.877;345.897;29.430,9;8,51
+Northeast Power;NE;Political Subdivision;6.754;118.755;10.752,0;9,05
+Omaha Public Power District;NE;Political Subdivision;351.712;3.983.478;465.262,0;11,68
+Perennial Public Power Dist;NE;Political Subdivision;3.514;73.980;7.876,0;10,65
+Southern Public Power District;NE;Political Subdivision;15.216;250.862;22.996,5;9,17
+Southwest Public Power Dist;NE;Political Subdivision;2.177;36.929;3.653,3;9,89
+Liberty Utilities (Granite State Electri;NH;Investor Owned;35.789;285.392;74.736,1;26,19
+New Hampshire Elec Coop Inc;NH;Cooperative;72.547;510.825;130.867,9;25,62
+Public Service Co of NH;NH;Investor Owned;380.922;2.812.800;730.897,2;25,98
+Sunnova;NH;Behind the Meter;55;437;37,7;8,63
+Sunrun Inc.;NH;Behind the Meter;985;8.552;1.801,1;21,06
+Tesla Inc.;NH;Behind the Meter;1.205;8.690;1.486,0;17,10
+Unitil Energy Systems;NH;Investor Owned;62.313;463.039;112.194,0;24,23
+Atlantic City Electric Co;NJ;Investor Owned;458.134;3.769.220;729.679,7;19,36
+City of Vineland - (NJ);NJ;Municipal;22.696;207.666;34.548,8;16,64
+Jersey Central Power & Lt Co;NJ;Investor Owned;919.604;8.840.013;1.202.493,7;13,60
+Public Service Elec & Gas Co;NJ;Investor Owned;1.901.659;13.171.809;2.296.478,4;17,43
+Rockland Electric Co;NJ;Investor Owned;62.028;697.562;122.834,6;17,61
+Spruce Finance;NJ;Behind the Meter;4.020;33.758;5.323,9;15,77
+SunPower Capital, LLC;NJ;Behind the Meter;4.927;50.370;7.674,7;15,24
+Sunnova;NJ;Behind the Meter;30.660;287.966;44.527,5;15,46
+Sunrun Inc.;NJ;Behind the Meter;36.624;290.756;46.570,4;16,02
+Tesla Inc.;NJ;Behind the Meter;10.057;75.584;12.942,0;17,12
+Central New Mexico El Coop, Inc;NM;Cooperative;16.895;125.471;20.762,0;16,55
+Central Valley Elec Coop, Inc;NM;Cooperative;5.884;86.950;10.156,7;11,68
+City of Farmington - (NM);NM;Municipal;35.988;283.807;32.944,0;11,61
+Continental Divide El Coop Inc;NM;Cooperative;20.585;147.715;21.371,0;14,47
+El Paso Electric Co;NM;Investor Owned;93.609;798.370;98.489,0;12,34
+Farmers Electric Coop, Inc - (NM);NM;Cooperative;10.122;104.617;14.151,8;13,53
+Jemez Mountains Elec Coop, Inc;NM;Cooperative;28.006;191.936;25.903,3;13,50
+Kit Carson Electric Coop, Inc;NM;Cooperative;25.650;160.486;25.477,8;15,88
+Lea County Electric Coop, Inc;NM;Cooperative;7.165;96.036;11.200,0;11,66
+Los Alamos County;NM;Municipal;7.887;59.591;7.329,4;12,30
+Navajo Tribal Utility Authority;NM;State;9.988;66.279;10.393,0;15,68
+Navopache Electric Coop, Inc;NM;Cooperative;1.473;7.632;1.245,0;16,31
+Otero County Electric Coop Inc;NM;Cooperative;16.372;116.579;21.100,8;18,10
+Public Service Co of NM;NM;Investor Owned;484.071;3.367.993;484.699,0;14,39
+Rio Grande Electric Coop, Inc;NM;Cooperative;239;1.822;306,3;16,81
+Roosevelt County Elec Coop Inc;NM;Cooperative;3.901;52.571;6.256,0;11,90
+Southwestern Electric Coop Inc - (NM);NM;Cooperative;1.446;9.946;2.409,2;24,22
+Southwestern Public Service Co;NM;Investor Owned;99.338;1.216.818;154.498,5;12,70
+Springer Electric Coop, Inc;NM;Cooperative;2.456;15.142;2.722,0;17,98
+Sunnova;NM;Behind the Meter;860;8.085;1.348,9;16,68
+Sunrun Inc.;NM;Behind the Meter;3.203;28.299;3.664,2;12,95
+Tesla Inc.;NM;Behind the Meter;350;3.092;471,0;15,23
+Tri-County Electric Coop, Inc (OK);NM;Cooperative;3;8;2,3;28,75
+City of Boulder City - (NV);NV;Municipal;7.122;98.691;9.909,0;10,04
+Mt Wheeler Power, Inc;NV;Cooperative;5.163;86.355;7.037,4;8,15
+Nevada Power Co;NV;Investor Owned;886.142;10.299.680;1.454.954,0;14,13
+Overton Power District No 5;NV;Political Subdivision;14.714;213.897;22.524,0;10,53
+Raft Rural Elec Coop Inc;NV;Cooperative;1.521;17.965;1.746,0;9,72
+Sierra Pacific Power Co;NV;Investor Owned;321.309;2.747.233;365.490,3;13,30
+Spruce Finance;NV;Behind the Meter;120;1.418;185,2;13,06
+SunPower Capital, LLC;NV;Behind the Meter;779;10.360;1.421,2;13,72
+Sunnova;NV;Behind the Meter;4.533;47.714;5.745,1;12,04
+Sunrun Inc.;NV;Behind the Meter;15.625;189.036;24.891,8;13,17
+Surprise Valley Electrification;NV;Cooperative;4;53;5,4;10,19
+Tesla Inc.;NV;Behind the Meter;12.391;124.480;15.137,0;12,16
+Valley Electric Assn, Inc;NV;Cooperative;21.626;323.652;46.443,1;14,35
+Wells Rural Electric Co;NV;Cooperative;4.599;60.134;5.980,8;9,95
+Central Hudson Gas & Elec Corp;NY;Investor Owned;233.720;2.122.918;472.571,0;22,26
+City of Plattsburgh - (NY);NY;Municipal;8.806;163.353;8.341,1;5,11
+Consolidated Edison Co-NY Inc;NY;Investor Owned;2.609.391;11.875.490;3.415.630,0;28,76
+Fishers Island Utility Co Inc;NY;Investor Owned;646;4.763;1.825,1;38,32
+Jamestown Board of Public Util;NY;Municipal;16.150;160.593;13.181,6;8,21
+Long Island Power Authority;NY;State;1.026.687;9.390.851;2.368.251,3;25,22
+New York State Elec & Gas Corp;NY;Investor Owned;700.370;6.188.500;971.307,4;15,70
+Niagara Mohawk Power Corp.;NY;Investor Owned;1.379.221;10.679.796;1.991.071,6;18,64
+Orange & Rockland Utils Inc;NY;Investor Owned;152.372;1.218.224;289.806,5;23,79
+Pennsylvania Electric Co;NY;Investor Owned;3.304;31.501;4.011,6;12,73
+Rochester Gas & Electric Corp;NY;Investor Owned;276.292;2.276.305;359.405,3;15,79
+Spruce Finance;NY;Behind the Meter;3.231;22.493;4.090,3;18,18
+SunPower Capital, LLC;NY;Behind the Meter;8.722;59.068;15.264,3;25,84
+Sunnova;NY;Behind the Meter;7.508;61.403;11.470,7;18,68
+Sunrun Inc.;NY;Behind the Meter;32.280;234.082;45.550,8;19,46
+Tesla Inc.;NY;Behind the Meter;16.990;122.514;21.004,0;17,14
+Town of Massena - (NY);NY;Municipal;8.198;120.600;7.502,0;6,22
+Village of Fairport - (NY);NY;Municipal;16.283;247.895;14.700,7;5,93
+Village of Freeport - (NY);NY;Municipal;13.288;121.595;17.052,0;14,02
+Village of Solvay - (NY);NY;Municipal;4.706;60.000;3.846,0;6,41
+Buckeye Rural Elec Coop, Inc;OH;Cooperative;17.767;227.265;39.156,9;17,23
+Butler Rural Electric Coop Inc - (OH);OH;Cooperative;11.244;186.043;32.224,0;17,32
+City of Bowling Green - (OH);OH;Municipal;12.901;100.232;15.348,0;15,31
+City of Celina - (OH);OH;Municipal;7.110;88.920;9.892,0;11,12
+City of Cleveland - (OH);OH;Municipal;64.594;393.878;56.111,9;14,25
+City of Columbus - (OH);OH;Municipal;13.640;92.846;10.854,3;11,69
+City of Cuyahoga Falls - (OH);OH;Municipal;23.961;177.389;22.350,9;12,60
+City of Dover - (OH);OH;Municipal;5.836;53.893;7.946,0;14,74
+City of Hamilton - (OH);OH;Municipal;26.707;249.108;39.694,0;15,93
+City of Lebanon - (OH);OH;Municipal;8.648;87.959;10.526,0;11,97
+City of Niles - (OH);OH;Municipal;12.119;91.770;7.387,7;8,05
+City of Orrville - (OH);OH;Municipal;6.301;75.188;8.250,5;10,97
+City of Painesville;OH;Municipal;10.782;86.236;12.259,7;14,22
+City of Piqua - (OH);OH;Municipal;9.744;88.345;10.910,6;12,35
+City of St Marys - (OH);OH;Municipal;3.755;36.973;4.802,6;12,99
+City of Wadsworth - (OH);OH;Municipal;12.105;111.877;12.874,0;11,51
+City of Wapakoneta - (OH);OH;Municipal;4.926;48.349;5.484,0;11,34
+City of Westerville - (OH);OH;Municipal;15.691;168.392;22.353,0;13,27
+Cleveland Electric Illum Co;OH;Investor Owned;252.788;1.795.431;236.750,6;13,19
+Clyde Light & Power;OH;Municipal;2.760;25.139;2.992,0;11,90
+Consolidated Cooperative;OH;Cooperative;16.461;254.743;39.585,0;15,54
+Dayton Power & Light Co;OH;Investor Owned;259.056;2.945.538;370.889,0;12,59
+Duke Energy Ohio Inc;OH;Investor Owned;307.110;3.392.162;400.151,0;11,80
+Guernsey-Muskingum El Coop Inc;OH;Cooperative;15.155;174.081;27.293,4;15,68
+Hancock-Wood Electric Coop Inc;OH;Cooperative;11.176;151.458;23.664,3;15,62
+Holmes-Wayne Electric Coop Inc;OH;Cooperative;14.530;180.296;26.771,7;14,85
+Licking Rural Electric Inc;OH;Cooperative;25.376;324.961;51.351,0;15,80
+Lorain-Medina R E C, Inc;OH;Cooperative;15.130;217.941;35.246,2;16,17
+Midwest Electric, Inc;OH;Cooperative;10.736;175.832;23.106,9;13,14
+Midwest Energy Cooperative;OH;Cooperative;868;10.898;1.975,9;18,13
+North Central Elec Coop, Inc;OH;Cooperative;8.426;123.659;19.029,4;15,39
+Ohio Edison Co;OH;Investor Owned;356.619;3.507.845;444.025,5;12,66
+Ohio Power Co;OH;Investor Owned;738.395;8.442.418;1.306.655,0;15,48
+Paulding-Putman Elec Coop, Inc;OH;Cooperative;9.123;138.799;19.651,9;14,16
+Pioneer Rural Elec Coop, Inc - (OH);OH;Cooperative;16.010;255.354;38.748,6;15,17
+South Central Power Company;OH;Cooperative;114.593;1.543.256;209.920,9;13,60
+Sunnova;OH;Behind the Meter;1;6;0,2;3,33
+The Toledo Edison Co;OH;Investor Owned;88.868;844.563;110.882,0;13,13
+Union Rural Electric Coop, Inc;OH;Cooperative;11.009;157.340;23.192,4;14,74
+Alfalfa Electric Coop, Inc;OK;Cooperative;2.674;52.125;6.054,0;11,61
+Arkansas Valley Elec Coop Corp;OK;Cooperative;4.187;61.494;8.064,8;13,11
+CKenergy Electric Cooperative;OK;Cooperative;22.044;273.451;40.557,0;14,83
+Canadian Valley Elec Coop, Inc;OK;Cooperative;23.658;390.468;47.538,7;12,17
+Central Rural Electric Cooperative, Inc;OK;Cooperative;18.770;369.204;36.612,5;9,92
+Choctaw Electric Coop Inc;OK;Cooperative;20.623;298.265;43.329,3;14,53
+Cimarron Electric Coop;OK;Cooperative;14.653;179.737;23.663,8;13,17
+City of Claremore;OK;Municipal;11.453;128.614;20.114,0;15,64
+City of Edmond - (OK);OK;Municipal;37.596;549.830;60.524,8;11,01
+City of Ponca City - (OK);OK;Municipal;13.837;145.904;21.974,0;15,06
+Cookson Hills Elec Coop, Inc;OK;Cooperative;17.208;258.906;30.983,3;11,97
+Cotton Electric Coop, Inc;OK;Cooperative;19.241;323.758;42.107,8;13,01
+East Central Oklahoma Elec Coop Inc;OK;Cooperative;32.388;459.486;49.906,0;10,86
+Empire District Electric Co;OK;Investor Owned;3.807;53.985;6.695,6;12,40
+Indian Electric Coop, Inc;OK;Cooperative;14.558;244.593;26.638,7;10,89
+Kay Electric Coop;OK;Cooperative;4.323;56.241;7.725,0;13,74
+Kiamichi Electric Coop, Inc;OK;Cooperative;20.657;284.161;37.419,0;13,17
+Lake Region Electric Coop, Inc - (OK);OK;Cooperative;24.212;360.143;37.316,0;10,36
+Northeast Oklahoma Electric Co;OK;Cooperative;36.982;530.179;60.455,0;11,40
+Northwestern Electric Coop Inc - (OK);OK;Cooperative;9.608;112.941;18.672,0;16,53
+Oklahoma Electric Coop Inc;OK;Cooperative;56.267;909.175;118.535,0;13,04
+Oklahoma Gas & Electric Co;OK;Investor Owned;696.033;9.617.975;1.215.869,7;12,64
+Ozarks Electric Coop Corp - (AR);OK;Cooperative;11.593;149.952;17.683,4;11,79
+People's Electric Cooperative;OK;Cooperative;14.293;244.864;31.727,5;12,96
+Public Service Co of Oklahoma;OK;Investor Owned;491.335;6.618.175;815.819,9;12,33
+Red River Valley Rrl Elec Assn;OK;Cooperative;15.458;220.878;26.336,0;11,92
+Rural Electric Coop, Inc;OK;Cooperative;8.885;128.954;16.077,5;12,47
+Southeastern Electric Coop Inc - (OK);OK;Cooperative;15.164;224.036;28.433,0;12,69
+Southwest Arkansas E C C;OK;Cooperative;222;2.727;361,6;13,26
+Southwestern Electric Coop Inc - (NM);OK;Cooperative;3;45;9,1;20,22
+Stillwater Utilities Authority;OK;Municipal;19.487;216.838;29.079,0;13,41
+Tri-County Electric Coop, Inc (OK);OK;Cooperative;13.466;136.703;22.705,3;16,61
+Verdigris Valley Elec Coop Inc;OK;Cooperative;34.312;607.491;61.793,0;10,17
+Central Electric Coop Inc - (OR);OR;Cooperative;33.025;567.055;51.698,0;9,12
+Central Lincoln People's Ut Dt;OR;Political Subdivision;35.228;447.398;45.316,0;10,13
+City of Eugene - (OR);OR;Municipal;87.450;984.714;115.118,0;11,69
+City of Forest Grove;OR;Municipal;10.162;123.936;11.163,0;9,01
+City of McMinnville - (OR);OR;Municipal;15.357;211.286;15.217,0;7,20
+City of Springfield - (OR);OR;Municipal;29.050;384.696;28.814,0;7,49
+Clatskanie Peoples Util Dist;OR;Political Subdivision;3.750;77.719;5.566,9;7,16
+Columbia River Peoples Ut Dist;OR;Political Subdivision;16.100;240.481;21.020,2;8,74
+Columbia Rural Elec Assn, Inc;OR;Cooperative;44;829;101,0;12,18
+Consumers Power, Inc;OR;Cooperative;18.459;271.227;30.731,7;11,33
+Coos-Curry Electric Coop, Inc;OR;Cooperative;15.763;189.536;23.954,9;12,64
+Emerald People's Utility Dist;OR;Political Subdivision;19.814;314.923;32.179,1;10,22
+Idaho Power Co;OR;Investor Owned;13.883;201.454;20.619,5;10,24
+Lane Electric Coop Inc;OR;Cooperative;12.229;195.722;22.859,9;11,68
+Midstate Electric Coop, Inc;OR;Cooperative;18.088;291.747;26.470,0;9,07
+Northern Wasco County PUD;OR;Political Subdivision;9.717;150.359;10.994,6;7,31
+Oregon Trail El Cons Coop, Inc;OR;Cooperative;25.769;324.238;32.604,3;10,06
+PacifiCorp;OR;Investor Owned;535.721;6.125.175;607.094,4;9,91
+Portland General Electric Co;OR;Investor Owned;809.603;8.088.473;1.103.143,0;13,64
+Salem Electric - (OR);OR;Cooperative;18.229;200.294;20.616,0;10,29
+Sunrun Inc.;OR;Behind the Meter;85;397;50,9;12,82
+Surprise Valley Electrification;OR;Cooperative;1.192;17.763;1.744,5;9,82
+Tesla Inc.;OR;Behind the Meter;3.659;20.198;2.221,0;11,00
+Tillamook Peoples Utility Dist;OR;Political Subdivision;19.739;264.338;28.032,0;10,60
+Umatilla Electric Coop Assn;OR;Cooperative;12.302;188.578;17.120,4;9,08
+Umpqua Indian Utility Cooperative;OR;Cooperative;48;457;45,0;9,85
+Adams Electric Cooperative Inc;PA;Cooperative;31.489;452.512;56.037,0;12,38
+Bedford Rural Elec Coop, Inc;PA;Cooperative;8.789;105.071;13.005,0;12,38
+Borough of Chambersburg;PA;Municipal;9.681;97.239;9.662,0;9,94
+Central Electric Coop, Inc - (PA);PA;Cooperative;23.574;224.059;32.627,0;14,56
+Citizens Electric Co - (PA);PA;Investor Owned;5.905;89.685;11.069,0;12,34
+Claverack Rural Elec Coop Inc;PA;Cooperative;17.257;179.265;24.886,0;13,88
+Duquesne Light Co;PA;Investor Owned;433.718;3.235.882;605.228,8;18,70
+Metropolitan Edison Co;PA;Investor Owned;410.569;4.738.436;683.296,9;14,42
+Northwestern Rural E C A, Inc - (PA);PA;Cooperative;18.131;198.769;27.091,0;13,63
+PECO Energy Co;PA;Investor Owned;1.175.420;10.859.290;1.561.842,0;14,38
+PPL Electric Utilities Corp;PA;Investor Owned;844.001;9.402.551;1.585.216,7;16,86
+Pennsylvania Electric Co;PA;Investor Owned;407.157;3.592.913;591.533,3;16,46
+Pennsylvania Power Co;PA;Investor Owned;122.902;1.393.132;209.155,9;15,01
+Pike County Light & Power Co;PA;Investor Owned;3.455;27.414;6.043,3;22,04
+REA Energy Coop Inc;PA;Cooperative;20.902;239.155;30.149,0;12,61
+Somerset Rural Elec Coop, Inc;PA;Cooperative;12.348;129.164;15.543,0;12,03
+SunPower Capital, LLC;PA;Behind the Meter;52;243;26,9;11,07
+Sunnova;PA;Behind the Meter;5.772;65.141;9.079,2;13,94
+Sunrun Inc.;PA;Behind the Meter;4.964;45.923;6.848,4;14,91
+Tesla Inc.;PA;Behind the Meter;6.956;59.447;8.721,0;14,67
+Tri-County Rural Elec Coop Inc (PA);PA;Cooperative;18.146;124.900;20.621,0;16,51
+UGI Utilities, Inc;PA;Investor Owned;55.190;572.988;98.234,4;17,14
+Valley Rural Electric Coop Inc;PA;Cooperative;20.172;219.190;28.663,0;13,08
+Wellsborough Electric Co;PA;Investor Owned;5.135;43.939;7.231,0;16,46
+West Penn Power Company;PA;Investor Owned;522.835;6.049.297;749.313,2;12,39
+Block Island Utility District;RI;Political Subdivision;1.610;7.108;2.591,0;36,45
+Pascoag Utility District;RI;Municipal;4.346;35.344;5.708,0;16,15
+Sunnova;RI;Behind the Meter;2.059;16.343;2.528,5;15,47
+Sunrun Inc.;RI;Behind the Meter;1.949;13.860;3.305,1;23,85
+Tesla Inc.;RI;Behind the Meter;95;736;153,0;20,79
+The Narragansett Electric Co;RI;Investor Owned;408.910;2.890.589;664.363,6;22,98
+Aiken Electric Coop Inc;SC;Cooperative;47.697;641.275;93.692,6;14,61
+Berkeley Electric Coop Inc;SC;Cooperative;104.645;1.494.448;200.359,0;13,41
+Black River Electric Coop, Inc - (SC);SC;Cooperative;29.778;469.454;56.343,6;12,00
+Blue Ridge Electric Coop Inc - (SC);SC;Cooperative;64.859;782.340;132.556,3;16,94
+Broad River Electric Coop, Inc;SC;Cooperative;22.208;290.157;43.020,9;14,83
+City of Gaffney - (SC);SC;Municipal;6.212;72.037;8.356,0;11,60
+City of Newberry - (SC);SC;Municipal;4.434;46.163;6.935,2;15,02
+City of Orangeburg - (SC);SC;Municipal;20.692;282.477;34.902,3;12,36
+City of Rock Hill - (SC);SC;Municipal;36.588;359.960;45.106,0;12,53
+Dominion Energy South Carolina, Inc;SC;Investor Owned;673.453;8.485.890;1.376.181,0;16,22
+Duke Energy Carolinas, LLC;SC;Investor Owned;540.420;7.134.506;823.796,2;11,55
+Duke Energy Progress - (NC);SC;Investor Owned;142.492;2.122.011;259.560,0;12,23
+Easley Combined Utility System;SC;Municipal;14.726;170.974;21.890,7;12,80
+Edisto Electric Coop, Inc;SC;Cooperative;15.299;221.858;34.453,7;15,53
+Fairfield Electric Coop, Inc;SC;Cooperative;30.475;422.724;56.415,0;13,35
+Greenwood CPW;SC;Municipal;11.597;114.910;12.713,0;11,06
+Greer Commission of Public Wks;SC;Municipal;20.363;221.591;27.766,0;12,53
+Haywood Electric Member Corp;SC;Cooperative;9;61;10,0;16,39
+Horry Electric Coop Inc;SC;Cooperative;78.610;1.070.438;138.810,0;12,97
+Laurens Electric Coop, Inc;SC;Cooperative;56.048;727.009;100.715,0;13,85
+Lockhart Power Co;SC;Investor Owned;4.933;63.552;8.682,5;13,66
+Lynches River Elec Coop, Inc;SC;Cooperative;20.743;265.746;39.824,0;14,99
+Marlboro Electric Coop, Inc;SC;Cooperative;5.410;82.058;8.261,0;10,07
+Mid-Carolina Electric Coop Inc;SC;Cooperative;55.110;780.548;110.698,7;14,18
+Newberry Electric Coop, Inc;SC;Cooperative;12.767;152.965;23.068,0;15,08
+Palmetto Electric Coop Inc;SC;Cooperative;65.970;946.716;112.632,0;11,90
+Pee Dee Electric Coop, Inc;SC;Cooperative;28.478;409.610;45.098,0;11,01
+Santee Electric Coop, Inc;SC;Cooperative;34.803;526.089;75.788,8;14,41
+South Carolina Public Service Authority;SC;State;170.536;1.979.376;224.245,0;11,33
+Sunnova;SC;Behind the Meter;289;3.085;314,0;10,18
+Sunrun Inc.;SC;Behind the Meter;7.739;74.997;12.717,7;16,96
+Tri-County Electric Coop, Inc (SC);SC;Cooperative;17.559;238.719;37.575,4;15,74
+York Electric Coop Inc;SC;Cooperative;62.814;812.434;98.114,0;12,08
+Black Hills Electric Coop, Inc;SD;Cooperative;8.966;127.438;17.766,0;13,94
+Black Hills Power, Inc.;SD;Investor Owned;58.892;573.621;79.824,0;13,92
+Central Electric Coop, Inc - (SD);SD;Cooperative;6.428;125.026;14.962,6;11,97
+City of Brookings - (SD);SD;Municipal;10.033;105.369;11.591,0;11,00
+City of Madison - (SD);SD;Municipal;2.828;36.677;4.144,0;11,30
+City of Pierre - (SD);SD;Municipal;6.166;68.590;6.861,5;10,00
+City of Volga - (SD);SD;Municipal;1.042;11.680;1.492,3;12,78
+Dakota Energy Coop Inc;SD;Cooperative;3.287;63.585;9.163,9;14,41
+MidAmerican Energy Co;SD;Investor Owned;4.208;58.799;4.613,9;7,85
+Montana-Dakota Utilities Co;SD;Investor Owned;6.384;69.892;8.550,0;12,23
+Nebraska Public Power District;SD;Political Subdivision;1.083;17.372;1.626,0;9,36
+NorthWestern Energy - (SD);SD;Investor Owned;51.069;596.376;69.809,0;11,71
+Northern Electric Coop, Inc;SD;Cooperative;5.466;150.112;15.002,7;9,99
+Northern States Power Co - Minnesota;SD;Investor Owned;87.577;830.054;109.777,0;13,23
+Otter Tail Power Co;SD;Investor Owned;8.972;121.912;13.472,0;11,05
+Rosebud Electric Coop Inc;SD;Cooperative;4.823;68.750;6.826,0;9,93
+Sioux Valley SW Elec Coop;SD;Cooperative;21.147;334.258;40.404,8;12,09
+Southeastern Electric Coop Inc - (SD);SD;Cooperative;18.412;275.404;30.928,8;11,23
+Watertown Municipal Utilities;SD;Municipal;11.075;126.454;11.407,0;9,02
+West River Electric Assn Inc;SD;Cooperative;17.214;199.131;26.298,0;13,21
+Appalachian Electric Coop;TN;Cooperative;42.362;629.092;80.669,0;12,82
+Athens Utility Board;TN;Municipal;11.335;157.477;18.246,0;11,59
+Benton County;TN;Municipal;8.590;116.769;15.832,0;13,56
+Bolivar Energy Authority;TN;Municipal;8.911;129.049;17.385,0;13,47
+Caney Fork Electric Coop, Inc;TN;Cooperative;28.584;407.481;52.148,0;12,80
+Carroll County - (TN);TN;Municipal;12.250;179.426;21.328,0;11,89
+Chickasaw Electric Coop, Inc;TN;Cooperative;18.796;318.556;35.968,0;11,29
+City of Alcoa Utilities;TN;Municipal;27.010;398.629;48.520,0;12,17
+City of Bristol - (TN);TN;Municipal;29.321;453.136;48.844,0;10,78
+City of Brownsville;TN;Municipal;4.145;53.372;6.028,0;11,29
+City of Chattanooga - (TN);TN;Municipal;157.845;2.132.922;260.604,0;12,22
+City of Clarksville - (TN);TN;Municipal;71.291;1.004.434;125.499,0;12,49
+City of Cleveland - (TN);TN;Municipal;28.178;378.146;48.382,0;12,79
+City of Clinton - (TN);TN;Municipal;25.878;376.279;47.785,0;12,70
+City of Cookeville - (TN);TN;Municipal;15.354;182.345;21.005,0;11,52
+City of Covington - (TN);TN;Municipal;3.700;49.608;5.576,0;11,24
+City of Dayton - (TN);TN;Municipal;8.892;114.735;13.871,0;12,09
+City of Dickson;TN;Municipal;29.806;452.285;52.453,0;11,60
+City of Dyersburg;TN;Municipal;9.470;133.654;15.369,0;11,50
+City of Elizabethton - (TN);TN;Municipal;23.138;313.413;37.816,0;12,07
+City of Etowah;TN;Municipal;4.399;59.745;8.343,0;13,96
+City of Fayetteville;TN;Municipal;16.438;252.307;30.648,0;12,15
+City of Gallatin - (TN);TN;Municipal;21.016;271.267;31.276,0;11,53
+City of Greeneville - (TN);TN;Municipal;31.905;467.935;55.375,0;11,83
+City of Harriman - (TN);TN;Municipal;9.244;125.544;17.280,0;13,76
+City of Humboldt;TN;Municipal;3.531;43.840;5.101,0;11,64
+City of Jackson - (TN);TN;Municipal;30.595;406.789;49.859,0;12,26
+City of Jellico;TN;Municipal;1.623;22.768;2.795,0;12,28
+City of LaFollette;TN;Municipal;19.676;258.098;34.550,0;13,39
+City of Lawrenceburg;TN;Municipal;17.767;263.511;31.597,0;11,99
+City of Lenoir - (TN);TN;Municipal;59.579;890.976;108.199,0;12,14
+City of Lewisburg - (TN);TN;Municipal;4.860;67.100;7.648,0;11,40
+City of Lexington - (TN);TN;Municipal;17.829;232.727;28.584,0;12,28
+City of Memphis - (TN);TN;Municipal;376.067;5.291.762;633.309,8;11,97
+City of Milan;TN;Municipal;6.825;103.850;12.385,0;11,93
+City of Morristown - (TN);TN;Municipal;12.922;165.346;21.128,0;12,78
+City of Mt Pleasant - (TN);TN;Municipal;3.471;51.222;6.793,0;13,26
+City of Newbern;TN;Municipal;1.498;20.311;2.184,0;10,75
+City of Newport;TN;Municipal;19.526;254.087;34.289,0;13,49
+City of Oak Ridge;TN;Municipal;14.919;166.834;21.473,0;12,87
+City of Paris - (TN);TN;Municipal;16.015;221.536;26.058,0;11,76
+City of Pulaski - (TN);TN;Municipal;12.299;177.532;23.422,0;13,19
+City of Ripley - (TN);TN;Municipal;5.203;70.235;8.489,0;12,09
+City of Rockwood - (TN);TN;Municipal;11.929;172.004;22.391,0;13,02
+City of Shelbyville - (TN);TN;Municipal;9.281;128.554;14.726,0;11,46
+City of Smithville - (TN);TN;Municipal;2.337;25.785;3.221,0;12,49
+City of Sparta;TN;Municipal;2.236;25.579;3.160,0;12,35
+City of Springfield - (TN);TN;Municipal;7.408;99.453;11.241,0;11,30
+City of Sweetwater;TN;Municipal;7.385;113.413;13.490,0;11,89
+City of Trenton - (TN);TN;Municipal;1.946;23.966;3.022,0;12,61
+City of Union City;TN;Municipal;5.178;65.645;7.675,0;11,69
+City of Winchester - (TN);TN;Municipal;5.176;70.763;8.467,0;11,97
+Columbia Power System;TN;Municipal;28.917;388.627;47.111,0;12,12
+Cumberland Elec Member Corp;TN;Cooperative;95.827;1.657.350;210.781,0;12,72
+Cumberland Valley Electric, Inc.;TN;Cooperative;73;773;109,0;14,10
+Duck River Elec Member Corp;TN;Cooperative;68.879;1.127.298;138.964,0;12,33
+Entergy Arkansas LLC;TN;Investor Owned;1;32;3,7;11,56
+Forked Deer Electric Coop, Inc;TN;Cooperative;8.356;139.115;18.931,0;13,61
+Fort Loudoun Electric Coop;TN;Cooperative;29.554;473.530;57.849,0;12,22
+French Broad Elec Member Corp;TN;Cooperative;985;8.813;1.225,1;13,90
+Gibson Electric Members Corp;TN;Cooperative;29.141;466.240;59.781,0;12,82
+Holston Electric Coop, Inc;TN;Cooperative;25.447;358.970;45.699,0;12,73
+Johnson City - (TN);TN;Municipal;70.347;990.987;125.354,0;12,65
+Kingsport Power Co;TN;Investor Owned;42.525;655.536;71.373,0;10,89
+Knoxville Utilities Board;TN;Municipal;187.716;2.523.550;308.133,0;12,21
+Loudon Utilities Board;TN;Municipal;11.976;177.745;20.615,0;11,60
+Maryville Utilities;TN;Municipal;19.686;264.827;30.236,0;11,42
+McMinnville Electric System;TN;Municipal;6.499;80.281;9.116,0;11,36
+Meriwether Lewis Electric Coop;TN;Cooperative;29.893;430.729;56.871,0;13,20
+Middle Tennessee E M C;TN;Cooperative;289.722;4.515.007;515.304,0;11,41
+Mountain Electric Coop, Inc;TN;Cooperative;12.576;151.575;18.111,0;11,95
+Nashville Electric Service;TN;Municipal;391.807;5.090.661;669.494,0;13,15
+Pickwick Electric Coop;TN;Cooperative;16.511;248.167;31.208,0;12,58
+Plateau Electric Cooperative;TN;Cooperative;13.967;163.989;21.487,0;13,10
+Powell Valley Electric Coop;TN;Cooperative;20.755;260.502;29.892,0;11,47
+Sequachee Valley Electric Coop;TN;Cooperative;32.079;451.751;57.705,0;12,77
+Sevier County Electric System;TN;Municipal;34.944;488.454;55.588,0;11,38
+South Kentucky Rural E C C;TN;Cooperative;155;1.491;202,2;13,56
+Southwest Tennessee E M C;TN;Cooperative;43.337;688.033;88.343,0;12,84
+Tennessee Valley Electric Coop;TN;Cooperative;16.487;221.078;28.244,0;12,78
+Town of Erwin - (TN);TN;Municipal;7.614;92.538;11.382,0;12,30
+Tri-County Elec Member Corp (TN);TN;Cooperative;24.085;372.644;45.845,0;12,30
+Tri-State Electric Member Corp;TN;Cooperative;2.726;33.690;4.613,0;13,69
+Tullahoma Board-Public Utils;TN;Municipal;9.132;128.577;14.401,0;11,20
+Upper Cumberland E M C;TN;Cooperative;44.328;646.089;79.601,0;12,32
+Volunteer Electric Coop;TN;Cooperative;101.929;1.468.539;176.557,0;12,02
+Weakley County Mun Elec Sys;TN;Municipal;15.476;245.507;27.859,0;11,35
+3000 Energy Corp;TX;Retail Power Marketer;1.979;23.982;3.997,3;16,67
+AP Holdings LLC;TX;Retail Power Marketer;20.706;390.187;30.109,5;7,72
+Accent Energy Holdings, LLC;TX;Retail Power Marketer;4.803;74.013;11.083,0;14,97
+Alliance Power Company, LLC.;TX;Retail Power Marketer;5.196;85.952;8.440,9;9,82
+Ambit Energy Holdings, LLC;TX;Retail Power Marketer;374.951;4.789.626;737.961,0;15,41
+AmeriPower LLC;TX;Retail Power Marketer;1.947;1.730;196,1;11,34
+Amigo Energy;TX;Retail Power Marketer;114.676;1.635.646;218.165,4;13,34
+Arrow Energy TX LLC;TX;Retail Power Marketer;40;36;5,0;13,89
+Austin Energy;TX;Municipal;479.353;5.166.372;612.163,9;11,85
+BKV-BPP Retail, LLC;TX;Retail Power Marketer;6;1;0,2;20,00
+Bailey County Elec Coop Assn;TX;Cooperative;3.346;26.442;4.025,0;15,22
+Bandera Electric Coop, Inc;TX;Cooperative;33.706;533.938;57.431,0;10,76
+Bartlett Electric Coop, Inc;TX;Cooperative;9.854;183.823;27.884,1;15,17
+Big Country Electric Coop, Inc;TX;Cooperative;9.301;95.450;15.149,0;15,87
+Bluebonnet Electric Coop, Inc;TX;Cooperative;102.759;1.641.037;182.258,5;11,11
+Bowie-Cass Electric Coop, Inc;TX;Cooperative;34.383;494.631;76.861,8;15,54
+Branch Energy Texas LLC;TX;Retail Power Marketer;2.925;44.193;5.024,5;11,37
+Brooklet Energy Distribution;TX;Retail Power Marketer;11.474;139.426;16.442,0;11,79
+Brownsville Public Utilities Board;TX;Municipal;46.999;641.945;83.438,0;13,00
+Bulb US LLC;TX;Retail Power Marketer;5.431;65.905;9.248,8;14,03
+Capital Energy PA LLC;TX;Retail Power Marketer;14.162;210.424;26.143,1;12,42
+Central Texas Elec Coop, Inc;TX;Cooperative;37.428;525.207;53.454,4;10,18
+Champion Energy Services;TX;Retail Power Marketer;157.939;2.510.023;216.111,0;8,61
+Chariot Energy;TX;Retail Power Marketer;26.904;453.235;56.906,0;12,56
+Cherokee County Elec Coop Assn;TX;Cooperative;20.888;317.440;41.662,0;13,12
+City of Brenham - (TX);TX;Municipal;5.915;81.350;7.914,5;9,73
+City of Bryan - (TX);TX;Municipal;54.231;804.509;85.785,4;10,66
+City of College Station - (TX);TX;Municipal;40.982;522.203;69.438,0;13,30
+City of Denton - (TX);TX;Municipal;54.079;701.389;74.200,0;10,58
+City of Floresville;TX;Municipal;15.294;261.081;31.774,3;12,17
+City of Garland - (TX);TX;Municipal;67.369;958.598;104.155,0;10,87
+City of Georgetown - (TX);TX;Municipal;28.194;308.527;42.424,5;13,75
+City of Greenville - (TX);TX;Municipal;13.862;185.867;23.088,0;12,42
+City of Lubbock - (TX);TX;Municipal;94.358;1.075.052;148.773,0;13,84
+City of New Braunfels - (TX);TX;Municipal;45.582;659.650;89.363,9;13,55
+City of San Antonio - (TX);TX;Municipal;823.105;11.276.203;1.377.763,0;12,22
+City of San Marcos - (TX);TX;Municipal;21.873;264.227;26.875,0;10,17
+City of Seguin - (TX);TX;Municipal;7.659;100.814;10.843,0;10,76
+Clearview Electric Inc.;TX;Retail Power Marketer;590;6.166;990,7;16,07
+Comanche County Elec Coop Assn;TX;Cooperative;6.870;110.793;17.504,0;15,80
+Concho Valley Elec Coop Inc;TX;Cooperative;11.747;136.754;22.146,5;16,19
+Constellation NewEnergy, Inc;TX;Retail Power Marketer;187.010;2.990.968;423.808,8;14,17
+Cooke County Elec Coop Assn;TX;Cooperative;15.208;225.799;34.761,0;15,39
+Deaf Smith Electric Coop, Inc;TX;Cooperative;5.317;56.929;6.505,4;11,43
+Declaration Energy LLC;TX;Retail Power Marketer;37.550;789.929;101.421,0;12,84
+Deep East Texas Elec Coop Inc;TX;Cooperative;40.359;598.430;78.461,0;13,11
+Denton County Elec Coop, Inc;TX;Cooperative;271.804;4.209.528;586.745,8;13,94
+Direct Energy Services;TX;Retail Power Marketer;304.884;4.504.883;581.881,9;12,92
+ENGIE Retail, LLC;TX;Retail Power Marketer;10.731;151.900;18.881,7;12,43
+El Paso Electric Co;TX;Investor Owned;310.263;2.519.058;386.497,0;15,34
+Energywell LLC;TX;Retail Power Marketer;7.110;7.917;802,2;10,13
+Entergy Texas Inc.;TX;Investor Owned;433.077;6.678.156;895.687,3;13,41
+Farmers Electric Coop, Inc - (TX);TX;Cooperative;73.951;1.174.967;156.693,0;13,34
+Fayette Electric Coop, Inc;TX;Cooperative;13.668;170.775;19.986,0;11,70
+Frontier Utilities, LLC;TX;Retail Power Marketer;119.604;1.758.093;269.358,9;15,32
+Gexa Energy, LP;TX;Retail Power Marketer;228.027;3.384.935;608.972,5;17,99
+Good Charlie & Co., LLC;TX;Retail Power Marketer;2.654;31.576;4.935,7;15,63
+Grayson-Collin Elec Coop, Inc;TX;Cooperative;71.028;1.096.322;161.140,0;14,70
+Green Mountain Energy Company;TX;Retail Power Marketer;324.902;3.913.777;582.093,5;14,87
+Greenbelt Electric Coop, Inc;TX;Cooperative;3.836;28.723;5.652,0;19,68
+Guadalupe Valley Elec Coop Inc;TX;Cooperative;85.406;1.324.704;165.641,7;12,50
+HILCO Electric Cooperative, Inc.;TX;Cooperative;24.773;478.196;72.668,0;15,20
+Hamilton County Elec Coop Assn;TX;Cooperative;18.884;246.999;36.006,6;14,58
+Heart of Texas Electric Coop;TX;Cooperative;17.771;361.752;45.748,6;12,65
+Heritage Power LLC;TX;Retail Power Marketer;6.259;101.126;10.376,9;10,26
+Houston County Elec Coop Inc;TX;Cooperative;21.070;234.901;36.592,7;15,58
+Hudson Energy Services;TX;Retail Power Marketer;4.662;82.649;8.723,0;10,55
+Infuse Energy LLC;TX;Retail Power Marketer;16.667;109.622;12.487,1;11,39
+Ironhorse Power Services LLC;TX;Retail Power Marketer;17.658;339.420;26.079,6;7,68
+JP Energy Resources, LLC;TX;Retail Power Marketer;28.662;289.643;39.013,9;13,47
+Jackson Electric Coop, Inc - (TX);TX;Cooperative;15.390;175.070;22.174,0;12,67
+Jasper-Newton Elec Coop, Inc;TX;Cooperative;20.918;282.990;38.824,0;13,72
+Just Energy;TX;Retail Power Marketer;276.235;4.113.360;558.316,0;13,57
+Karnes Electric Coop Inc;TX;Cooperative;13.383;273.006;30.816,0;11,29
+Kerrville Public Utility Board;TX;Municipal;19.905;294.877;26.342,4;8,93
+Lamar County Elec Coop Assn;TX;Cooperative;12.397;167.341;18.444,0;11,02
+Lamb County Electric Coop, Inc;TX;Cooperative;2.814;36.919;4.808,0;13,02
+Lea County Electric Coop, Inc;TX;Cooperative;1.855;29.828;2.628,0;8,81
+Liberty Power Corp.;TX;Retail Power Marketer;138;328;78,7;23,99
+Lighthouse Electric Coop, Inc;TX;Cooperative;3.854;28.361;4.663,6;16,44
+Lyntegar Electric Coop, Inc;TX;Cooperative;8.792;114.269;14.429,0;12,63
+MP2 Energy LLC;TX;Retail Power Marketer;40.934;503.541;71.241,0;14,15
+Magic Valley Electric Coop Inc;TX;Cooperative;117.744;1.903.292;216.525,9;11,38
+Medina Electric Coop, Inc;TX;Cooperative;29.067;401.959;53.340,4;13,27
+Mid-South Electric Coop Assn;TX;Cooperative;32.607;523.306;80.759,8;15,43
+MidAmerican Energy Services, LLC;TX;Retail Power Marketer;4.228;71.413;8.352,2;11,70
+Mothership;TX;Retail Power Marketer;3.164;47.203;8.612,0;18,24
+Navarro County Elec Coop, Inc;TX;Cooperative;17.419;276.906;40.933,0;14,78
+Navasota Valley Elec Coop, Inc;TX;Cooperative;19.020;235.720;34.709,8;14,73
+North Plains Electric Coop Inc;TX;Cooperative;3.088;36.223;4.919,0;13,58
+Nueces Electric Cooperative;TX;Cooperative;41.720;658.025;81.838,0;12,44
+Octopus Energy LLC;TX;Retail Power Marketer;14.798;272.559;29.024,3;10,65
+OhmConnect Texas LLC;TX;Retail Power Marketer;1.921;28.081;3.415,4;12,16
+Panola-Harrison Elec Coop, Inc;TX;Cooperative;9.340;136.764;18.618,8;13,61
+Pedernales Electric Coop, Inc;TX;Cooperative;370.868;5.660.723;639.424,1;11,30
+Pogo Energy LLC;TX;Retail Power Marketer;13.733;163.468;24.902,0;15,23
+Pulse Power, LLC;TX;Retail Power Marketer;160.940;2.591.318;351.740,5;13,57
+Reliant Energy Retail Services;TX;Retail Power Marketer;1.562.777;21.460.140;3.242.101,8;15,11
+Revolution Energy LLC;TX;Retail Power Marketer;83;925;141,0;15,24
+Rhythm Ops LLC;TX;Retail Power Marketer;52.770;527.299;94.952,8;18,01
+Rio Grande Electric Coop, Inc;TX;Cooperative;9.023;102.744;18.026,1;17,54
+Rita Blanca Electric Coop, Inc;TX;Cooperative;1.233;38.282;4.323,0;11,29
+Rusk County Electric Coop, Inc;TX;Cooperative;18.087;297.675;43.528,7;14,62
+Sam Houston Electric Coop Inc;TX;Cooperative;80.134;1.161.745;173.559,0;14,94
+San Bernard Electric Coop, Inc;TX;Cooperative;30.756;472.275;69.320,1;14,68
+San Patricio Electric Coop Inc;TX;Cooperative;9.702;135.855;19.697,6;14,50
+Smart Prepaid Electric;TX;Retail Power Marketer;149;1.510;240,7;15,94
+SmartEnergy Holdings, LLC;TX;Retail Power Marketer;3;51;7,5;14,71
+South Plains Electric Coop Inc;TX;Cooperative;50.571;675.407;91.287,8;13,52
+Southern Federal Power, LLC;TX;Retail Power Marketer;10.710;184.417;13.070,0;7,09
+Southwest Arkansas E C C;TX;Cooperative;1.060;21.129;2.549,8;12,07
+Southwest Texas Elec Coop, Inc;TX;Cooperative;5.783;40.256;6.243,0;15,51
+Southwestern Electric Coop Inc - (NM);TX;Cooperative;10;77;18,4;23,90
+Southwestern Electric Power Co;TX;Investor Owned;154.733;2.293.022;294.361,7;12,84
+Southwestern Public Service Co;TX;Investor Owned;219.033;2.627.405;353.165,8;13,44
+Spark Energy, LP;TX;Retail Power Marketer;38.182;649.826;84.781,0;13,05
+Stream SPE, LTD;TX;Retail Power Marketer;200.184;3.136.239;438.184,5;13,97
+Summer Energy LLC;TX;Retail Power Marketer;27.921;395.476;59.247,0;14,98
+Sunnova;TX;Behind the Meter;6.326;77.907;6.632,8;8,51
+Sunrun Inc.;TX;Behind the Meter;4.522;50.527;9.108,8;18,03
+TXU Energy Retail Co, LLC;TX;Retail Power Marketer;1.409.602;19.973.789;3.183.061,6;15,94
+Tara Energy, LLC;TX;Retail Power Marketer;30.953;432.369;57.353,0;13,26
+Taylor Electric Coop Inc - (TX);TX;Cooperative;17.008;240.809;43.568,8;18,09
+Tesla Energy Ventures;TX;Retail Power Marketer;24;117;4,0;3,42
+Tesla Inc.;TX;Behind the Meter;7.263;69.593;9.013,0;12,95
+Texpo Power, L.P.;TX;Retail Power Marketer;57.915;1.107.216;76.475,1;6,91
+Tomorow Energy Corp.;TX;Retail Power Marketer;3.321;50.129;6.320,7;12,61
+Tri-County Electric Coop, Inc (OK);TX;Cooperative;205;2.364;384,4;16,26
+Tri-County Electric Coop, Inc (TX);TX;Cooperative;110.971;2.096.613;288.562,0;13,76
+TriEagle Energy, L.P.;TX;Retail Power Marketer;127.457;2.035.030;259.373,0;12,75
+Trinity Valley Elec Coop Inc;TX;Cooperative;75.267;1.219.909;172.466,3;14,14
+US Retailers, LLC;TX;Retail Power Marketer;319.021;5.251.001;660.182,0;12,57
+United Electric Coop Service Inc - (TX);TX;Cooperative;82.957;1.426.347;194.701,7;13,65
+Upshur Rural Elec Coop Corp;TX;Cooperative;43.181;669.302;92.251,0;13,78
+V247 Power Corporation;TX;Retail Power Marketer;23.736;99.994;10.597,3;10,60
+Value Based Brands LLC;TX;Retail Power Marketer;183.858;2.742.120;388.937,0;14,18
+Varsity Energy;TX;Retail Power Marketer;7.146;98.258;12.693,4;12,92
+Victoria Electric Coop, Inc;TX;Cooperative;21.005;325.299;39.756,7;12,22
+Weatherford Mun Utility System;TX;Municipal;13.840;210.494;24.173,0;11,48
+Wharton County Elec Coop, Inc;TX;Cooperative;5.481;78.905;10.510,0;13,32
+Windrose Power & Gas LLC;TX;Retail Power Marketer;10.586;47.849;2.870,9;6,00
+Wise Electric Coop Inc;TX;Cooperative;19.152;356.540;49.339,0;13,84
+Wolverine Alternative Investments, LLC;TX;Retail Power Marketer;121;2.920;311,3;10,66
+Wood County Electric Coop, Inc;TX;Cooperative;34.575;481.978;68.936,0;14,30
+XOOM Energy Texas, LLC;TX;Retail Power Marketer;41.382;622.402;90.381,6;14,52
+Young Energy, LLC;TX;Retail Power Marketer;38.452;450.355;92.471,5;20,53
+City of Bountiful;UT;Municipal;15.616;160.800;17.392,0;10,82
+City of Logan - (UT);UT;Municipal;17.682;116.731;13.086,0;11,21
+City of Murray - (UT);UT;Municipal;16.371;125.462;11.615,0;9,26
+City of Springville - (UT);UT;Municipal;10.596;101.148;11.330,2;11,20
+City of St George;UT;Municipal;27.496;323.873;32.749,8;10,11
+Dixie Escalante R E A, Inc;UT;Cooperative;23.595;388.819;29.574,8;7,61
+Empire Electric Assn, Inc;UT;Cooperative;924;7.611;1.199,0;15,75
+Garkane Energy Coop, Inc;UT;Cooperative;11.121;123.329;13.150,8;10,66
+Lehi City Corporation;UT;Municipal;25.016;237.384;21.281,0;8,96
+Moon Lake Electric Assn Inc;UT;Cooperative;13.000;156.804;13.049,6;8,32
+Mt Wheeler Power, Inc;UT;Cooperative;219;2.143;202,5;9,45
+Navajo Tribal Utility Authority;UT;State;1.793;12.507;1.617,0;12,93
+PacifiCorp;UT;Investor Owned;901.864;8.291.943;922.879,8;11,13
+Provo City Corp;UT;Municipal;35.091;256.678;27.920,9;10,88
+Raft Rural Elec Coop Inc;UT;Cooperative;370;5.127;487,0;9,50
+Spanish Fork City Corporation;UT;Municipal;12.613;123.455;12.408,0;10,05
+Strawberry Electric Serv Dist;UT;Political Subdivision;3.611;50.647;6.247,7;12,34
+Sunnova;UT;Behind the Meter;4;21;0,8;3,81
+Sunrun Inc.;UT;Behind the Meter;759;5.884;822,0;13,97
+Wells Rural Electric Co;UT;Cooperative;507;5.739;597,3;10,41
+A & N Electric Coop;VA;Cooperative;32.415;376.851;47.388,3;12,57
+Appalachian Power Co;VA;Investor Owned;460.456;6.252.210;814.405,0;13,03
+Bristol Virginia Utilities;VA;Municipal;13.571;198.193;21.848,0;11,02
+Central Virginia Electric Coop;VA;Cooperative;34.060;512.105;71.521,0;13,97
+City of Danville - (VA);VA;Municipal;37.176;454.015;69.717,4;15,36
+City of Harrisonburg - (VA);VA;Municipal;17.990;208.840;23.708,0;11,35
+City of Manassas - (VA);VA;Municipal;14.008;169.568;19.923,0;11,75
+City of Salem - (VA);VA;Municipal;11.252;128.984;15.953,9;12,37
+Kentucky Utilities Co;VA;Investor Owned;22.864;348.798;47.546,4;13,63
+Mecklenburg Electric Cooperative;VA;Cooperative;29.816;363.278;52.599,6;14,48
+Northern Neck Elec Coop, Inc;VA;Cooperative;17.376;245.104;35.058,0;14,30
+Northern Virginia Elec Coop;VA;Cooperative;164.645;2.267.589;301.154,0;13,28
+Powell Valley Electric Coop;VA;Cooperative;6.578;89.356;10.160,0;11,37
+Prince George Electric Coop;VA;Cooperative;10.793;177.513;23.005,0;12,96
+Rappahannock Electric Coop;VA;Cooperative;162.816;2.404.396;320.782,7;13,34
+Shenandoah Valley Elec Coop;VA;Cooperative;84.189;1.223.045;152.182,4;12,44
+Southside Electric Coop, Inc;VA;Cooperative;55.919;760.129;113.196,0;14,89
+Sunnova;VA;Behind the Meter;13;55;5,0;9,09
+Tesla Inc.;VA;Behind the Meter;66;308;23,0;7,47
+Town of Bedford - (VA);VA;Municipal;5.911;84.268;10.797,0;12,81
+Virginia Electric & Power Co;VA;Investor Owned;2.332.881;29.595.057;3.968.614,8;13,41
+Virginia Tech Electric Service;VA;State;5.590;54.899;6.759,4;12,31
+City of Burlington Electric - (VT);VT;Municipal;17.550;88.628;15.253,1;17,21
+Green Mountain Power Corp;VT;Investor Owned;225.059;1.567.812;319.345,0;20,37
+SunPower Capital, LLC;VT;Behind the Meter;343;1.287;361,7;28,10
+Sunrun Inc.;VT;Behind the Meter;1.616;11.973;2.697,6;22,53
+Tesla Inc.;VT;Behind the Meter;1.588;9.087;1.745,0;19,20
+Vermont Electric Cooperative, Inc;VT;Cooperative;35.640;236.476;47.034,9;19,89
+Washington Electric Coop - (VT);VT;Cooperative;11.231;63.556;15.539,0;24,45
+Avista Corp;WA;Investor Owned;239.958;2.765.089;277.755,0;10,05
+Benton Rural Electric Assn;WA;Cooperative;12.744;238.963;20.708,1;8,67
+Big Bend Electric Coop, Inc;WA;Cooperative;5.279;121.553;10.033,5;8,25
+City of Centralia - (WA);WA;Municipal;8.964;127.889;12.493,9;9,77
+City of Ellensburg - (WA);WA;Municipal;8.877;88.172;9.238,0;10,48
+City of Port Angeles - (WA);WA;Municipal;9.947;136.391;12.134,0;8,90
+City of Richland - (WA);WA;Municipal;25.006;389.130;38.419,0;9,87
+City of Seattle - (WA);WA;Municipal;441.926;3.346.665;405.555,6;12,12
+City of Tacoma - (WA);WA;Municipal;171.948;2.041.309;204.838,0;10,03
+Columbia Rural Elec Assn, Inc;WA;Cooperative;4.182;61.544;7.995,4;12,99
+Elmhurst Mutual Power & Light Co;WA;Cooperative;15.043;236.548;16.416,5;6,94
+Inland Power & Light Company;WA;Cooperative;39.738;736.037;62.173,1;8,45
+Kootenai Electric Cooperative;WA;Cooperative;93;2.590;241,5;9,32
+Lakeview Light & Power;WA;Cooperative;8.223;114.144;11.064,0;9,69
+Modern Electric Water Company;WA;Cooperative;8.753;104.534;7.009,8;6,71
+Northern Lights, Inc;WA;Cooperative;17;153;19,0;12,42
+Orcas Power & Light Coop;WA;Cooperative;13.743;165.868;26.566,0;16,02
+PUD 1 of Snohomish County;WA;Political Subdivision;338.081;3.955.205;403.054,0;10,19
+PUD No 1 of Benton County;WA;Political Subdivision;49.045;781.760;68.016,0;8,70
+PUD No 1 of Chelan County;WA;Political Subdivision;40.899;973.990;33.073,0;3,40
+PUD No 1 of Clallam County;WA;Political Subdivision;30.088;487.507;55.223,6;11,33
+PUD No 1 of Clark County - (WA);WA;Political Subdivision;210.225;2.691.577;248.189,0;9,22
+PUD No 1 of Cowlitz County;WA;Political Subdivision;46.816;784.589;67.710,0;8,63
+PUD No 1 of Douglas County;WA;Political Subdivision;16.211;473.999;14.526,0;3,06
+PUD No 1 of Franklin County;WA;Political Subdivision;26.909;413.738;39.405,0;9,52
+PUD No 1 of Grays Harbor County;WA;Political Subdivision;39.099;518.242;63.918,9;12,33
+PUD No 1 of Jefferson County;WA;Political Subdivision;18.047;229.986;27.669,0;12,03
+PUD No 1 of Klickitat County;WA;Political Subdivision;11.625;162.260;18.452,0;11,37
+PUD No 1 of Lewis County;WA;Political Subdivision;29.313;502.037;45.488,8;9,06
+PUD No 1 of Okanogan County;WA;Political Subdivision;17.909;332.676;30.727,7;9,24
+PUD No 1 of Pend Oreille County;WA;Political Subdivision;9.013;167.179;14.160,0;8,47
+PUD No 2 of Grant County;WA;Political Subdivision;41.052;917.714;51.018,0;5,56
+PUD No 2 of Pacific County;WA;Political Subdivision;16.224;204.587;18.246,0;8,92
+PUD No 3 of Mason County;WA;Political Subdivision;33.131;479.072;56.515,0;11,80
+PacifiCorp;WA;Investor Owned;113.137;1.736.586;164.308,5;9,46
+Peninsula Light Company;WA;Cooperative;34.949;530.637;54.718,3;10,31
+Puget Sound Energy Inc;WA;Investor Owned;1.065.508;11.753.057;1.381.833,4;11,76
+Tesla Inc.;WA;Behind the Meter;99;576;76,0;13,19
+Vera Irrigation District #15;WA;Political Subdivision;11.957;161.672;13.491,0;8,34
+Adams-Columbia Electric Coop;WI;Cooperative;35.333;279.312;48.027,2;17,19
+Algoma Utility Comm;WI;Municipal;1.668;11.137;1.529,2;13,73
+Barron Electric Coop;WI;Cooperative;18.917;206.748;28.148,0;13,61
+Brodhead Water & Lighting Comm;WI;Municipal;1.534;13.094;1.783,9;13,62
+Cedarburg Light & Water Comm;WI;Municipal;5.824;46.152;6.073,7;13,16
+City of Black River Falls;WI;Municipal;2.227;19.399;2.888,0;14,89
+City of Boscobel - (WI);WI;Municipal;1.425;11.921;1.371,8;11,51
+City of Columbus - (WI);WI;Municipal;2.454;19.316;2.529,2;13,09
+City of Cuba City;WI;Municipal;977;7.674;975,3;12,71
+City of Eagle River - (WI);WI;Municipal;1.038;6.337;900,3;14,21
+City of Evansville;WI;Municipal;3.925;30.340;3.993,0;13,16
+City of Kaukauna;WI;Municipal;14.047;125.970;15.557,0;12,35
+City of Lodi - (WI);WI;Municipal;1.486;11.635;1.604,7;13,79
+City of Marshfield - (WI);WI;Municipal;11.931;100.861;11.232,0;11,14
+City of Menasha - (WI);WI;Municipal;8.427;62.166;8.283,9;13,33
+City of New Holstein - (WI);WI;Municipal;2.229;19.517;2.746,6;14,07
+City of New Richmond;WI;Municipal;4.682;40.298;4.835,1;12,00
+City of Plymouth - (WI);WI;Municipal;7.197;63.208;7.893,0;12,49
+City of Richland Center - (WI);WI;Municipal;2.447;17.112;2.142,6;12,52
+City of River Falls;WI;Municipal;6.454;52.202;7.401,9;14,18
+City of Stoughton - (WI);WI;Municipal;8.013;66.004;8.439,4;12,79
+City of Sturgeon Bay - (WI);WI;Municipal;7.477;55.263;7.247,7;13,11
+City of Westby;WI;Municipal;1.023;8.622;1.067,2;12,38
+Consolidated Water Power Co;WI;Investor Owned;70;677;85,7;12,66
+Dahlberg Light & Power Co;WI;Investor Owned;10.770;75.859;10.185,0;13,43
+Dunn County Electric Coop;WI;Cooperative;9.311;114.202;16.490,0;14,44
+East Central Energy;WI;Cooperative;5.116;50.212;7.437,1;14,81
+Florence Utility Comm;WI;Municipal;1.376;7.552;1.229,3;16,28
+Hartford Electric;WI;Municipal;6.927;52.499;6.568,2;12,51
+Hustisford Utilities;WI;Municipal;1.313;11.403;1.667,7;14,63
+Jefferson Utilities;WI;Municipal;3.602;30.503;3.801,9;12,46
+Juneau Utility Comm;WI;Municipal;934;7.868;977,2;12,42
+Lake Mills Light & Water;WI;Municipal;4.003;29.326;4.262,9;14,54
+Madison Gas & Electric Co;WI;Investor Owned;141.386;884.476;160.995,0;18,20
+Manitowoc Public Utilities;WI;Municipal;16.103;109.629;10.797,8;9,85
+New London Electric&Water Util;WI;Municipal;3.460;26.657;3.473,0;13,03
+North Central Power Co Inc;WI;Investor Owned;4.908;26.683;4.289,9;16,08
+Northern States Power Co;WI;Investor Owned;216.875;1.940.578;292.748,4;15,09
+Northwestern Wisconsin Elec Co;WI;Investor Owned;12.869;88.467;13.213,4;14,94
+Oakdale Electric Coop;WI;Cooperative;16.739;151.358;22.290,0;14,73
+Oconomowoc Utilities;WI;Municipal;9.335;79.392;10.759,9;13,55
+Oconto Falls Water & Light Comm;WI;Municipal;1.367;9.998;1.445,4;14,46
+Pioneer Power and Light Co;WI;Investor Owned;2.013;13.050;2.171,5;16,64
+Polk-Burnett Electric Coop;WI;Cooperative;19.898;197.505;28.974,0;14,67
+Reedsburg Utility Comm;WI;Municipal;4.669;39.218;5.095,8;12,99
+Riverland Energy Cooperative;WI;Cooperative;17.964;241.191;34.419,6;14,27
+Rock Energy Cooperative;WI;Cooperative;7.211;84.546;11.566,0;13,68
+Scenic Rivers Energy Coop;WI;Cooperative;13.427;189.567;27.120,8;14,31
+Shawano Municipal Utilities;WI;Municipal;4.809;34.393;4.050,9;11,78
+Slinger Utilities;WI;Municipal;2.454;20.512;2.706,1;13,19
+Sun Prairie Utilities;WI;Municipal;15.605;116.611;14.401,5;12,35
+Superior Water and Light Co;WI;Investor Owned;12.916;94.322;13.388,8;14,19
+Two Rivers Water & Light;WI;Municipal;5.585;34.042;4.616,6;13,56
+Village of Mt. Horeb - (WI);WI;Municipal;3.653;29.372;3.663,0;12,47
+Village of Muscoda - (WI);WI;Municipal;914;7.439;895,6;12,04
+Village of New Glarus - (WI);WI;Municipal;1.076;8.416;1.160,2;13,79
+Village of Prairie Du Sac - (WI);WI;Municipal;1.903;15.213;1.891,6;12,43
+Village of Waunakee - (WI);WI;Municipal;6.149;55.117;6.942,2;12,60
+Waterloo Light & Water Comm;WI;Municipal;1.503;13.024;1.778,2;13,65
+Waupun Utilities;WI;Municipal;3.887;32.381;4.031,0;12,45
+Westfield Electric Company;WI;Investor Owned;588;4.747;868,1;18,29
+Whitehall Electric Utility;WI;Municipal;779;6.710;864,1;12,88
+Wisconsin Electric Power Co;WI;Investor Owned;1.028.813;8.099.798;1.371.741,9;16,94
+Wisconsin Power & Light Co;WI;Investor Owned;429.581;3.686.150;559.649,0;15,18
+Wisconsin Public Service Corp;WI;Investor Owned;403.558;3.033.821;457.282,0;15,07
+Wisconsin Rapids W W & L Comm;WI;Municipal;12.174;97.997;11.780,0;12,02
+Appalachian Power Co;WV;Investor Owned;351.800;4.907.186;751.225,0;15,31
+Black Diamond Power Co;WV;Investor Owned;3.469;34.512;4.554,7;13,20
+Monongahela Power Co;WV;Investor Owned;334.385;3.700.797;428.034,6;11,57
+The Potomac Edison Company;WV;Investor Owned;130.196;2.018.265;213.403,4;10,57
+Wheeling Power Co;WV;Investor Owned;34.707;387.427;61.828,0;15,96
+Black Hills Power, Inc.;WY;Investor Owned;2.024;20.528;2.612,0;12,72
+Cheyenne Light Fuel & Power;WY;Investor Owned;39.137;284.205;41.162,0;14,48
+City of Gillette - (WY);WY;Municipal;13.243;143.673;16.627,0;11,57
+Fall River Rural Elec Coop Inc;WY;Cooperative;312;7.591;747,0;9,84
+High Plains Power Inc;WY;Cooperative;12.571;148.726;20.287,0;13,64
+High West Energy, Inc;WY;Cooperative;5.527;69.734;9.866,0;14,15
+Lower Valley Energy Inc;WY;Cooperative;21.951;541.803;34.428,0;6,35
+Montana-Dakota Utilities Co;WY;Investor Owned;14.173;154.374;17.027,0;11,03
+NorthWestern Energy LLC - (MT);WY;Investor Owned;167;1.412;177,0;12,54
+PacifiCorp;WY;Investor Owned;117.245;1.057.690;114.637,3;10,84
+Powder River Energy Corp;WY;Cooperative;15.737;230.244;26.681,2;11,59
+Yampa Valley Electric Assn Inc;WY;Cooperative;566;5.713;885,7;15,50
+Adjustment 2022;AK;;25.001;196.995;54.535,8;.
+Adjustment 2022;AL;;61.611;740.329;96.708,9;.
+Adjustment 2022;AR;;25.467;352.249;42.261,2;.
+Adjustment 2022;CO;;41.700;557.281;85.646,5;.
+Adjustment 2022;DE;;12.631;162.998;22.514,7;.
+Adjustment 2022;FL;;34.005;602.688;84.870,0;.
+Adjustment 2022;GA;;131.511;1.856.661;226.425,3;.
+Adjustment 2022;IA;;203.297;2.514.021;313.078,7;.
+Adjustment 2022;ID;;33.711;495.714;46.844,7;.
+Adjustment 2022;IL;;141.014;1.880.577;273.706,7;.
+Adjustment 2022;IN;;156.450;1.923.920;246.216,3;.
+Adjustment 2022;KS;;199.229;2.106.417;312.943,8;.
+Adjustment 2022;KY;;25.415;299.289;32.346,1;.
+Adjustment 2022;LA;;37.304;499.087;60.726,7;.
+Adjustment 2022;MA;;32.594;921.544;163.315,4;.
+Adjustment 2022;ME;;9.472;79.996;10.885,0;.
+Adjustment 2022;MI;;80.048;635.978;88.219,5;.
+Adjustment 2022;MN;;259.140;3.029.339;383.509,1;.
+Adjustment 2022;MO;;199.236;2.510.898;308.742,3;.
+Adjustment 2022;MS;;37.212;467.431;55.285,5;.
+Adjustment 2022;MT;;77.448;1.042.247;114.161,1;.
+Adjustment 2022;NC;;130.229;1.551.684;202.324,5;.
+Adjustment 2022;ND;;23.455;333.005;38.326,8;.
+Adjustment 2022;NE;;155.506;2.303.391;254.085,6;.
+Adjustment 2022;NH;;7.984;77.313;10.596,4;.
+Adjustment 2022;NM;;45.618;333.391;51.280,3;.
+Adjustment 2022;NY;;27.899;1.213.422;94.262,0;.
+Adjustment 2022;OH;;169.577;1.927.462;264.528,2;.
+Adjustment 2022;OK;;110.086;1.267.846;159.359,9;.
+Adjustment 2022;OR;;61.820;842.906;93.030,7;.
+Adjustment 2022;PA;;81.979;841.190;128.099,0;.
+Adjustment 2022;SC;;64.509;820.897;116.381,4;.
+Adjustment 2022;SD;;84.286;1.362.406;159.199,6;.
+Adjustment 2022;TX;;122.983;1.762.195;220.734,7;.
+Adjustment 2022;UT;;89.630;848.160;92.549,4;.
+Adjustment 2022;VA;;62.986;802.986;106.795,9;.
+Adjustment 2022;VT;;27.822;207.848;33.884,8;.
+Adjustment 2022;WA;;59.727;840.624;86.754,5;.
+Adjustment 2022;WI;;168.129;1.761.159;255.422,9;.
+Adjustment 2022;WV;;9.348;88.783;14.352,5;.
+Adjustment 2022;WY;;38.811;342.987;48.498,3;.

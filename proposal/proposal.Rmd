@@ -24,6 +24,13 @@ Which factors affect electricity distribution and pricing to what extent in the 
 
 
 ## 2. Data
+```{r install packages}
+library(tidyverse)
+```
+
+```{r glimpse-data}
+glimpse(table_Residential)
+```
 
 
 ## 3. Ethics review
