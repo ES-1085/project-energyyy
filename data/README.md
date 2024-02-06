@@ -1,13 +1,53 @@
-# data
+Data
 
-Place data file(s) in this folder.
+table_Residential
 
-Then, include codebooks (variables, and their descriptions) for your data file(s)
-using the following format.
+This data set contains information for electricity sales in the residential sector 2022. It contains 1526 rows representing individual utility companies. (Data from forms EIA-861- schedules 4A & 4D and EIA-861S)
+- `Entity` : utility company
 
-## name of data file
+- `State`: US state in which the utility company operates
+- `Ownership`: type of ownership
+- `Customers (Count)`: Count of households that receive their electricity from the entity, determined by number of electricity meters; includes private households and apartment buildings where energy is consumed primarily for space heating, water heating, air conditioning, lighting, refrigeration, cooking, and clothes drying
+- `Sales (Megawatthours)`: amount of electricity sold by said entity in megawatthours in 2022
+- `Revenues (Thousand Dollars)`: profit made by the entity in 2022
+- `Average Price (cents/kWh)`: average price of electricity in cents/kWh sold by the entity in 2022
 
-- `variable1`: Description of variable 1
-- `variable2`: Description of variable 2
-- `variable3`: Description of variable 3
-- ...
+
+table_Commercial
+
+This data set contains information for electricity sales in the commercial sector 2022. It contains 1526 rows representing individual utility companies. (Data from forms EIA-861- schedules 4A & 4D and EIA-861S)
+- `Entity`: utility company
+
+- `State`: US state in which the utility company operates
+- `Ownership`: type of ownership
+- `Customers (Count)`: Count of businesses that receive their electricity from the entity, determined by number of electricity meters, includes public streets and highway lighting, counting one customer per community; includes nonmanufacturing business establishments such as: hotels, motels, restaurants, wholesale businesses, retail stores, and health, social, and educational institutions, public street and highway lighting, municipalities, divisions of agencies of states and federal governments under special contracts or agreements, and other utility departments, such as defined by the pertinent regulatory agency and/or electric utility. 
+- `Sales (Megawatthours)` : amount of electricity sold by said entity in megawatthours in 2022
+- `Revenues (Thousand Dollars)`: profit made by the entity in 2022
+- `Average Price (cents/kWh)`: average price of electricity in cents/kWh sold by the entity in 2022
+
+
+table_Industrial
+
+This data set contains information for electricity sales in the industrial sector 2022. It contains 1526 rows representing individual utility companies. (Data from forms EIA-861- schedules 4A & 4D and EIA-861S)
+- `Entity` : utility company
+
+- `State` : US state in which the utility company operates
+- `Ownership` : type of ownership
+- `Customers (Count)`: Count of companies that receive their electricity from the entity, includes irrigation; includes: manufacturing, construction, mining, agriculture (irrigation), fishing, and forestry establishments. 
+- `Sales (Megawatthours)` : amount of electricity sold by said entity in megawatthours in 2022
+- `Revenues (Thousand Dollars)`: profit made by the entity in 2022
+- `Average Price (cents/kWh)` : average price of electricity in cents/kWh sold by the entity in 2022
+
+
+table_Transportation
+
+This data set contains information for electricity sales in the transportation sector 2022. It contains 1526 rows representing individual utility companies. (Data from forms EIA-861- schedules 4A & 4D and EIA-861S)
+- `Entity` : utility company
+
+- `State` : US state in which the utility company operates
+- `Ownership` : type of ownership
+- `Customers (Count)`: number of customers for electric energy supplied for transportation purposes; includes railroads and railways (the fuel source of propulsion must be electrical like a metro system which exists in large cities), count in number of systems not meters.  
+- `Sales (Megawatthours)` : amount of electricity sold by said entity in megawatthours in 2022
+- `Revenues (Thousand Dollars)`: profit made by the entity in 2022
+- `Average Price (cents/kWh)` : average price of electricity in cents/kWh sold by the entity in 2022
+
