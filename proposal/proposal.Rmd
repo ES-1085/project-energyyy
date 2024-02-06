@@ -62,6 +62,21 @@ view(table_Transportation)
 
 ## 4. Data analysis plan
 
+We will use all the mentioned variables in our analyses. 
+There will be other data that we include in our analysis to visualize the data we already have, such as coordinates to locate the US states on a potential heatmap. In case we would like to expand our data analysis, we would go further into price developments per sector and US state potentially using data between 1960-2023. 
 
+Priority list:
+join data sets
 
+Ownership vs price of electricity /acc to state 
+```{r ownership-average-price-state}
+ggplot(table_Residential, aes(x = Ownership, y = `Average Price (cents/kWh)`, color = State)) +
+  geom_point()
+```
+
+- Profit vs price and actual blackouts and ownership (less profit and community owned means less blackouts?)
+- Number of customers per utility company vs price 
+- Per household consumption of electricity (megawatthours sold/customers) vs price and revenue (make revenue into categories to use the variable as e.g. color or shape in ggplot) per utility company
+- Heatmap of electricity use
+- Seasonal price variation vs average temperature, per month
 
