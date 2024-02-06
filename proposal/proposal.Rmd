@@ -25,11 +25,12 @@ Which factors affect electricity distribution and pricing to what extent in the 
 
 ## 2. Data
 ```{r install packages}
-library(tidyverse)
+#install.packages("readxl")
+library(readxl)
 ```
 
 ```{r glimpse-data}
-glimpse(table_Residential)
+Residential <- read_excel(table_Residential)
 ```
 
 
