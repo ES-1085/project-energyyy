@@ -9,6 +9,12 @@ library(broom)
 
 ## 1. Introduction
 
+This is the first sentence of our intro. And this is the second.
+
+RQ: Which factors affect electricity distribution and pricing to what
+extent in the US? - black outs - urban rural - sectors -seasons -
+regional differences - utility companies ownership
+
 ## 2. Data
 
 ## 3. Ethics review
