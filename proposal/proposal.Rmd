@@ -11,7 +11,7 @@ library(broom)
 
 ## 1. Introduction
 
-This is the first sentence of our intro. And this is the second.
+The United States of America has on of the most diverse electric grids in the world. With this many stakeholders it is interesting to know which factors affect electricity distribution and pricing to what extent in the US. We are looking into the data from the the U.S. Energy Information Administration (EIA). EIA collects, analyzes, and disseminates independent and impartial energy information. The utility companies are required to self-report this data due to regulations. The variables that we will be looking at are Ownership type, Customers (Count), Sales (Megawatt hours) Revenues (Thousands Dollars), and Average Price (cents/kWh).
 
 RQ: 
 Which factors affect electricity distribution and pricing to what extent in the US?
@@ -29,6 +29,7 @@ Which factors affect electricity distribution and pricing to what extent in the 
 ## 3. Ethics review
 
 ## 4. Data analysis plan
+
 
 
 
