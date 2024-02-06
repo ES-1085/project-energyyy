@@ -25,14 +25,38 @@ Which factors affect electricity distribution and pricing to what extent in the 
 
 ## 2. Data
 ```{r install packages}
-#install.packages("readxl")
 library(readxl)
 ```
 
-```{r glimpse-data}
-Residential <- read_excel(table_Residential)
+```{r read-data}
+library(readxl)
+table_Residential <- read_excel("/cloud/project/data/table_Residential.xlsx")
+table_Commercial <- read_excel("/cloud/project/data/table_Commercial.xlsx")
+table_Industrial <- read_excel("/cloud/project/data/table_Industrial.xlsx")
+table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xlsx") %>%
+  mutate(`Average Price (cents/kWh)` == case_when(`Average Price (cents/kWh)` == "." ~ "NA"))
 ```
 
+```{r "."-to-NA}
+table_Residential <- read_excel("/cloud/project/data/table_Residential.xlsx") %>%
+  mutate(`Average Price (cents/kWh)` = case_when(
+    `Average Price (cents/kWh)` == "." ~ NA,
+    TRUE                   ~ as.double(`Average Price (cents/kWh)`)
+    ))
+#this is just a preview of trying to get rid of the "." and change it to NA
+```
+
+
+```{r glimpse-data}
+glimpse(table_Residential)
+glimpse(table_Commercial)
+glimpse(table_Industrial)
+glimpse(table_Transportation)
+```
+
+```{r}
+view(table_Transportation)
+```
 
 ## 3. Ethics review
 
