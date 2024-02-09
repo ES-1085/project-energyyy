@@ -29,8 +29,10 @@ library(readxl)
 ```
 
 ```{r read-data}
-table_Residential <- read_excel("/cloud/project/data/table_Residential.xlsx")
-table_Commercial <- read_excel("/cloud/project/data/table_Commercial.xlsx")
+table_Residential <- read_excel("/cloud/project/data/table_Residential.xlsx",
+                                na = c("."))
+table_Commercial <- read_excel("/cloud/project/data/table_Commercial.xlsx",
+                               na = c("."))
 table_Industrial <- read_excel("/cloud/project/data/table_Industrial.xlsx")
 table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xlsx")
 ```
