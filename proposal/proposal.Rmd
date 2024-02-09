@@ -36,6 +36,9 @@ table_Industrial <- read_excel("/cloud/project/data/table_Industrial.xlsx",
                                na = c("."))
 table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xlsx", 
                                    na = c("."))
+table_Disturbance <- read_excel("/cloud/project/data/table_Disturbance.xlsx",
+                                na= c(".", ". Hours,  . Minutes", "Unknow", ".        ."))
+
 ```
 
 ```{r glimpse-data}
@@ -43,6 +46,7 @@ glimpse(table_Residential)
 glimpse(table_Commercial)
 glimpse(table_Industrial)
 glimpse(table_Transportation)
+glimpse(table_Disturbance)
 ```
 
 This mutate function adds a column which contains the sector of the data.
@@ -60,7 +64,7 @@ industrial <- table_Industrial %>%
 This code binds all the tables together. 
 ```{r bind-rows}
 energy_sector <- bind_rows(residential, commercial, industrial, transportation)
-View(energy_sector)
+glimpse(energy_sector)
 ```
 
 ## 3. Ethics review
