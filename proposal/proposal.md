@@ -31,7 +31,6 @@ library(readxl)
 ```
 
 ``` r
-library(readxl)
 table_Residential <- read_excel("/cloud/project/data/table_Residential.xlsx")
 ```
 
@@ -219,102 +218,7 @@ table_Commercial <- read_excel("/cloud/project/data/table_Commercial.xlsx")
 
 ``` r
 table_Industrial <- read_excel("/cloud/project/data/table_Industrial.xlsx")
-table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xlsx") %>%
-  mutate(`Average Price (cents/kWh)` == case_when(`Average Price (cents/kWh)` == "." ~ "NA"))
-```
-
-``` r
-table_Residential <- read_excel("/cloud/project/data/table_Residential.xlsx") %>%
-  mutate(`Average Price (cents/kWh)` = case_when(
-    `Average Price (cents/kWh)` == "." ~ NA,
-    TRUE                   ~ as.double(`Average Price (cents/kWh)`)
-    ))
-```
-
-    ## Warning: Expecting numeric in G1487 / R1487C7: got '.'
-
-    ## Warning: Expecting numeric in G1488 / R1488C7: got '.'
-
-    ## Warning: Expecting numeric in G1489 / R1489C7: got '.'
-
-    ## Warning: Expecting numeric in G1490 / R1490C7: got '.'
-
-    ## Warning: Expecting numeric in G1491 / R1491C7: got '.'
-
-    ## Warning: Expecting numeric in G1492 / R1492C7: got '.'
-
-    ## Warning: Expecting numeric in G1493 / R1493C7: got '.'
-
-    ## Warning: Expecting numeric in G1494 / R1494C7: got '.'
-
-    ## Warning: Expecting numeric in G1495 / R1495C7: got '.'
-
-    ## Warning: Expecting numeric in G1496 / R1496C7: got '.'
-
-    ## Warning: Expecting numeric in G1497 / R1497C7: got '.'
-
-    ## Warning: Expecting numeric in G1498 / R1498C7: got '.'
-
-    ## Warning: Expecting numeric in G1499 / R1499C7: got '.'
-
-    ## Warning: Expecting numeric in G1500 / R1500C7: got '.'
-
-    ## Warning: Expecting numeric in G1501 / R1501C7: got '.'
-
-    ## Warning: Expecting numeric in G1502 / R1502C7: got '.'
-
-    ## Warning: Expecting numeric in G1503 / R1503C7: got '.'
-
-    ## Warning: Expecting numeric in G1504 / R1504C7: got '.'
-
-    ## Warning: Expecting numeric in G1505 / R1505C7: got '.'
-
-    ## Warning: Expecting numeric in G1506 / R1506C7: got '.'
-
-    ## Warning: Expecting numeric in G1507 / R1507C7: got '.'
-
-    ## Warning: Expecting numeric in G1508 / R1508C7: got '.'
-
-    ## Warning: Expecting numeric in G1509 / R1509C7: got '.'
-
-    ## Warning: Expecting numeric in G1510 / R1510C7: got '.'
-
-    ## Warning: Expecting numeric in G1511 / R1511C7: got '.'
-
-    ## Warning: Expecting numeric in G1512 / R1512C7: got '.'
-
-    ## Warning: Expecting numeric in G1513 / R1513C7: got '.'
-
-    ## Warning: Expecting numeric in G1514 / R1514C7: got '.'
-
-    ## Warning: Expecting numeric in G1515 / R1515C7: got '.'
-
-    ## Warning: Expecting numeric in G1516 / R1516C7: got '.'
-
-    ## Warning: Expecting numeric in G1517 / R1517C7: got '.'
-
-    ## Warning: Expecting numeric in G1518 / R1518C7: got '.'
-
-    ## Warning: Expecting numeric in G1519 / R1519C7: got '.'
-
-    ## Warning: Expecting numeric in G1520 / R1520C7: got '.'
-
-    ## Warning: Expecting numeric in G1521 / R1521C7: got '.'
-
-    ## Warning: Expecting numeric in G1522 / R1522C7: got '.'
-
-    ## Warning: Expecting numeric in G1523 / R1523C7: got '.'
-
-    ## Warning: Expecting numeric in G1524 / R1524C7: got '.'
-
-    ## Warning: Expecting numeric in G1525 / R1525C7: got '.'
-
-    ## Warning: Expecting numeric in G1526 / R1526C7: got '.'
-
-    ## Warning: Expecting numeric in G1527 / R1527C7: got '.'
-
-``` r
-#this is just a preview of trying to get rid of the "." and change it to NA
+table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xlsx")
 ```
 
 ``` r
@@ -364,7 +268,7 @@ glimpse(table_Transportation)
 ```
 
     ## Rows: 43
-    ## Columns: 8
+    ## Columns: 7
     ## $ Entity                         <chr> "City of North Little Rock - (AR)", "En…
     ## $ State                          <chr> "AR", "AR", "AZ", "AZ", "CA", "CA", "CA…
     ## $ Ownership                      <chr> "Municipal", "Investor Owned", "Politic…
@@ -372,7 +276,6 @@ glimpse(table_Transportation)
     ## $ `Sales (Megawatthours)`        <dbl> 213, 6, 9375, 829, 93808, 6968, 909, 10…
     ## $ `Revenues (Thousands Dollars)` <dbl> 33.0, 0.9, 866.0, 115.5, 12338.1, 1322.…
     ## $ `Average Price (cents/kWh)`    <dbl> 15.492958, 15.000000, 9.237333, 13.9324…
-    ## $ `==...`                        <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
 
 ``` r
 view(table_Transportation)
@@ -381,3 +284,32 @@ view(table_Transportation)
 ## 3. Ethics review
 
 ## 4. Data analysis plan
+
+We will use all the mentioned variables in our analyses. There will be
+other data that we include in our analysis to visualize the data we
+already have, such as coordinates to locate the US states on a potential
+heatmap. In case we would like to expand our data analysis, we would go
+further into price developments per sector and US state potentially
+using data between 1960-2023.
+
+Priority list: join data sets
+
+Ownership vs price of electricity /acc to state
+
+``` r
+ggplot(table_Residential, aes(x = Ownership, y = `Average Price (cents/kWh)`, color = State)) +
+  geom_point()
+```
+
+    ## Warning: Removed 41 rows containing missing values (`geom_point()`).
+
+![](proposal_files/figure-gfm/ownership-average-price-state-1.png)<!-- -->
+
+- Profit vs price and actual blackouts and ownership (less profit and
+  community owned means less blackouts?)
+- Number of customers per utility company vs price
+- Per household consumption of electricity (megawatthours
+  sold/customers) vs price and revenue (make revenue into categories to
+  use the variable as e.g. color or shape in ggplot) per utility company
+- Heatmap of electricity use
+- Seasonal price variation vs average temperature, per month
