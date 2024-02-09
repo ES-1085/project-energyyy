@@ -51,3 +51,19 @@ This data set contains information for electricity sales in the transportation s
 - `Revenues (Thousand Dollars)`: profit made by the entity in 2022
 - `Average Price (cents/kWh)` : average price of electricity in cents/kWh sold by the entity in 2022
 
+table_Disturbance
+
+This data contains information for electricity disturbance events, so called black-outs, in 2022.
+
+- `Year` : Year in which event occurred
+- `Month`: Month in which event occurred
+- `Event Date and Time`: Date and Time in which event occurred
+- `Restoration Date and Time` : Restoration Date and Time, end of event
+- `Duration` : Duration of the event
+- `Utility/Power Pool`: Utility or Power Pool in which event occurred
+- `NERC Region`: Regional cohort which is assigned by the North American Electric Reliability Corporation (NERC)
+- `Area Affected`: Affected area in NERC region
+- `Type of Disturbance`: The events are categorized by how many customers are affected by the disturbance event and by the reason for the disturbance, e.g. severe weather. 
+- `Loss (megawatts)`: Amount of electricity (in megawatts) lost to the environment due to the event and not distributed to the customer. 
+- `Number of Customers Affected`: The number of customers affected by event, includes all the customers mentioned above.
+
