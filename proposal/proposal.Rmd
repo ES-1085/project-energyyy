@@ -57,14 +57,10 @@ industrial <- table_Industrial %>%
   mutate(Sector = c("Industrial"))
 ```
 
-This code joins all the tables together. We still need to figure out how to pivot the data, so that we have a single column called "Sector". 
-```{r join-all}
-energy_sector <- residential %>%
-  full_join(commercial, by = "Entity", relationship = "many-to-many") %>%
-  full_join(transportation, by = "Entity", relationship = "many-to-many") %>%
-  full_join(industrial, by = "Entity", relationship = "many-to-many") #%>%
- # pivot_longer()
-#View(energy_sector)
+This code binds all the tables together. 
+```{r bind-rows}
+energy_sector <- bind_rows(residential, commercial, industrial, transportation)
+View(energy_sector)
 ```
 
 ## 3. Ethics review
