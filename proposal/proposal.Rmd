@@ -7,6 +7,9 @@ output: github_document
 ```{r load-packages, message = FALSE}
 library(tidyverse)
 library(broom)
+#install.packages("lubridate")
+library(lubridate)
+library(tidyr)
 ```
 
 ## 1. Introduction
@@ -61,11 +64,18 @@ industrial <- table_Industrial %>%
   mutate(Sector = c("Industrial"))
 ```
 
-This code binds all the tables together. 
+This code binds all the tables with sectors together. 
 ```{r bind-rows}
 energy_sector <- bind_rows(residential, commercial, industrial, transportation)
 glimpse(energy_sector)
 ```
+
+```{r separate-duration-disturbance}
+disturbance <- table_Disturbance |>
+  separate(col = Duration, into = c("Hours (Duration)", "Minutes (Duration)"), sep = ',')
+glimpse(disturbance)
+```
+
 
 ## 3. Ethics review
 
