@@ -86,17 +86,31 @@ There will be other data that we include in our analysis to visualize the data w
 
 Priority list of data analyses:
 
-1. Ownership vs price of electricity /according to state 
+1. Ownership vs price of electricity /according to sector 
 - Q: Does ownership e.g. cooperatives influence the average price of electricity, does it benefit individuals/residential sector or is it more geared towards commercial sector…?
 ```{r ownership-average-price-state}
-ggplot(table_Residential, aes(x = Ownership, y = `Average Price (cents/kWh)`, color = State)) +
-  geom_point()
+p1 <- energy_sector |>
+  filter(!is.na(Ownership)) |>
+
+ ggplot(aes(x = Ownership, y = `Average Price (cents/kWh)`)) +
+  #geom_point(aes(color = Sector)) +
+  geom_boxplot(outlier.shape = NA, aes(color = Sector)) +
+  ylim(0,25)+
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust  = 1), plot.margin = margin(1, 0.1, 1, 1, unit = "mm")) 
+#ggsave(filename = "plot1.png", device = "png")
 ```
 
 2. Revenue vs price and actual blackouts and ownership 
   - Q: does less profit and community owned mean less blackouts? Or does ownership tell us that big companies have more means to prevent blackouts?
-  - ggplot(aes(x = avg price, y = revenue, size = n of blackouts/in categories)), facet(~ ownership)
-  - need to add dataset for blackouts
+
+```{r}
+disturbance |>
+  group_by(`Utility/Power Pool`) |>
+  count()
+
+ggplot(aes(x = `Average Price (cents/kWh)`, y = `Revenues (Thousands Dollars)`, size = n of blackouts/in categories)), facet(~ ownership)
+```
+  
 
 3. Amount of electricity used, cheaper prices?
   - Q: Is it cheaper to buy electricity depending on the sector and is buying electricity in bulk cheaper? 
