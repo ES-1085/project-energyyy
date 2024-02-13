@@ -153,25 +153,45 @@ glimpse(energy_sector)
     ## $ Sector                         <chr> "Residential", "Residential", "Resident…
 
 ``` r
-disturbance <- table_Disturbance |>
-  separate(col = Duration, into = c("Hours (Duration)", "Minutes (Duration)"), sep = ',')
+disturbance_unjoined <- table_Disturbance |>
+  separate(col = Duration, into = c("Hours (Duration)", "Minutes (Duration)"), sep = ',') 
+
+disturbance <- 
+  rename(disturbance_unjoined, Entity = `Utility/Power Pool`) |>
+  right_join(energy_sector, by = "Entity")
+```
+
+    ## Warning in right_join(rename(disturbance_unjoined, Entity = `Utility/Power Pool`), : Detected an unexpected many-to-many relationship between `x` and `y`.
+    ## ℹ Row 19 of `x` matches multiple rows in `y`.
+    ## ℹ Row 333 of `y` matches multiple rows in `x`.
+    ## ℹ If a many-to-many relationship is expected, set `relationship =
+    ##   "many-to-many"` to silence this warning.
+
+``` r
 glimpse(disturbance)
 ```
 
-    ## Rows: 167
-    ## Columns: 12
+    ## Rows: 4,397
+    ## Columns: 19
     ## $ Year                           <chr> "2022", "2022", "2022", "2022", "2022",…
-    ## $ Month                          <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-    ## $ `Event Date and Time`          <chr> "01/02/2022  1:21 PM", "01/03/2022  1:0…
-    ## $ `Restoration Date and Time`    <chr> "01/02/2022  5:38 PM", "01/03/2022  2:0…
-    ## $ `Hours (Duration)`             <chr> "4 Hours", "13 Hours", "37 Hours", "31 …
-    ## $ `Minutes (Duration)`           <chr> " 17 Minutes", "  0 Minutes", "  0 Minu…
-    ## $ `Utility/Power Pool`           <chr> "Pacific Gas & Electric Co", "Southern …
-    ## $ `NERC Region`                  <chr> "WECC", "SERC", "SERC", "SERC", "NPCC",…
-    ## $ `Area Affected`                <chr> "California: Tuolumne County;", "Georgi…
-    ## $ `Type of Disturbance`          <chr> "Electrical System Separation (Islandin…
-    ## $ `Loss (megawatts)`             <chr> "3", "283", "Unknown", "Unknown", "0", …
-    ## $ `Number of Customers Affected` <chr> "1706", "40885", "60424", "142000", "0"…
+    ## $ Month                          <dbl> 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, …
+    ## $ `Event Date and Time`          <chr> "02/04/2022  1:10 PM", "02/04/2022  1:1…
+    ## $ `Restoration Date and Time`    <chr> NA, NA, NA, "04/13/2022  8:00 AM", "04/…
+    ## $ `Hours (Duration)`             <chr> NA, NA, NA, "46 Hours", "46 Hours", "46…
+    ## $ `Minutes (Duration)`           <chr> NA, NA, NA, " 45 Minutes", " 45 Minutes…
+    ## $ Entity                         <chr> "Central Hudson Gas & Elec Corp", "Cent…
+    ## $ `NERC Region`                  <chr> "NPCC", "NPCC", "NPCC", "WECC", "WECC",…
+    ## $ `Area Affected`                <chr> "New York: Ulster County;", "New York: …
+    ## $ `Type of Disturbance`          <chr> "Loss of electric service to more than …
+    ## $ `Loss (megawatts)`             <chr> "Unknown", "Unknown", "Unknown", "3140"…
+    ## $ `Number of Customers Affected` <chr> "67404", "67404", "67404", "73717", "73…
+    ## $ State                          <chr> "NY", "NY", "NY", "OR", "OR", "OR", "OR…
+    ## $ Ownership                      <chr> "Investor Owned", "Investor Owned", "In…
+    ## $ `Customers (Count)`            <dbl> 233720, 37720, 749, 809603, 108016, 430…
+    ## $ `Sales (Megawatthours)`        <dbl> 2122918, 874245, 65913, 8088473, 652205…
+    ## $ `Revenues (Thousands Dollars)` <dbl> 472571.0, 171489.0, 10853.0, 1103143.0,…
+    ## $ `Average Price (cents/kWh)`    <dbl> 22.260445, 19.615668, 16.465644, 13.638…
+    ## $ Sector                         <chr> "Residential", "Commercial", "Industria…
 
 ## 3. Ethics review
 
@@ -186,29 +206,92 @@ using data between 1960-2023.
 
 Priority list of data analyses:
 
-1.  Ownership vs price of electricity /according to state
+1.  Ownership vs price of electricity /according to sector
 
 - Q: Does ownership e.g. cooperatives influence the average price of
   electricity, does it benefit individuals/residential sector or is it
   more geared towards commercial sector…?
 
 ``` r
-ggplot(table_Residential, aes(x = Ownership, y = `Average Price (cents/kWh)`, color = State)) +
-  geom_point()
+p1 <- energy_sector |>
+  filter(!is.na(Ownership)) |>
+
+ ggplot(aes(x = Ownership, y = `Average Price (cents/kWh)`)) +
+  #geom_point(aes(color = Sector)) +
+  geom_boxplot(outlier.shape = NA, aes(color = Sector)) +
+  ylim(0,25)+
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust  = 1), plot.margin = margin(1, 0.1, 1, 1, unit = "mm")) 
+#ggsave(filename = "plot1.png", device = "png")
 ```
-
-    ## Warning: Removed 41 rows containing missing values (`geom_point()`).
-
-![](proposal_files/figure-gfm/ownership-average-price-state-1.png)<!-- -->
 
 2.  Revenue vs price and actual blackouts and ownership
 
 - Q: does less profit and community owned mean less blackouts? Or does
   ownership tell us that big companies have more means to prevent
   blackouts?
-- ggplot(aes(x = avg price, y = revenue, size = n of blackouts/in
-  categories)), facet(~ ownership)
-- need to add dataset for blackouts
+
+``` r
+disturbance |> 
+  group_by(Entity) |>
+count()
+```
+
+    ## # A tibble: 1,308 × 2
+    ## # Groups:   Entity [1,308]
+    ##    Entity                             n
+    ##    <chr>                          <int>
+    ##  1 3000 Energy Corp                   2
+    ##  2 4-County Electric Power Assn       3
+    ##  3 A & N Electric Coop                5
+    ##  4 AGC Division of APGI Inc           1
+    ##  5 ALLETE, Inc.                       3
+    ##  6 AP Holdings LLC                    2
+    ##  7 Accent Energy Holdings, LLC        2
+    ##  8 Access Energy Coop                 3
+    ##  9 Adams Electric Cooperative Inc     3
+    ## 10 Adams-Columbia Electric Coop       3
+    ## # ℹ 1,298 more rows
+
+For the next plot we want to count the disturbances per utility company.
+However, we need to clean up the data first because some companies come
+up with different names. Hence, the mutate function.
+
+``` r
+disturbance |>
+  mutate(Company = 
+           case_when(
+    `Entity` %in% 
+      c("American Electric Power (Regulated Generation)", 
+      "American Electric Power - (RFC Reliability Region) (8400 Smiths Mill Road, New Albany Ohio 43054)")
+        ~ "American Electric Power", 
+     `Entity` %in% 
+      c("Baltimore Gas & Electric Co",  
+"Baltimore Gas and Electric") ~ "Baltimore Gas & Electric",
+     TRUE ~ as.character(as.character(`Entity`))
+    )) |>
+    group_by(Company) |>
+  count()
+```
+
+    ## # A tibble: 1,308 × 2
+    ## # Groups:   Company [1,308]
+    ##    Company                            n
+    ##    <chr>                          <int>
+    ##  1 3000 Energy Corp                   2
+    ##  2 4-County Electric Power Assn       3
+    ##  3 A & N Electric Coop                5
+    ##  4 AGC Division of APGI Inc           1
+    ##  5 ALLETE, Inc.                       3
+    ##  6 AP Holdings LLC                    2
+    ##  7 Accent Energy Holdings, LLC        2
+    ##  8 Access Energy Coop                 3
+    ##  9 Adams Electric Cooperative Inc     3
+    ## 10 Adams-Columbia Electric Coop       3
+    ## # ℹ 1,298 more rows
+
+``` r
+#ggplot(aes(x = `Average Price (cents/kWh)`, y = `Revenues (Thousands Dollars)`, size = n of blackouts/in categories)), facet(~ ownership)
+```
 
 3.  Amount of electricity used, cheaper prices?
 

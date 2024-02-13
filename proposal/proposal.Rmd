@@ -71,8 +71,13 @@ glimpse(energy_sector)
 ```
 
 ```{r separate-duration-disturbance}
-disturbance <- table_Disturbance |>
-  separate(col = Duration, into = c("Hours (Duration)", "Minutes (Duration)"), sep = ',')
+disturbance_unjoined <- table_Disturbance |>
+  separate(col = Duration, into = c("Hours (Duration)", "Minutes (Duration)"), sep = ',') 
+
+disturbance <- 
+  rename(disturbance_unjoined, Entity = `Utility/Power Pool`) |>
+  right_join(energy_sector, by = "Entity")
+
 glimpse(disturbance)
 ```
 
@@ -103,12 +108,30 @@ p1 <- energy_sector |>
 2. Revenue vs price and actual blackouts and ownership 
   - Q: does less profit and community owned mean less blackouts? Or does ownership tell us that big companies have more means to prevent blackouts?
 
-```{r}
-disturbance |>
-  group_by(`Utility/Power Pool`) |>
-  count()
+```{r count-disturbances-per-companies}
+disturbance |> 
+  group_by(Entity) |>
+count()
+```
 
-ggplot(aes(x = `Average Price (cents/kWh)`, y = `Revenues (Thousands Dollars)`, size = n of blackouts/in categories)), facet(~ ownership)
+For the next plot we want to count the disturbances per utility company. However, we need to clean up the data first because some companies come up with different names. Hence, the mutate function. 
+```{r mutate-to-group-same-companies-different-names}
+disturbance |>
+  mutate(Company = 
+           case_when(
+    `Entity` %in% 
+      c("American Electric Power (Regulated Generation)", 
+      "American Electric Power - (RFC Reliability Region) (8400 Smiths Mill Road, New Albany Ohio 43054)")
+        ~ "American Electric Power", 
+     `Entity` %in% 
+      c("Baltimore Gas & Electric Co", 	
+"Baltimore Gas and Electric") ~ "Baltimore Gas & Electric",
+     TRUE ~ as.character(as.character(`Entity`))
+    )) |>
+    group_by(Company) |>
+  count()
+  
+#ggplot(aes(x = `Average Price (cents/kWh)`, y = `Revenues (Thousands Dollars)`, size = n of blackouts/in categories)), facet(~ ownership)
 ```
   
 
