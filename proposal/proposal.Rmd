@@ -111,7 +111,8 @@ p1 <- energy_sector |>
 ```{r count-disturbances-per-companies}
 disturbance |> 
   group_by(Entity) |>
-count()
+  count() |>
+  arrange(n)
 ```
 
 For the next plot we want to count the disturbances per utility company. However, we need to clean up the data first because some companies come up with different names. Hence, the mutate function. 
