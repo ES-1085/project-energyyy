@@ -10,23 +10,6 @@ library(broom)
 #install.packages("lubridate")
 library(lubridate)
 library(tidyr)
-```
-
-## 1. Introduction
-
-The United States of America has on of the most diverse electric grids in the world. With this many stakeholders it is interesting to know which factors affect electricity distribution and pricing to what extent in the US. We are looking into the data from the the U.S. Energy Information Administration (EIA). EIA collects, analyzes, and disseminates independent and impartial energy information. The utility companies are required to self-report this data due to regulations. The variables that we will be looking at are Ownership type, Customers (Count), Sales (Megawatt hours) Revenues (Thousands Dollars), and Average Price (cents/kWh).
-
-Research Question: 
-Which factors affect electricity distribution and pricing to what extent in the US?
-- black outs
-- urban rural
-- sectors
--seasons
-- regional differences
-- utility companies ownership
-
-## 2. Data
-```{r readxl-library}
 library(readxl)
 ```
 
@@ -42,14 +25,6 @@ table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xls
 table_Disturbance <- read_excel("/cloud/project/data/table_Disturbance.xlsx",
                                 na= c(".", ". Hours,  . Minutes", "Unknow", ".        ."))
 
-```
-
-```{r glimpse-data}
-glimpse(table_Residential)
-glimpse(table_Commercial)
-glimpse(table_Industrial)
-glimpse(table_Transportation)
-glimpse(table_Disturbance)
 ```
 
 This mutate function adds a column which contains the sector of the data.
@@ -80,16 +55,6 @@ disturbance <-
 
 glimpse(disturbance)
 ```
-
-
-## 3. Ethics review
-
-## 4. Data analysis plan
-
-We will use all the mentioned variables in our analyses. 
-There will be other data that we include in our analysis to visualize the data we already have, such as coordinates to locate the US states on a potential heatmap. In case we would like to expand our data analysis, we would go further into price developments per sector and US state potentially using data between 1960-2023. 
-
-Priority list of data analyses:
 
 1. Ownership vs price of electricity /according to sector 
 - Q: Does ownership e.g. cooperatives influence the average price of electricity, does it benefit individuals/residential sector or is it more geared towards commercial sector…?`
@@ -155,3 +120,4 @@ Stretch goals:
 
 7. Seasonal price variation vs average temperature, per month
   - We would need: avg temperature per month per state, electricity price per month for multiple years per state
+
