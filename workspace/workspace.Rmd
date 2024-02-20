@@ -1,5 +1,5 @@
 ---
-title: "Project proposal"
+title: "Project Workspace"
 author: "Energyyy"
 output: github_document
 ---
@@ -69,14 +69,28 @@ to-do:
 - geom_smooth - does that work on a boxplot? see if there is a trend on this cooperative-corporate spectrum for different sectors
 - add labs() 
 ```{r ownership-average-price-state}
-p1 <- energy_sector |>
+energy_sector |>
   filter(!is.na(Ownership)) |>
+  mutate(
+    Ownership = fct_relevel(
+      Ownership,
+      "Cooperative", "Municipal", "Political Subdivision", "State", "Federal", "Behind the Meter", "Retail Power Marketer", "Investor Owned"
+    )) |>
 
- ggplot(aes(x = Ownership, y = `Average Price (cents/kWh)`)) +
-  #geom_point(aes(color = Sector)) +
-  geom_boxplot(outlier.shape = NA, aes(color = Sector)) +
+ ggplot(aes(x = as.numeric(Ownership), y = `Average Price (cents/kWh)`)) +
+  geom_boxplot(outlier.shape = NA, aes(color = Ownership)) +
+  geom_smooth(method = "glm", color = "black") +
   ylim(0,25)+
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust  = 1), plot.margin = margin(1, 0.1, 1, 1, unit = "mm")) 
+  facet_wrap(~Sector) +
+  scale_color_manual(values = c("Cooperative" = "#ffffd9", "Municipal" = "#edf8b1", "Political Subdivision" = "#c7e9b4", "State" = "#7fcdbb", "Federal" = "#41b6c4", "Behind the Meter" = "#1d91c0", "Retail Power Marketer" = "#225ea8", "Investor Owned" = "#0c2c84")) +
+  theme(axis.text.x = element_text(
+    angle = 45, vjust = 1, hjust  = 1), plot.margin = margin(1, 0.1, 1, 1, unit = "mm")) +
+  labs(
+    title = "Does ownership type of the utility company influence the average price of electricity?",
+    subtitle = "Per sector based on 2022 data",
+    caption = "Source : https://www.eia.gov/electricity/data.php#sales",
+    x = ""
+  )
 #ggsave(filename = "plot1.png", device = "png")
 ```
 
