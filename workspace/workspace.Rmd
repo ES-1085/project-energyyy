@@ -149,7 +149,7 @@ bins <- seq(from = 0, to = 1500, by = 300)
 palCAIDI <- colorBin("BuPu", domain = table_CAIDI$CAIDI, bins = bins)
 ```
 
-```{r}
+```{r leaflet-CAIDI, eval=FALSE}
 
 leaflet(data = table_CAIDI) |>
   addTiles() |>
