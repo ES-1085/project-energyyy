@@ -11,6 +11,8 @@ library(broom)
 library(lubridate)
 library(tidyr)
 library(readxl)
+#install.packages("leaflet")
+library(leaflet)
 ```
 
 ```{r read-data}
@@ -24,6 +26,7 @@ table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xls
                                    na = c("."))
 table_Disturbance <- read_excel("/cloud/project/data/table_Disturbance.xlsx",
                                 na= c(".", ". Hours,  . Minutes", "Unknow", ".        ."))
+table_CAIDI <- read_excel("/cloud/project/data/table_CAIDI.xlsx")
 
 ```
 
@@ -54,6 +57,13 @@ disturbance <-
   right_join(energy_sector, by = "Entity")
 
 glimpse(disturbance)
+```
+
+```{r pivot-CAIDI}
+table_CAIDI <- table_CAIDI |>
+ pivot_longer(cols = `2013`:`2022`,
+              names_to = "Year",
+              values_to = "CAIDI")
 ```
 
 1. Ownership vs price of electricity /according to sector 
@@ -133,6 +143,21 @@ disturbance |>
 2b. CAIDI reliability in electricity networks throughout the US based on states
 Q: How does CAIDI vary throughout the US states? 
 Animate leaflet from 2013-2022. 
+```{r}
+summary(table_CAIDI$CAIDI)
+bins <- seq(from = 0, to = 1500, by = 300)
+palCAIDI <- colorBin("BuPu", domain = table_CAIDI$CAIDI, bins = bins)
+```
+
+```{r}
+
+leaflet(data = table_CAIDI) |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+addPolygons(fillColor = ~ palCAIDI(table_CAIDI$CAIDI))
+```
 
 - use sequential color scheme for Index
 - import/upload data and tidy it
