@@ -11,6 +11,11 @@ library(tidyr)
 library(readxl)
 #install.packages("leaflet")
 library(leaflet)
+#install.packages("tigris")
+#library(tigris)
+#options(tigris_use_cache = TRUE)
+#install.packages("sf")
+library(sf)
 ```
 
 ``` r
@@ -25,7 +30,17 @@ table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xls
 table_Disturbance <- read_excel("/cloud/project/data/table_Disturbance.xlsx",
                                 na= c(".", ". Hours,  . Minutes", "Unknow", ".        ."))
 table_CAIDI <- read_excel("/cloud/project/data/table_CAIDI.xlsx")
+
+USA_df <- sf::st_read("/cloud/project/data/USA_States_Generalized.shp")
 ```
+
+    ## Reading layer `USA_States_Generalized' from data source 
+    ##   `/cloud/project/data/USA_States_Generalized.shp' using driver `ESRI Shapefile'
+    ## Simple feature collection with 51 features and 56 fields
+    ## Geometry type: MULTIPOLYGON
+    ## Dimension:     XY
+    ## Bounding box:  xmin: -178.2176 ymin: 18.92179 xmax: -66.96927 ymax: 71.40624
+    ## Geodetic CRS:  WGS 84
 
 This mutate function adds a column which contains the sector of the
 data.
@@ -253,19 +268,24 @@ summary(table_CAIDI$CAIDI)
 ``` r
 bins <- seq(from = 0, to = 1500, by = 300)
 palCAIDI <- colorBin("BuPu", domain = table_CAIDI$CAIDI, bins = bins)
+
+#USA_df <- USA_df %>%
+  #rename(`Census Division and State` = `STATE_NAME`)
+
+CAIDI_leaflet_df <- merge(USA_df, table_CAIDI)
 ```
 
 ``` r
-leaflet(data = table_CAIDI) |>
+leaflet(data = CAIDI_leaflet_df) |>
   addTiles() |>
   setView(lng = -98.6,
           lat = 36.7,
           zoom = 4) |>
-addPolygons(fillColor = ~ palCAIDI(table_CAIDI$CAIDI))
+addPolygons()
 ```
 
-- use sequential color scheme for Index
-- import/upload data and tidy it
+fillColor = ~ palCAIDI(CAIDI_leaflet\$CAIDI) - use sequential color
+scheme for Index - import/upload data and tidy it
 
 3.  Amount of electricity used, cheaper prices?
 
