@@ -72,7 +72,7 @@ table_CAIDI <- table_CAIDI |>
               values_to = "CAIDI")
 ```
 
-1. Ownership vs price of electricity /according to sector 
+## 1. Ownership vs price of electricity /according to sector 
 - Q: Does ownership e.g. cooperatives influence the average price of electricity, does it benefit individuals/residential sector or is it more geared towards commercial sector…?`
 
 to-do:
@@ -110,7 +110,7 @@ energy_sector |>
 #ggsave(filename = "plot1.png", device = "png")
 ```
 
-2a. Revenue and actual blackouts and ownership 
+# 2a. Revenue and actual blackouts and ownership 
   - Q: does less profit and community owned mean less blackouts? Or does ownership tell us that big companies have more means to prevent blackouts?
 
 - aes(x = Revenue, y = n of blackouts, color = ownership) +
@@ -146,35 +146,58 @@ disturbance |>
 #ggplot(aes(x = `Average Price (cents/kWh)`, y = `Revenues (Thousands Dollars)`, size = n of blackouts/in categories)), facet(~ ownership)
 ```
   
-2b. CAIDI reliability in electricity networks throughout the US based on states
+# 2b. CAIDI reliability in electricity networks throughout the US based on states
 Q: How does CAIDI vary throughout the US states? 
 Animate leaflet from 2013-2022. 
-```{r prepare-leaflet-CAIDI}
-summary(table_CAIDI$CAIDI)
-bins <- seq(from = 0, to = 1500, by = 300)
-palCAIDI <- colorBin("BuPu", domain = table_CAIDI$CAIDI, bins = bins)
+
+```{r join-US-states-geometry-to-CAIDI}
+#Data contains states and regions. Thus, we filter for states only.
+table_CAIDI <- table_CAIDI %>%
+  filter(`Census Division\r\nand State` %in% c(
+  "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia"))
 
 #USA_df <- USA_df %>%
-  #rename(`Census Division and State` = `STATE_NAME`)
+  #rename(`Census Division\r\nand State` = `Census Division and State`)
+USA_df <- USA_df %>%
+  select(`Census Division\r\nand State`)
 
-CAIDI_leaflet_df <- merge(USA_df, table_CAIDI)
+
+CAIDI_leaflet_df <- 
+  full_join(USA_df, table_CAIDI)
+```
+```{r filter-MajorEventDays-FALSE}
+CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
+  filter(`Major Event Days` == FALSE)
 ```
 
-```{r leaflet-CAIDI, eval=FALSE}
+```{r leaflet-CAIDI-bins&palette}
+CAIDI_leaflet_df %>%
+  filter(Year == "2022") %>%
+  summary("CAIDI")
+  
+bins <- seq(from = 75, to = 225, by = 75)
+#yblu <- c("#ffffd9", "#edf8b1", "#c7e9b4","#41b6c4", "#1d91c0", "#0c2c84","gray", "black" )
+palCAIDI <- colorBin("PiYG", domain = CAIDI_leaflet_df$CAIDI, bins = bins)
+```
+
+```{r leaflet-CAIDI-2022, eval=FALSE}
 CAIDI_leaflet_df |>
-  filter(Year == "2013") |>
+  filter(Year == "2022") |>
+  filter(`Census Division\r\nand State` %in% c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia")) |>
 leaflet() |>
   addTiles() |>
   setView(lng = -98.6,
           lat = 36.7,
           zoom = 4) |>
-addPolygons()
+  addPolygons(
+    fillColor = ~palCAIDI(CAIDI_leaflet_df$CAIDI), 
+    color = "white", 
+    weight = 1
+)
 ```
-fillColor = ~ palCAIDI(CAIDI_leaflet$CAIDI)
-- use sequential color scheme for Index
-- import/upload data and tidy it
 
-3. Amount of electricity used, cheaper prices?
+
+## 3. Amount of electricity used, cheaper prices?
   - Q: Is it cheaper to buy electricity depending on the sector? Is buying electricity in bulk cheaper? 
   - ggplot(aes(x = Sales(mWh)/n of customers, y = average price, color = sectors))
 
@@ -182,16 +205,16 @@ fillColor = ~ palCAIDI(CAIDI_leaflet$CAIDI)
 - electricity producers want reliable consumers --> does this bias still exist?
 Book: "The Grid"
 
-[4. Number of customers vs price by sector -- if we are bored, we can do this!
+## [4. Number of customers vs price by sector -- if we are bored, we can do this!
   - Q: Do bigger utility companies (meaning more customers) offer lower avg. prices due to scale?
   - ggplot(aes(x = avg price, y = customers)), facet( ~ sector)]
 
-5. Per household consumption of electricity (megawatthours sold/customers) vs price 
+## 5. Per household consumption of electricity (megawatthours sold/customers) vs price 
   - Q: Do consumers use less electricity if it is more expensive? 
   - ggplot(aes(x = Sales/customers, y = avg. price))
 
-Stretch goals: 
-6. Heatmap of the US' electricity use
+### Stretch goal: 
+## 6. Heatmap of the US' electricity use
   - Note: we might need long lat data to map the US states
   - Average per capita Sales per state (sum up all sales, group by state, calculate average), each box of the heatmap is one state
 - goes together with 5.
