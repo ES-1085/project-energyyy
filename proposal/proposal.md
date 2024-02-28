@@ -195,6 +195,57 @@ glimpse(disturbance)
 
 ## 3. Ethics review
 
+### Limitations in data sources:
+
+- table_CAIDI: Most utility companies use IEE standards to report CAIDI,
+  but some do not. We have decided to leave out companies of our
+  analysis that do not use IEE standards, so we will not have a complete
+  account of ALL utility companies, but of most of them. We decided not
+  to use the CAIDI index that includes Major Event Days because those
+  represent hurricanes, storms etc. which utility companies do not have
+  control over. Thus, they do not attest to the utility’s ability to
+  provide reliable services.
+
+- The data collection is standardized and done by governmental
+  institutions, so the data should be reliable, of high quality and
+  equal across utility companies and sectors. However, the EIA relies on
+  the honesty of the utility company to share accurate data with the
+  EIA.
+
+- Ilham and Anna do not have an extensive background in the energy
+  industry, so we rely on Rudy for most of the expertise in our project.
+
+### Positive effects on people:
+
+- Education of lay people: might help citizens to be better informed of
+  the US energy industry which is highly complex.
+- Decision-makers: gain a better understanding to improve policy-making
+  and can therefore evaluate the efficiency and effectiveness of utility
+  companies. This enables them to encourage the companies to become more
+  efficient and effective.
+- Education of Rudy: improves his personal understanding of the US
+  energy sector
+- We could enhance these positive effects by dispersing our research
+  more and communicating it to citizens and decision-makers.
+
+### Negative effects on people:
+
+- The reputation of specific utility companies might suffer from our
+  research if they are connected to higher prices for lower-quality
+  offering of energy services.
+
+### Minimising negative impact:
+
+- We will talk about the limitations/disclaimers of our research, so
+  that people are aware of what we cannot show with our data, so that
+  people do not draw wrong conclusions from our research.
+  - This is a beneficial action to take because people will be more
+    aware of the limitations and can understand our data and our
+    visualizations better.
+- We are presenting to our class at COA only and we do not intend to
+  share our outcomes with the wider community where it would lead to the
+  implementation of policies etc.
+
 ## 4. Data analysis plan
 
 We will use all the mentioned variables in our analyses. There will be
@@ -210,7 +261,7 @@ Priority list of data analyses:
 
 - Q: Does ownership e.g. cooperatives influence the average price of
   electricity, does it benefit individuals/residential sector or is it
-  more geared towards commercial sector…?
+  more geared towards commercial sector…?\`
 
 ``` r
 p1 <- energy_sector |>
@@ -233,23 +284,24 @@ p1 <- energy_sector |>
 ``` r
 disturbance |> 
   group_by(Entity) |>
-count()
+  count() |>
+  arrange(n)
 ```
 
     ## # A tibble: 1,308 × 2
     ## # Groups:   Entity [1,308]
-    ##    Entity                             n
-    ##    <chr>                          <int>
-    ##  1 3000 Energy Corp                   2
-    ##  2 4-County Electric Power Assn       3
-    ##  3 A & N Electric Coop                5
-    ##  4 AGC Division of APGI Inc           1
-    ##  5 ALLETE, Inc.                       3
-    ##  6 AP Holdings LLC                    2
-    ##  7 Accent Energy Holdings, LLC        2
-    ##  8 Access Energy Coop                 3
-    ##  9 Adams Electric Cooperative Inc     3
-    ## 10 Adams-Columbia Electric Coop       3
+    ##    Entity                        n
+    ##    <chr>                     <int>
+    ##  1 AGC Division of APGI Inc      1
+    ##  2 American PowerNet             1
+    ##  3 Ammper Power LLC              1
+    ##  4 Arrow Energy TX LLC           1
+    ##  5 BKV-BPP Retail, LLC           1
+    ##  6 BP Energy Company             1
+    ##  7 BP Energy Retail LLC          1
+    ##  8 Basin Electric Power Coop     1
+    ##  9 Branch Energy Texas LLC       1
+    ## 10 Calpine Power America LLC     1
     ## # ℹ 1,298 more rows
 
 For the next plot we want to count the disturbances per utility company.
