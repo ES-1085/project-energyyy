@@ -38,6 +38,8 @@ USA_df <- sf::st_read("/cloud/project/data/USA_States_Generalized.shp")
 
 This mutate function adds a column which contains the sector of the data.
 ```{r mutate-to-sector}
+USA_df <- USA_df %>%
+ rename(`Census Division\r\nand State` = STATE_NAME)
 residential <- table_Residential %>%
   mutate(Sector = c("Residential"))
 commercial <- table_Commercial %>%
@@ -156,53 +158,49 @@ table_CAIDI <- table_CAIDI %>%
   filter(`Census Division\r\nand State` %in% c(
   "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia"))
 
-#USA_df <- USA_df %>%
- # rename(`Census Division\r\nand State` = STATE_NAME)
 USA_df <- USA_df %>%
   select("Census Division\r\nand State")
-
-CAIDI_leaflet_df <- 
-  merge(USA_df, table_CAIDI, by = "Census Division\r\nand State")
 ```
 
 ```{r filter-MajorEventDays-FALSE}
+CAIDI_leaflet_df <- 
+  merge(USA_df, table_CAIDI, by = "Census Division\r\nand State")
+
 CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
   filter(`Major Event Days` == FALSE)
 ```
 
-```{r}
+```{r filter-2013}
 CAIDI_2013 <- CAIDI_leaflet_df |>
   filter(Year == "2013")
+
 ```
 
 
 ```{r leaflet-CAIDI-bins&palette}
 CAIDI_leaflet_df %>%
-  filter(Year == "20213") %>%
+  #filter(Year == "2013") %>%
   summary("CAIDI")
   
-bins <- seq(from = 70, to = 245, by = 25)
-#yblu <- c("#ffffd9", "#edf8b1", "#c7e9b4","#41b6c4", "#1d91c0", "#0c2c84","gray", "black" )
-palCAIDI <- colorBin("PiYG", domain = CAIDI_leaflet_df$CAIDI, bins = bins)
+bins <- seq(from = 26, to = 245, by = 25)
+palCAIDI <- colorBin("OrRd", domain = CAIDI_2013$CAIDI, bins = bins)
 
 labels <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_leaflet_df$`Census Division\r\nand State`, CAIDI_leaflet_df$CAIDI) %>% lapply(htmltools::HTML)
+                  CAIDI_2013$`Census Division\r\nand State`, CAIDI_2013$CAIDI) %>% lapply(htmltools::HTML)
 ```
 
 ```{r leaflet-CAIDI-2022, eval=FALSE}
 CAIDI_2013 |>
-  #filter(Year == "2022") |>
-  #filter(`Census Division\r\nand State` %in% c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia")) |>
 leaflet() |>
   addTiles() |>
   setView(lng = -98.6,
           lat = 36.7,
           zoom = 4) |>
   addPolygons(
-    fillColor = ~palCAIDI(CAIDI_leaflet_df$CAIDI), 
+    fillColor = ~palCAIDI(CAIDI_2013$CAIDI), 
     color = "white", 
-    weight = 1)
-    #label = labels)
+    weight = 1,
+    label = labels)
 ```
 
 
@@ -215,21 +213,32 @@ leaflet() |>
 - electricity producers want reliable consumers --> does this bias still exist?
 Book: "The Grid"
 
-```{r}
-#glimpse(energy_sector)
-```
 
-
-```{r}
-energy_sector |>
+```{r average-price-in-kWH-consumption}
+line_test <- energy_sector |>
   summarise(mean(`Average Price (cents/kWh)`, na.rm = TRUE),.by = Sector)
+
+line_test$mean <- line_test$`mean(\`Average Price (cents/kWh)\`, na.rm = TRUE)` 
+
+line_test$label <-
+  round(line_test$mean, 2)
 
 energy_sector |>
   ggplot(aes(x = ((
     `Sales (Megawatthours)`/ 1000)/`Customers (Count)`), y = `Average Price (cents/kWh)`, color = Sector)) +
   geom_point() +
   geom_smooth() +
-  facet_wrap(~Sector)
+  # geom_line(data = line_test, aes(y = mean)) +
+  geom_hline(data = line_test, aes(yintercept = mean)) +
+  geom_text(data = line_test, aes(500, y = label,label = label, vjust = -1), color = "black") +
+  facet_wrap(~Sector) +
+  labs(
+    title = "Average KWh Consumption per Customer vs Average Price",
+    subtitle = "by sector in 2022",
+    x = "Average KWh Consumption per Customer",
+    y = "Average Price (cents/kWh)",
+    caption = "Source : https://www.eia.gov/electricity/data.php#sales"
+  )
 ```
 
 
@@ -237,6 +246,11 @@ energy_sector |>
 ## [4. Number of customers vs price by sector -- if we are bored, we can do this!
   - Q: Do bigger utility companies (meaning more customers) offer lower avg. prices due to scale?
   - ggplot(aes(x = avg price, y = customers)), facet( ~ sector)]
+  
+```{r}
+
+```
+
 
 ## 5. Per household consumption of electricity (megawatthours sold/customers) vs price 
   - Q: Do consumers use less electricity if it is more expensive? 
