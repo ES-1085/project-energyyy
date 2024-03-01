@@ -157,14 +157,14 @@ table_CAIDI <- table_CAIDI %>%
   "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia"))
 
 #USA_df <- USA_df %>%
-  #rename(`Census Division\r\nand State` = `Census Division and State`)
+  #rename(`Census Division\r\nand State` = STATE_NAME)
 USA_df <- USA_df %>%
-  select(`Census Division\r\nand State`)
-
+  select("Census Division\r\nand State")
 
 CAIDI_leaflet_df <- 
-  full_join(USA_df, table_CAIDI)
+  merge(USA_df, table_CAIDI, by = "Census Division\r\nand State")
 ```
+
 ```{r filter-MajorEventDays-FALSE}
 CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
   filter(`Major Event Days` == FALSE)
@@ -178,12 +178,15 @@ CAIDI_leaflet_df %>%
 bins <- seq(from = 75, to = 225, by = 75)
 #yblu <- c("#ffffd9", "#edf8b1", "#c7e9b4","#41b6c4", "#1d91c0", "#0c2c84","gray", "black" )
 palCAIDI <- colorBin("PiYG", domain = CAIDI_leaflet_df$CAIDI, bins = bins)
+
+labels <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_leaflet_df$`Census Division\r\nand State`, CAIDI_leaflet_df$CAIDI) %>% lapply(htmltools::HTML)
 ```
 
 ```{r leaflet-CAIDI-2022, eval=FALSE}
 CAIDI_leaflet_df |>
   filter(Year == "2022") |>
-  filter(`Census Division\r\nand State` %in% c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia")) |>
+  #filter(`Census Division\r\nand State` %in% c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia")) |>
 leaflet() |>
   addTiles() |>
   setView(lng = -98.6,
@@ -192,7 +195,8 @@ leaflet() |>
   addPolygons(
     fillColor = ~palCAIDI(CAIDI_leaflet_df$CAIDI), 
     color = "white", 
-    weight = 1
+    weight = 1,
+    label = labels
 )
 ```
 
