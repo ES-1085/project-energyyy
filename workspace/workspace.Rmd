@@ -248,7 +248,11 @@ energy_sector |>
   - ggplot(aes(x = avg price, y = customers)), facet( ~ sector)]
   
 ```{r}
-
+energy_sector |>
+  filter(Sector == "Residential") |>
+  ggplot(aes(x = `Customers (Count)`, y = `Average Price (cents/kWh)`)) +
+  geom_point() +
+  geom_smooth()
 ```
 
 
