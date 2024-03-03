@@ -38,8 +38,8 @@ USA_df <- sf::st_read("/cloud/project/data/USA_States_Generalized.shp")
 
 This mutate function adds a column which contains the sector of the data.
 ```{r mutate-to-sector}
-USA_df <- USA_df %>%
- rename(`Census Division\r\nand State` = STATE_NAME)
+#USA_df <- USA_df %>%
+ #rename(`Census Division\r\nand State` = STATE_NAME)
 residential <- table_Residential %>%
   mutate(Sector = c("Residential"))
 commercial <- table_Commercial %>%
@@ -53,7 +53,6 @@ industrial <- table_Industrial %>%
 This code binds all the tables with sectors together. 
 ```{r bind-rows}
 energy_sector <- bind_rows(residential, commercial, industrial, transportation)
-glimpse(energy_sector)
 ```
 
 ```{r separate-duration-disturbance}
@@ -77,15 +76,6 @@ table_CAIDI <- table_CAIDI |>
 ## 1. Ownership vs price of electricity /according to sector 
 - Q: Does ownership e.g. cooperatives influence the average price of electricity, does it benefit individuals/residential sector or is it more geared towards commercial sector…?`
 
-to-do:
-- facet by sector (for readability)
-- aes(color = ownership) to be able to compare the same ownership better in the different facets
-- justify looking at this question, why it makes sense even though prices are mainly affected by fuel prices (we are looking at one year - 2022 - and different utility companies, we assume that they pay about the same for fuel)
-- arrange x-axis in spectrum from cooperative to big corporation /catered to people or to profit (fct_relevel) 
-  Order: Cooperative, municipal, political subdivision, state, federal, Behind the Meter (clarify what it is), retail power marketer, investor owned 
--- need to justify our levelling into this spectrum -- 
-- geom_smooth - does that work on a boxplot? see if there is a trend on this cooperative-corporate spectrum for different sectors
-- add labs() 
 ```{r ownership-average-price-state}
 energy_sector |>
   filter(!is.na(Ownership)) |>
@@ -162,7 +152,7 @@ USA_df <- USA_df %>%
   select("Census Division\r\nand State")
 ```
 
-```{r filter-MajorEventDays-FALSE}
+```{r filter-MajorEventDays-FALSE, eval=FALSE}
 CAIDI_leaflet_df <- 
   merge(USA_df, table_CAIDI, by = "Census Division\r\nand State")
 
@@ -225,43 +215,62 @@ line_test$label <-
 
 energy_sector |>
   ggplot(aes(x = ((
-    `Sales (Megawatthours)`/ 1000)/`Customers (Count)`), y = `Average Price (cents/kWh)`, color = Sector)) +
+    `Sales (Megawatthours)`*1000)/`Customers (Count)`), y = `Average Price (cents/kWh)`, color = Sector)) +
   geom_point() +
   geom_smooth() +
   # geom_line(data = line_test, aes(y = mean)) +
   geom_hline(data = line_test, aes(yintercept = mean)) +
-  geom_text(data = line_test, aes(500, y = label,label = label, vjust = -1), color = "black") +
+  geom_text(data = line_test, aes(50000000, y = label, label = label, vjust = -1), color = "black") +
   facet_wrap(~Sector) +
+  xlim(0, 400000000) +
   labs(
     title = "Average KWh Consumption per Customer vs Average Price",
-    subtitle = "by sector in 2022",
+    subtitle = "by Sector in 2022",
     x = "Average KWh Consumption per Customer",
     y = "Average Price (cents/kWh)",
     caption = "Source : https://www.eia.gov/electricity/data.php#sales"
   )
 ```
 
-
-
 ## [4. Number of customers vs price by sector -- if we are bored, we can do this!
   - Q: Do bigger utility companies (meaning more customers) offer lower avg. prices due to scale?
   - ggplot(aes(x = avg price, y = customers)), facet( ~ sector)]
   
-```{r}
+```{r price-by-#customers}
 energy_sector |>
   filter(Sector == "Residential") |>
   ggplot(aes(x = `Customers (Count)`, y = `Average Price (cents/kWh)`)) +
   geom_point() +
-  geom_smooth()
+  geom_smooth() +
+  labs(title = "Average Price vs. Number of Customers", 
+       subtitle = "per Utility company", 
+       x = "Number of Customers", 
+       y = "Average Price (cents/kWh)",
+       caption = "Source : https://www.eia.gov/electricity/data.php#sales")
 ```
 
 
 ## 5. Per household consumption of electricity (megawatthours sold/customers) vs price 
   - Q: Do consumers use less electricity if it is more expensive? 
   - ggplot(aes(x = Sales/customers, y = avg. price))
+  
+```{r household-consumption-electricity}
+ggplot(table_Residential, aes(x = (`Sales (Megawatthours)`*1000)/`Customers (Count)`, y = `Average Price (cents/kWh)`)) +
+  geom_hex() +
+  geom_smooth() +
+  labs(title = "Electricity Consumption vs. Average Price", 
+       subtitle = "in the Residential Sector", 
+       x = "Average Electricity Consumption per Customer (in kWh)", 
+       y = "Average Price (cents/kWh)", 
+       fill = "Number of\nUtility\nCompanies",
+       caption = "Source : https://www.eia.gov/electricity/data.php#sales")
+```
+
 
 ### Stretch goal: 
 ## 6. Heatmap of the US' electricity use
   - Note: we might need long lat data to map the US states
   - Average per capita Sales per state (sum up all sales, group by state, calculate average), each box of the heatmap is one state
 - goes together with 5.
+
+
