@@ -18,6 +18,8 @@ library(leaflet)
 #options(tigris_use_cache = TRUE)
 #install.packages("sf")
 library(sf)
+#install.packages("magick")
+library(magick)
 ```
 
 ```{r read-data}
@@ -38,8 +40,8 @@ USA_df <- sf::st_read("/cloud/project/data/USA_States_Generalized.shp")
 
 This mutate function adds a column which contains the sector of the data.
 ```{r mutate-to-sector}
-#USA_df <- USA_df %>%
- #rename(`Census Division\r\nand State` = STATE_NAME)
+USA_df <- USA_df %>%
+ rename(`Census Division\r\nand State` = STATE_NAME)
 residential <- table_Residential %>%
   mutate(Sector = c("Residential"))
 commercial <- table_Commercial %>%
@@ -158,39 +160,245 @@ CAIDI_leaflet_df <-
 
 CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
   filter(`Major Event Days` == FALSE)
+
+CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
+  pivot_longer(
+    cols = starts_with("20"),
+    names_to = "Year",
+    values_to = "CAIDI"
+  )
 ```
 
-```{r filter-2013}
+```{r filter-2013, eval=FALSE}
 CAIDI_2013 <- CAIDI_leaflet_df |>
   filter(Year == "2013")
-
+###
+CAIDI_2014 <- CAIDI_leaflet_df |>
+  filter(Year == "2014")
+###
+CAIDI_2015 <- CAIDI_leaflet_df |>
+  filter(Year == "2015")
+###
+CAIDI_2016 <- CAIDI_leaflet_df |>
+  filter(Year == "2016")
+###
+CAIDI_2017 <- CAIDI_leaflet_df |>
+  filter(Year == "2017")
+###
+CAIDI_2018 <- CAIDI_leaflet_df |>
+  filter(Year == "2018")
+###
+CAIDI_2019 <- CAIDI_leaflet_df |>
+  filter(Year == "2019")
+###
+CAIDI_2020 <- CAIDI_leaflet_df |>
+  filter(Year == "2022")
+###
+CAIDI_2021 <- CAIDI_leaflet_df |>
+  filter(Year == "2021")
+###
+CAIDI_2022 <- CAIDI_leaflet_df |>
+  filter(Year == "2022")
 ```
 
 
-```{r leaflet-CAIDI-bins&palette}
+```{r leaflet-CAIDI-bins&palette, eval=FALSE}
 CAIDI_leaflet_df %>%
   #filter(Year == "2013") %>%
   summary("CAIDI")
   
 bins <- seq(from = 26, to = 245, by = 25)
-palCAIDI <- colorBin("OrRd", domain = CAIDI_2013$CAIDI, bins = bins)
 
-labels <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2013$`Census Division\r\nand State`, CAIDI_2013$CAIDI) %>% lapply(htmltools::HTML)
 ```
 
-```{r leaflet-CAIDI-2022, eval=FALSE}
-CAIDI_2013 |>
+```{r pal-bins-setup-per-year, eval=FALSE}
+palCAIDI_2013 <- colorBin("OrRd", domain = CAIDI_2013$CAIDI, bins = bins)
+
+labels_2013 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2013$`Census Division\r\nand State`, CAIDI_2013$CAIDI) %>% lapply(htmltools::HTML)
+######
+palCAIDI_2014 <- colorBin("OrRd", domain = CAIDI_2014$CAIDI, bins = bins)
+
+labels_2014 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2014$`Census Division\r\nand State`, CAIDI_2014$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2015 <- colorBin("OrRd", domain = CAIDI_2015$CAIDI, bins = bins)
+
+labels_2015 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2015$`Census Division\r\nand State`, CAIDI_2015$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2016 <- colorBin("OrRd", domain = CAIDI_2016$CAIDI, bins = bins)
+
+labels_2016 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2016$`Census Division\r\nand State`, CAIDI_2016$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2017 <- colorBin("OrRd", domain = CAIDI_2017$CAIDI, bins = bins)
+
+labels_2017 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2017$`Census Division\r\nand State`, CAIDI_2017$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2018 <- colorBin("OrRd", domain = CAIDI_2018$CAIDI, bins = bins)
+
+labels_2018 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2018$`Census Division\r\nand State`, CAIDI_2018$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2019 <- colorBin("OrRd", domain = CAIDI_2019$CAIDI, bins = bins)
+
+labels_2019 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2019$`Census Division\r\nand State`, CAIDI_2019$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2020 <- colorBin("OrRd", domain = CAIDI_2020$CAIDI, bins = bins)
+
+labels_2020 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2020$`Census Division\r\nand State`, CAIDI_2020$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2021 <- colorBin("OrRd", domain = CAIDI_2021$CAIDI, bins = bins)
+
+labels_2021 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2021$`Census Division\r\nand State`, CAIDI_2021$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2022 <- colorBin("OrRd", domain = CAIDI_2022$CAIDI, bins = bins)
+
+labels_2022 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2022$`Census Division\r\nand State`, CAIDI_2022$CAIDI) %>% lapply(htmltools::HTML)
+
+```
+
+
+```{r leaflet-CAIDI-years, eval=FALSE}
+p1 <- CAIDI_2013 |>
 leaflet() |>
   addTiles() |>
   setView(lng = -98.6,
           lat = 36.7,
           zoom = 4) |>
   addPolygons(
-    fillColor = ~palCAIDI(CAIDI_2013$CAIDI), 
+    fillColor = ~palCAIDI_2013(CAIDI_2013$CAIDI), 
     color = "white", 
     weight = 1,
-    label = labels)
+    label = labels_2013)
+
+p2 <- CAIDI_2014 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2014(CAIDI_2014$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2014)
+
+p3 <- CAIDI_2015 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2015(CAIDI_2015$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2015)
+
+p4 <- CAIDI_2016 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2016(CAIDI_2016$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2016)
+
+p5 <- CAIDI_2017 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2017(CAIDI_2017$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2017)
+
+p6 <- CAIDI_2018 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2018(CAIDI_2018$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2018)
+
+p7 <- CAIDI_2019 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2019(CAIDI_2019$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2019)
+
+
+p8 <- CAIDI_2020 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2020(CAIDI_2020$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2020)
+
+p9 <- CAIDI_2021 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2021(CAIDI_2021$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2021)
+
+p10 <- CAIDI_2022 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2022(CAIDI_2022$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2022)
+```
+
+```{r leaflet-map-per-year, eval=FALSE}
+p1
+p2
+p3
+p4
+p5
+p6
+p7
+p8
+p9
+p10
 ```
 
 
