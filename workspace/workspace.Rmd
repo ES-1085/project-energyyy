@@ -18,8 +18,10 @@ library(leaflet)
 #options(tigris_use_cache = TRUE)
 #install.packages("sf")
 library(sf)
-#install.packages("magick")
-library(magick)
+#install.packages("gganimate")
+library(gganimate)
+library(ggthemes)
+library(gapminder)
 ```
 
 ```{r read-data}
@@ -75,6 +77,15 @@ table_CAIDI <- table_CAIDI |>
               values_to = "CAIDI")
 ```
 
+```{r make-our-own-theme}
+our_theme <- theme_grey() + 
+  theme(text = element_text(color = "#1d91c0"), 
+        panel.grid = element_blank(),
+        legend.text = element_text(color = "black"))
+  
+```
+
+
 ## 1. Ownership vs price of electricity /according to sector 
 - Q: Does ownership e.g. cooperatives influence the average price of electricity, does it benefit individuals/residential sector or is it more geared towards commercial sector…?`
 
@@ -89,19 +100,20 @@ energy_sector |>
 
  ggplot(aes(x = as.numeric(Ownership), y = `Average Price (cents/kWh)`)) +
   geom_boxplot(outlier.shape = NA, aes(color = Ownership)) +
-  geom_smooth(method = "glm", color = "black") +
+  geom_smooth(method = "loess", color = "black") +
   ylim(0,25)+
   facet_wrap(~Sector) +
   scale_color_manual(values = c("Cooperative" = "#ffffd9", "Municipal" = "#edf8b1", "Political Subdivision" = "#c7e9b4", "State" = "#7fcdbb", "Federal" = "#41b6c4", "Behind the Meter" = "#1d91c0", "Retail Power Marketer" = "#225ea8", "Investor Owned" = "#0c2c84")) +
-  theme(axis.text.x = element_text(
-    angle = 45, vjust = 1, hjust  = 1), plot.margin = margin(1, 0.1, 1, 1, unit = "mm")) +
   labs(
-    title = "Does ownership type of the utility company influence the average price of electricity?",
+    title = "Does ownership type of the utility company influence\nthe average price of electricity?",
     subtitle = "Per sector based on 2022 data",
     caption = "Source : https://www.eia.gov/electricity/data.php#sales",
     x = ""
-  )
-#ggsave(filename = "plot1.png", device = "png")
+  ) +
+  our_theme +
+  theme(axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank())
+#ggsave(filename = "Ownership vs price.png", device = "png")
 ```
 
 # 2a. Revenue and actual blackouts and ownership 
@@ -400,6 +412,35 @@ p8
 p9
 p10
 ```
+
+```{r animate-gif-CAIDI, eval=FALSE}
+# Create a base plot
+CAIDI_leaflet_df$Year <-as.numeric(CAIDI_leaflet_df$Year)
+
+p <- CAIDI_leaflet_df |>
+  ggplot(aes(fill = CAIDI,
+             group = Year)) +
+  geom_sf() +
+  
+  xlim(125, 68) +
+  ylim(24.5, 50) +
+  scale_fill_viridis_c() +
+  theme_minimal() +
+  labs(title = "Attribute Map: {closest_state}")
+
+# Create an animated plot
+p <- p + transition_states(
+  states = Year,
+  transition_length = 3,
+  state_length = 3)
+
+animate(p, duration = 30, renderer = gifski_renderer("map.gif"))
+
+```
+
+
+
+
 
 
 ## 3. Amount of electricity used, cheaper prices?
