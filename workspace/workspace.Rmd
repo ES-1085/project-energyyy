@@ -18,6 +18,8 @@ library(leaflet)
 #options(tigris_use_cache = TRUE)
 #install.packages("sf")
 library(sf)
+#install.packages("magick")
+library(magick)
 ```
 
 ```{r read-data}
@@ -53,7 +55,6 @@ industrial <- table_Industrial %>%
 This code binds all the tables with sectors together. 
 ```{r bind-rows}
 energy_sector <- bind_rows(residential, commercial, industrial, transportation)
-glimpse(energy_sector)
 ```
 
 ```{r separate-duration-disturbance}
@@ -77,15 +78,6 @@ table_CAIDI <- table_CAIDI |>
 ## 1. Ownership vs price of electricity /according to sector 
 - Q: Does ownership e.g. cooperatives influence the average price of electricity, does it benefit individuals/residential sector or is it more geared towards commercial sector…?`
 
-to-do:
-- facet by sector (for readability)
-- aes(color = ownership) to be able to compare the same ownership better in the different facets
-- justify looking at this question, why it makes sense even though prices are mainly affected by fuel prices (we are looking at one year - 2022 - and different utility companies, we assume that they pay about the same for fuel)
-- arrange x-axis in spectrum from cooperative to big corporation /catered to people or to profit (fct_relevel) 
-  Order: Cooperative, municipal, political subdivision, state, federal, Behind the Meter (clarify what it is), retail power marketer, investor owned 
--- need to justify our levelling into this spectrum -- 
-- geom_smooth - does that work on a boxplot? see if there is a trend on this cooperative-corporate spectrum for different sectors
-- add labs() 
 ```{r ownership-average-price-state}
 energy_sector |>
   filter(!is.na(Ownership)) |>
@@ -162,45 +154,251 @@ USA_df <- USA_df %>%
   select("Census Division\r\nand State")
 ```
 
-```{r filter-MajorEventDays-FALSE}
+```{r filter-MajorEventDays-FALSE, eval=FALSE}
 CAIDI_leaflet_df <- 
   merge(USA_df, table_CAIDI, by = "Census Division\r\nand State")
 
 CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
   filter(`Major Event Days` == FALSE)
+
+CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
+  pivot_longer(
+    cols = starts_with("20"),
+    names_to = "Year",
+    values_to = "CAIDI"
+  )
 ```
 
-```{r filter-2013}
+```{r filter-2013, eval=FALSE}
 CAIDI_2013 <- CAIDI_leaflet_df |>
   filter(Year == "2013")
-
+###
+CAIDI_2014 <- CAIDI_leaflet_df |>
+  filter(Year == "2014")
+###
+CAIDI_2015 <- CAIDI_leaflet_df |>
+  filter(Year == "2015")
+###
+CAIDI_2016 <- CAIDI_leaflet_df |>
+  filter(Year == "2016")
+###
+CAIDI_2017 <- CAIDI_leaflet_df |>
+  filter(Year == "2017")
+###
+CAIDI_2018 <- CAIDI_leaflet_df |>
+  filter(Year == "2018")
+###
+CAIDI_2019 <- CAIDI_leaflet_df |>
+  filter(Year == "2019")
+###
+CAIDI_2020 <- CAIDI_leaflet_df |>
+  filter(Year == "2022")
+###
+CAIDI_2021 <- CAIDI_leaflet_df |>
+  filter(Year == "2021")
+###
+CAIDI_2022 <- CAIDI_leaflet_df |>
+  filter(Year == "2022")
 ```
 
 
-```{r leaflet-CAIDI-bins&palette}
+```{r leaflet-CAIDI-bins&palette, eval=FALSE}
 CAIDI_leaflet_df %>%
   #filter(Year == "2013") %>%
   summary("CAIDI")
   
 bins <- seq(from = 26, to = 245, by = 25)
-palCAIDI <- colorBin("OrRd", domain = CAIDI_2013$CAIDI, bins = bins)
 
-labels <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2013$`Census Division\r\nand State`, CAIDI_2013$CAIDI) %>% lapply(htmltools::HTML)
 ```
 
-```{r leaflet-CAIDI-2022, eval=FALSE}
-CAIDI_2013 |>
+```{r pal-bins-setup-per-year, eval=FALSE}
+palCAIDI_2013 <- colorBin("OrRd", domain = CAIDI_2013$CAIDI, bins = bins)
+
+labels_2013 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2013$`Census Division\r\nand State`, CAIDI_2013$CAIDI) %>% lapply(htmltools::HTML)
+######
+palCAIDI_2014 <- colorBin("OrRd", domain = CAIDI_2014$CAIDI, bins = bins)
+
+labels_2014 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2014$`Census Division\r\nand State`, CAIDI_2014$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2015 <- colorBin("OrRd", domain = CAIDI_2015$CAIDI, bins = bins)
+
+labels_2015 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2015$`Census Division\r\nand State`, CAIDI_2015$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2016 <- colorBin("OrRd", domain = CAIDI_2016$CAIDI, bins = bins)
+
+labels_2016 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2016$`Census Division\r\nand State`, CAIDI_2016$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2017 <- colorBin("OrRd", domain = CAIDI_2017$CAIDI, bins = bins)
+
+labels_2017 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2017$`Census Division\r\nand State`, CAIDI_2017$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2018 <- colorBin("OrRd", domain = CAIDI_2018$CAIDI, bins = bins)
+
+labels_2018 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2018$`Census Division\r\nand State`, CAIDI_2018$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2019 <- colorBin("OrRd", domain = CAIDI_2019$CAIDI, bins = bins)
+
+labels_2019 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2019$`Census Division\r\nand State`, CAIDI_2019$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2020 <- colorBin("OrRd", domain = CAIDI_2020$CAIDI, bins = bins)
+
+labels_2020 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2020$`Census Division\r\nand State`, CAIDI_2020$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2021 <- colorBin("OrRd", domain = CAIDI_2021$CAIDI, bins = bins)
+
+labels_2021 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2021$`Census Division\r\nand State`, CAIDI_2021$CAIDI) %>% lapply(htmltools::HTML)
+###
+palCAIDI_2022 <- colorBin("OrRd", domain = CAIDI_2022$CAIDI, bins = bins)
+
+labels_2022 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2022$`Census Division\r\nand State`, CAIDI_2022$CAIDI) %>% lapply(htmltools::HTML)
+
+```
+
+
+```{r leaflet-CAIDI-years, eval=FALSE}
+p1 <- CAIDI_2013 |>
 leaflet() |>
   addTiles() |>
   setView(lng = -98.6,
           lat = 36.7,
           zoom = 4) |>
   addPolygons(
-    fillColor = ~palCAIDI(CAIDI_2013$CAIDI), 
+    fillColor = ~palCAIDI_2013(CAIDI_2013$CAIDI), 
     color = "white", 
     weight = 1,
-    label = labels)
+    label = labels_2013)
+
+p2 <- CAIDI_2014 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2014(CAIDI_2014$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2014)
+
+p3 <- CAIDI_2015 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2015(CAIDI_2015$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2015)
+
+p4 <- CAIDI_2016 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2016(CAIDI_2016$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2016)
+
+p5 <- CAIDI_2017 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2017(CAIDI_2017$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2017)
+
+p6 <- CAIDI_2018 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2018(CAIDI_2018$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2018)
+
+p7 <- CAIDI_2019 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2019(CAIDI_2019$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2019)
+
+
+p8 <- CAIDI_2020 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2020(CAIDI_2020$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2020)
+
+p9 <- CAIDI_2021 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2021(CAIDI_2021$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2021)
+
+p10 <- CAIDI_2022 |>
+leaflet() |>
+  addTiles() |>
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) |>
+  addPolygons(
+    fillColor = ~palCAIDI_2022(CAIDI_2022$CAIDI), 
+    color = "white", 
+    weight = 1,
+    label = labels_2022)
+```
+
+```{r leaflet-map-per-year, eval=FALSE}
+p1
+p2
+p3
+p4
+p5
+p6
+p7
+p8
+p9
+p10
 ```
 
 
@@ -225,43 +423,62 @@ line_test$label <-
 
 energy_sector |>
   ggplot(aes(x = ((
-    `Sales (Megawatthours)`/ 1000)/`Customers (Count)`), y = `Average Price (cents/kWh)`, color = Sector)) +
+    `Sales (Megawatthours)`*1000)/`Customers (Count)`), y = `Average Price (cents/kWh)`, color = Sector)) +
   geom_point() +
   geom_smooth() +
   # geom_line(data = line_test, aes(y = mean)) +
   geom_hline(data = line_test, aes(yintercept = mean)) +
-  geom_text(data = line_test, aes(500, y = label,label = label, vjust = -1), color = "black") +
+  geom_text(data = line_test, aes(50000000, y = label, label = label, vjust = -1), color = "black") +
   facet_wrap(~Sector) +
+  xlim(0, 400000000) +
   labs(
     title = "Average KWh Consumption per Customer vs Average Price",
-    subtitle = "by sector in 2022",
+    subtitle = "by Sector in 2022",
     x = "Average KWh Consumption per Customer",
     y = "Average Price (cents/kWh)",
     caption = "Source : https://www.eia.gov/electricity/data.php#sales"
   )
 ```
 
-
-
 ## [4. Number of customers vs price by sector -- if we are bored, we can do this!
   - Q: Do bigger utility companies (meaning more customers) offer lower avg. prices due to scale?
   - ggplot(aes(x = avg price, y = customers)), facet( ~ sector)]
   
-```{r}
+```{r price-by-#customers}
 energy_sector |>
   filter(Sector == "Residential") |>
   ggplot(aes(x = `Customers (Count)`, y = `Average Price (cents/kWh)`)) +
   geom_point() +
-  geom_smooth()
+  geom_smooth() +
+  labs(title = "Average Price vs. Number of Customers", 
+       subtitle = "per Utility company", 
+       x = "Number of Customers", 
+       y = "Average Price (cents/kWh)",
+       caption = "Source : https://www.eia.gov/electricity/data.php#sales")
 ```
 
 
 ## 5. Per household consumption of electricity (megawatthours sold/customers) vs price 
   - Q: Do consumers use less electricity if it is more expensive? 
   - ggplot(aes(x = Sales/customers, y = avg. price))
+  
+```{r household-consumption-electricity}
+ggplot(table_Residential, aes(x = (`Sales (Megawatthours)`*1000)/`Customers (Count)`, y = `Average Price (cents/kWh)`)) +
+  geom_hex() +
+  geom_smooth() +
+  labs(title = "Electricity Consumption vs. Average Price", 
+       subtitle = "in the Residential Sector", 
+       x = "Average Electricity Consumption per Customer (in kWh)", 
+       y = "Average Price (cents/kWh)", 
+       fill = "Number of\nUtility\nCompanies",
+       caption = "Source : https://www.eia.gov/electricity/data.php#sales")
+```
+
 
 ### Stretch goal: 
 ## 6. Heatmap of the US' electricity use
   - Note: we might need long lat data to map the US states
   - Average per capita Sales per state (sum up all sales, group by state, calculate average), each box of the heatmap is one state
 - goes together with 5.
+
+
