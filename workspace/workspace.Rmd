@@ -65,7 +65,7 @@ disturbance_unjoined <- table_Disturbance |>
 
 disturbance <- 
   rename(disturbance_unjoined, Entity = `Utility/Power Pool`) |>
-  right_join(energy_sector, by = "Entity")
+  inner_join(energy_sector, by = "Entity")
 
 glimpse(disturbance)
 ```
@@ -126,30 +126,43 @@ energy_sector |>
 - join tables by utility company name
 
 ```{r count-disturbances-per-companies}
-disturbance |> 
+disturbance_select <- disturbance |>
+  select(`Revenues (Thousands Dollars)`, Ownership, Entity) 
+
+disturbance_select |>
+  group_by(Entity, Ownership) |>
+  summarise(sum_revenue = sum(`Revenues (Thousands Dollars)`)) |>
+  count()
+
+disturbance_select |>
+  group_by(`Revenues (Thousands Dollars)` ) |>
+  count()
+
+disturbance_count <- 
+  disturbance |> 
   group_by(Entity) |>
-  count() |>
-  arrange(n)
+  count()
+  inner_join(disturbance_select)
 ```
 
-For the next plot we want to count the disturbances per utility company. However, we need to clean up the data first because some companies come up with different names. Hence, the mutate function. 
-```{r mutate-to-group-same-companies-different-names}
-disturbance |>
-  mutate(Company = 
-           case_when(
-    `Entity` %in% 
-      c("American Electric Power (Regulated Generation)", 
-      "American Electric Power - (RFC Reliability Region) (8400 Smiths Mill Road, New Albany Ohio 43054)")
-        ~ "American Electric Power", 
-     `Entity` %in% 
-      c("Baltimore Gas & Electric Co", 	
-"Baltimore Gas and Electric") ~ "Baltimore Gas & Electric",
-     TRUE ~ as.character(as.character(`Entity`))
-    )) |>
-    group_by(Company) |>
-  count()
+```{r}
+disturbance_count <- disturbance_count|>
   
-#ggplot(aes(x = `Average Price (cents/kWh)`, y = `Revenues (Thousands Dollars)`, size = n of blackouts/in categories)), facet(~ ownership)
+  group_by(Entity, Ownership, n) |>
+  summarise(sum_revenue = sum(`Revenues (Thousands Dollars)`)) |>
+  as.data.frame()
+
+```
+
+
+For the next plot we want to count the disturbances per utility company. However, we need to clean up the data first because some companies come up with different names. Hence, the mutate function. 
+```{r disturbances-vs-revenue-and-ownership}
+ggplot(disturbance, aes(
+  x = `Revenues (Thousands Dollars)`, 
+  y = `Ownership`,
+  size = `Entity`)) +
+  geom_point()
+  #geom_point(data = disturbance_count, aes(size = disturbance_count$n))
 ```
   
 # 2b. CAIDI reliability in electricity networks throughout the US based on states
