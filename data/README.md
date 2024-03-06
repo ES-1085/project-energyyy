@@ -67,3 +67,12 @@ This data contains information for electricity disturbance events, so called bla
 - `Loss (megawatts)`: Amount of electricity (in megawatts) lost to the environment due to the event and not distributed to the customer. 
 - `Number of Customers Affected`: The number of customers affected by event, includes all the customers mentioned above.
 
+table_CAIDI
+
+This data contains information for Customer Average Interruption Duration Index (CAIDI) that is derived from System Average Interruption Duration Index( SAIDI) and System Average Interruption Frequncy Index (SAIFI), from 2013 to 2022. 
+
+- `Census Division\r\nand State` The state or the Census Division e.g New England. 
+- `Major Event Days` Was CAIDI calculated using or not the Major Event Days. Major Event Days are calculated with this formula SAID > Tmed = e(sqrt)...... To minimize weather impact on the CAIDI. 
+- `Year` The year of CAIDI index.
+- `CAIDI` The value of the index.
+
