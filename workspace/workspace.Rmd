@@ -67,7 +67,16 @@ energy_sector <- bind_rows(residential, commercial, industrial, transportation)
   #rename(disturbance_unjoined, Entity = `Utility/Power Pool`) |>
   #right_join(energy_sector, by = "Entity")
 
-glimpse(disturbance)
+#table_Disturbance <- table_Disturbance |>
+  #rename(Entity = `Utility/Power Pool`)
+
+energy_sector_rev_sum <- energy_sector |> 
+  select(Entity, Ownership, `Revenues (Thousands Dollars)`) |>
+  group_by(Entity, Ownership) |>
+  summarise(sum_revenue = sum(`Revenues (Thousands Dollars)`)) |>
+  as.data.frame()
+
+glimpse(energy_sector_rev_sum)
 ```
 
 ```{r pivot-CAIDI}
@@ -126,43 +135,28 @@ energy_sector |>
 - join tables by utility company name
 
 ```{r count-disturbances-per-companies}
-disturbance_select <- disturbance |>
-  select(`Revenues (Thousands Dollars)`, Ownership, Entity) 
-
-disturbance_select |>
-  group_by(Entity, Ownership) |>
-  summarise(sum_revenue = sum(`Revenues (Thousands Dollars)`)) |>
-  count()
-
-disturbance_select |>
-  group_by(`Revenues (Thousands Dollars)` ) |>
-  count()
-
-disturbance_count <- 
-  disturbance |> 
+disturbance_count <- table_Disturbance |>
   group_by(Entity) |>
   count()
-  inner_join(disturbance_select)
+
+disturbance_complete <- disturbance_count |> 
+  inner_join(energy_sector_rev_sum)
 ```
-
-```{r}
-disturbance_count <- disturbance_count|>
-  
-  group_by(Entity, Ownership, n) |>
-  summarise(sum_revenue = sum(`Revenues (Thousands Dollars)`)) |>
-  as.data.frame()
-
-```
-
 
 For the next plot we want to count the disturbances per utility company. However, we need to clean up the data first because some companies come up with different names. Hence, the mutate function. 
 ```{r disturbances-vs-revenue-and-ownership}
-ggplot(disturbance, aes(
-  x = `Revenues (Thousands Dollars)`, 
-  y = `Ownership`,
-  size = `Entity`)) +
-  geom_point()
-  #geom_point(data = disturbance_count, aes(size = disturbance_count$n))
+ggplot(disturbance_complete, aes(
+  y = sum_revenue/1000000, 
+  x = `Ownership`,
+  size = n)) +
+  geom_point(color = "#1d91c0", alpha = 0.8) +
+  labs(title = "Number of Disturbances per Utility Company", 
+       subtitle = "in relation to Ownership Type and Revenue", 
+       x = "Type of Ownership", y = "Revenue in Million Dollars ($)", 
+       caption = "Source : https://www.eia.gov/electricity/data.php#sales") +
+ theme_grey() + 
+  theme(text = element_text(color = "#1d91c0"), 
+        legend.text = element_text(color = "black"))
 ```
   
 # 2b. CAIDI reliability in electricity networks throughout the US based on states
