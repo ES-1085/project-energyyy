@@ -56,12 +56,15 @@ energy_sector <- bind_rows(residential, commercial, industrial, transportation)
 ```
 
 ```{r separate-duration-disturbance}
-disturbance_unjoined <- table_Disturbance |>
-  separate(col = Duration, into = c("Hours (Duration)", "Minutes (Duration)"), sep = ',') 
+#disturbance_unjoined <- table_Disturbance |>
+  #separate(col = Duration, into = c("Hours (Duration)", "Minutes (Duration)"), sep = ',') 
 
-disturbance <- 
-  rename(disturbance_unjoined, Entity = `Utility/Power Pool`) |>
-  right_join(energy_sector, by = "Entity")
+#disturbance <- 
+  #rename(disturbance_unjoined, Entity = `Utility/Power Pool`) |>
+  #right_join(energy_sector, by = "Entity")
+
+
+
 
 glimpse(disturbance)
 ```
@@ -249,7 +252,6 @@ energy_sector |>
        caption = "Source : https://www.eia.gov/electricity/data.php#sales")
 ```
 
-
 ## 5. Per household consumption of electricity (megawatthours sold/customers) vs price 
   - Q: Do consumers use less electricity if it is more expensive? 
   - ggplot(aes(x = Sales/customers, y = avg. price))
@@ -265,7 +267,6 @@ ggplot(table_Residential, aes(x = (`Sales (Megawatthours)`*1000)/`Customers (Cou
        fill = "Number of\nUtility\nCompanies",
        caption = "Source : https://www.eia.gov/electricity/data.php#sales")
 ```
-
 
 ### Stretch goal: 
 ## 6. Heatmap of the US' electricity use
