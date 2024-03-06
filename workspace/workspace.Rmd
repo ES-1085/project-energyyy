@@ -231,6 +231,9 @@ bins <- seq(from = 26, to = 245, by = 25)
 ```
 
 ```{r pal-bins-setup-per-year, eval=FALSE}
+palCAIDI <- colorBin("OrRd", domain = CAIDI_leaflet_df$CAIDI, bins = bins, alpha = TRUE)
+
+
 palCAIDI_2013 <- colorBin("OrRd", domain = CAIDI_2013$CAIDI, bins = bins)
 
 labels_2013 <- sprintf("<strong>%s</strong><br/>%g", 
@@ -283,142 +286,68 @@ labels_2022 <- sprintf("<strong>%s</strong><br/>%g",
 
 ```
 
-
-```{r leaflet-CAIDI-years, eval=FALSE}
-p1 <- CAIDI_2013 |>
-leaflet() |>
-  addTiles() |>
+```{r leaflet-caidi-map}
+leaflet() %>%
+  addTiles() %>%
   setView(lng = -98.6,
           lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2013(CAIDI_2013$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2013)
-
-p2 <- CAIDI_2014 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2014(CAIDI_2014$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2014)
-
-p3 <- CAIDI_2015 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2015(CAIDI_2015$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2015)
-
-p4 <- CAIDI_2016 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2016(CAIDI_2016$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2016)
-
-p5 <- CAIDI_2017 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2017(CAIDI_2017$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2017)
-
-p6 <- CAIDI_2018 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2018(CAIDI_2018$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2018)
-
-p7 <- CAIDI_2019 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2019(CAIDI_2019$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2019)
-
-
-p8 <- CAIDI_2020 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2020(CAIDI_2020$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2020)
-
-p9 <- CAIDI_2021 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2021(CAIDI_2021$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2021)
-
-p10 <- CAIDI_2022 |>
-leaflet() |>
-  addTiles() |>
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) |>
-  addPolygons(
-    fillColor = ~palCAIDI_2022(CAIDI_2022$CAIDI), 
-    color = "white", 
-    weight = 1,
-    label = labels_2022)
+          zoom = 4) %>%
+  addPolygons(data = CAIDI_2013, 
+              group = "2013",
+              fillColor = ~palCAIDI(CAIDI_2013$CAIDI), 
+              color = "white", 
+              label = labels_2013) %>%
+   addPolygons(data = CAIDI_2014, 
+              group = "2014",
+              fillColor = ~palCAIDI(CAIDI_2014$CAIDI), 
+              color = "white", 
+              label = labels_2014) %>%
+   addPolygons(data = CAIDI_2015, 
+              group = "2015",
+              fillColor = ~palCAIDI(CAIDI_2015$CAIDI), 
+              color = "white", 
+              label = labels_2015) %>%
+   addPolygons(data = CAIDI_2016, 
+              group = "2016",
+              fillColor = ~palCAIDI(CAIDI_2016$CAIDI), 
+              color = "white", 
+              label = labels_2016) %>%
+  addPolygons(data = CAIDI_2017, 
+              group = "2017",
+              fillColor = ~palCAIDI(CAIDI_2017$CAIDI), 
+              color = "white", 
+              label = labels_2017) %>%
+   addPolygons(data = CAIDI_2018, 
+              group = "2018",
+              fillColor = ~palCAIDI(CAIDI_2018$CAIDI), 
+              color = "white", 
+              label = labels_2018) %>%
+   addPolygons(data = CAIDI_2019, 
+              group = "2019",
+              fillColor = ~palCAIDI(CAIDI_2019$CAIDI), 
+              color = "white", 
+              label = labels_2019) %>%
+   addPolygons(data = CAIDI_2020, 
+              group = "2020",
+              fillColor = ~palCAIDI(CAIDI_2020$CAIDI), 
+              color = "white", 
+              label = labels_2020) %>%
+   addPolygons(data = CAIDI_2021, 
+              group = "2021",
+              fillColor = ~palCAIDI(CAIDI_2021$CAIDI), 
+              color = "white", 
+              label = labels_2021) %>%
+  addPolygons(data = CAIDI_2022, 
+              group = "2022",
+              fillColor = ~palCAIDI(CAIDI_2022$CAIDI), 
+              color = "white", 
+              label = labels_2022) %>%
+  addLayersControl(
+    baseGroups = c("2013", "2014", "2015", "2016", "2017","2018","2019", "2020", "2021", "2022"),
+    options = layersControlOptions(collapsed = TRUE)
+  )
 ```
 
-```{r leaflet-map-per-year, eval=FALSE}
-p1
-p2
-p3
-p4
-p5
-p6
-p7
-p8
-p9
-p10
-```
 
 ```{r animate-gif-CAIDI, eval=FALSE}
 # Create a base plot
