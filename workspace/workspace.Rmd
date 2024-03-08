@@ -6,6 +6,11 @@ output:
   github_document: default
 ---
 
+
+```{r}
+knitr::opts_chunk$set(message = FALSE, warnings = FALSE, warning = FALSE)
+```
+
 ```{r load-packages, message = FALSE}
 library(tidyverse)
 library(broom)
@@ -20,6 +25,7 @@ library(gganimate)
 library(ggthemes)
 library(gapminder)
 ```
+
 
 ```{r read-data}
 table_Residential <- read_excel("/cloud/project/data/table_Residential.xlsx",
@@ -380,7 +386,7 @@ energy_sector |>
 ## 4. Number of customers vs price by sector
   - Q: Do bigger utility companies (meaning more customers) offer lower avg. prices due to scale?
   
-```{r price-by-#customers, fig.alt = "Scatterplot and trendline of Number of Customers in the Residential Sector per Utility Company versus average price in cents per kilowatthour. There is no correlation between the number of customers and the average price. The price that the utility companies offer depends on other factors. Most utility companies serve electricity to less than 50000 households, while some serve 250000 and more households."}
+```{r price-by-customers, fig.alt = "Scatterplot and trendline of Number of Customers in the Residential Sector per Utility Company versus average price in cents per kilowatthour. There is no correlation between the number of customers and the average price. The price that the utility companies offer depends on other factors. Most utility companies serve electricity to less than 50000 households, while some serve 250000 and more households."}
 energy_sector |>
   filter(Sector == "Residential") |>
   ggplot(aes(x = `Customers (Count)`, y = `Average Price (cents/kWh)`)) +
