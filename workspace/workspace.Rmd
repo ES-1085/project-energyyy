@@ -173,9 +173,9 @@ p <- p + transition_states(
   states = Year,
   transition_length = 3,
   state_length = 3)
-
 #animate(p, duration = 30, renderer = gifski_renderer("map.gif"))
 ```
+
 ## 3. Amount of electricity used, cheaper prices?
 - Q: Is it cheaper to buy electricity depending on the sector? Is buying
   electricity in bulk cheaper?

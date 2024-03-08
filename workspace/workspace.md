@@ -195,7 +195,6 @@ p <- p + transition_states(
   states = Year,
   transition_length = 3,
   state_length = 3)
-
 #animate(p, duration = 30, renderer = gifski_renderer("map.gif"))
 ```
 
