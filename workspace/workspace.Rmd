@@ -1,7 +1,9 @@
 ---
 title: "Project Workspace"
 author: "Energyyy"
-output: html_document
+output:
+  html_document: default
+  github_document: default
 ---
 
 ```{r load-packages, message = FALSE}
