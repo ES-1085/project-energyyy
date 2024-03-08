@@ -3,6 +3,11 @@ Project Workspace
 Energyyy
 
 ``` r
+library(knitr)
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+```
+
+``` r
 library(tidyverse)
 library(broom)
 library(tidyr)
@@ -74,12 +79,9 @@ energy_sector_rev_sum <- energy_sector |>
   as.data.frame()
 ```
 
-    ## `summarise()` has grouped output by 'Entity'. You can override using the
-    ## `.groups` argument.
-
 ``` r
 table_CAIDI <- table_CAIDI |>
-  pivot_longer(cols = `2013`:`2022`,
+ pivot_longer(cols = `2013`:`2022`,
               names_to = "Year",
               values_to = "CAIDI")
 ```
@@ -122,142 +124,6 @@ energy_sector |>
         panel.grid = element_blank())
 ```
 
-    ## Warning: Removed 73 rows containing non-finite outside the scale range
-    ## (`stat_boxplot()`).
-
-    ## `geom_smooth()` using formula = 'y ~ x'
-
-    ## Warning: Removed 73 rows containing non-finite outside the scale range
-    ## (`stat_smooth()`).
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : pseudoinverse used at 0.965
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : neighborhood radius 2.035
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : reciprocal condition number 2.0707e-15
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : There are other near singularities as well. 4
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
-    ## 0.965
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
-    ## 2.035
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
-    ## number 2.0707e-15
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : There are other near
-    ## singularities as well. 4
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : pseudoinverse used at 0.965
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : neighborhood radius 1.035
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : reciprocal condition number 3.052e-29
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : There are other near singularities as well. 1
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
-    ## 0.965
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
-    ## 1.035
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
-    ## number 3.052e-29
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : There are other near
-    ## singularities as well. 1
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : pseudoinverse used at 0.965
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : neighborhood radius 2.035
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : reciprocal condition number 2.7653e-15
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : There are other near singularities as well. 4
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
-    ## 0.965
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
-    ## 2.035
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
-    ## number 2.7653e-15
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : There are other near
-    ## singularities as well. 4
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : pseudoinverse used at 8.03
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : neighborhood radius 3.03
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : reciprocal condition number 0
-
-    ## Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-    ## : There are other near singularities as well. 4
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
-    ## 8.03
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
-    ## 3.03
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
-    ## number 0
-
-    ## Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
-    ## else if (is.data.frame(newdata))
-    ## as.matrix(model.frame(delete.response(terms(object)), : There are other near
-    ## singularities as well. 4
-
 <img src="workspace_files/figure-gfm/ownership-average-price-state-1.png" alt="Boxplot with trendline of average price in cents per kilowatthour in 2022 in each sector according to type of ownership. Types of ownership are ordered on a spectrum from mor cooperative to more investor-owned. Federally-owned companies and companies owned by political subdivisions seem to offer lower than average prices in all sectors. The industrial sector generally has lower average prices than the other sectors."  />
 
 ``` r
@@ -279,8 +145,6 @@ disturbance_complete <- disturbance_count |>
   inner_join(energy_sector_rev_sum)
 ```
 
-    ## Joining with `by = join_by(Entity)`
-
 For the next plot we want to count the disturbances per utility company.
 
 ``` r
@@ -301,183 +165,8 @@ ggplot(disturbance_complete, aes(
 
 # 2b. CAIDI reliability in electricity networks throughout the US based on states
 
-Q: How does CAIDI vary throughout the US states?
-
-``` r
-#Data contains states and regions. Thus, we filter for states only.
-table_CAIDI <- table_CAIDI %>%
-  filter(`Census Division\r\nand State` %in% c(
-  "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia"))
-
-USA_df <- USA_df %>%
-  select("Census Division\r\nand State")
-```
-
-``` r
-CAIDI_leaflet_df <- 
-  merge(USA_df, table_CAIDI, by = "Census Division\r\nand State")
-
-CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
-  filter(`Major Event Days` == FALSE)
-```
-
-``` r
-CAIDI_2013 <- CAIDI_leaflet_df |>
-  filter(Year == "2013")
-###
-CAIDI_2014 <- CAIDI_leaflet_df |>
-  filter(Year == "2014")
-###
-CAIDI_2015 <- CAIDI_leaflet_df |>
-  filter(Year == "2015")
-###
-CAIDI_2016 <- CAIDI_leaflet_df |>
-  filter(Year == "2016")
-###
-CAIDI_2017 <- CAIDI_leaflet_df |>
-  filter(Year == "2017")
-###
-CAIDI_2018 <- CAIDI_leaflet_df |>
-  filter(Year == "2018")
-###
-CAIDI_2019 <- CAIDI_leaflet_df |>
-  filter(Year == "2019")
-###
-CAIDI_2020 <- CAIDI_leaflet_df |>
-  filter(Year == "2022")
-###
-CAIDI_2021 <- CAIDI_leaflet_df |>
-  filter(Year == "2021")
-###
-CAIDI_2022 <- CAIDI_leaflet_df |>
-  filter(Year == "2022")
-```
-
-``` r
-CAIDI_leaflet_df %>%
-  summary("CAIDI") #to determine bin size
-```
-
-    ##  Census Division\r\nand State Major Event Days     Year          
-    ##  Length:510                   Mode :logical    Length:510        
-    ##  Class :character             FALSE:510        Class :character  
-    ##  Mode  :character                              Mode  :character  
-    ##                                                                  
-    ##                                                                  
-    ##                                                                  
-    ##      CAIDI                 geometry  
-    ##  Min.   : 26.10   MULTIPOLYGON :510  
-    ##  1st Qu.: 96.42   epsg:4326    :  0  
-    ##  Median :109.30   +proj=long...:  0  
-    ##  Mean   :112.12                      
-    ##  3rd Qu.:123.42                      
-    ##  Max.   :244.40
-
-``` r
-bins <- seq(from = 26, to = 245, by = 25)
-
-palCAIDI <- colorBin("OrRd", domain = CAIDI_leaflet_df$CAIDI, bins = bins, alpha = TRUE)
-```
-
-``` r
-labels_2013 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2013$`Census Division\r\nand State`, CAIDI_2013$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2014 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2014$`Census Division\r\nand State`, CAIDI_2014$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2015 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2015$`Census Division\r\nand State`, CAIDI_2015$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2016 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2016$`Census Division\r\nand State`, CAIDI_2016$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2017 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2017$`Census Division\r\nand State`, CAIDI_2017$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2018 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2018$`Census Division\r\nand State`, CAIDI_2018$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2019 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2019$`Census Division\r\nand State`, CAIDI_2019$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2020 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2020$`Census Division\r\nand State`, CAIDI_2020$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2021 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2021$`Census Division\r\nand State`, CAIDI_2021$CAIDI) %>% lapply(htmltools::HTML)
-
-labels_2022 <- sprintf("<strong>%s</strong><br/>%g", 
-                  CAIDI_2022$`Census Division\r\nand State`, CAIDI_2022$CAIDI) %>% lapply(htmltools::HTML)
-```
-
-``` r
-leaflet() %>%
-  addTiles() %>%
-  setView(lng = -98.6,
-          lat = 36.7,
-          zoom = 4) %>%
-  addPolygons(data = CAIDI_2013, 
-              group = "2013",
-              fillColor = ~palCAIDI(CAIDI_2013$CAIDI), 
-              color = "white", 
-              label = labels_2013) %>%
-   addPolygons(data = CAIDI_2014, 
-              group = "2014",
-              fillColor = ~palCAIDI(CAIDI_2014$CAIDI), 
-              color = "white", 
-              label = labels_2014) %>%
-   addPolygons(data = CAIDI_2015, 
-              group = "2015",
-              fillColor = ~palCAIDI(CAIDI_2015$CAIDI), 
-              color = "white", 
-              label = labels_2015) %>%
-   addPolygons(data = CAIDI_2016, 
-              group = "2016",
-              fillColor = ~palCAIDI(CAIDI_2016$CAIDI), 
-              color = "white", 
-              label = labels_2016) %>%
-  addPolygons(data = CAIDI_2017, 
-              group = "2017",
-              fillColor = ~palCAIDI(CAIDI_2017$CAIDI), 
-              color = "white", 
-              label = labels_2017) %>%
-   addPolygons(data = CAIDI_2018, 
-              group = "2018",
-              fillColor = ~palCAIDI(CAIDI_2018$CAIDI), 
-              color = "white", 
-              label = labels_2018) %>%
-   addPolygons(data = CAIDI_2019, 
-              group = "2019",
-              fillColor = ~palCAIDI(CAIDI_2019$CAIDI), 
-              color = "white", 
-              label = labels_2019) %>%
-   addPolygons(data = CAIDI_2020, 
-              group = "2020",
-              fillColor = ~palCAIDI(CAIDI_2020$CAIDI), 
-              color = "white", 
-              label = labels_2020) %>%
-   addPolygons(data = CAIDI_2021, 
-              group = "2021",
-              fillColor = ~palCAIDI(CAIDI_2021$CAIDI), 
-              color = "white", 
-              label = labels_2021) %>%
-  addPolygons(data = CAIDI_2022, 
-              group = "2022",
-              fillColor = ~palCAIDI(CAIDI_2022$CAIDI), 
-              color = "white", 
-              label = labels_2022) %>%
-  addLayersControl(
-    baseGroups = c("2013", "2014", "2015", "2016", "2017","2018","2019", "2020", "2021", "2022"),
-    options = layersControlOptions(collapsed = TRUE)
-  ) %>%
-  addLegend(
-    position = "bottomright",
-    pal = palCAIDI,
-    values = CAIDI_leaflet_df$CAIDI,
-    title = "Customer Average\nInterruption Duration\nIndex",
-    opacity = 1)
-```
+Q: How does CAIDI vary throughout the US states? Animate leaflet from
+2013-2022.
 
 ``` r
 # Create a base plot
@@ -554,17 +243,9 @@ energy_sector |>
   theme(panel.grid = element_blank())
 ```
 
-    ## `geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'
-
-    ## Warning: Removed 145 rows containing non-finite outside the scale range
-    ## (`stat_smooth()`).
-
-    ## Warning: Removed 145 rows containing missing values or values outside the scale range
-    ## (`geom_point()`).
-
 <img src="workspace_files/figure-gfm/average-price-in-kWH-consumption-1.png" alt="Scatterplot showing average kilowatthour consumption per customer versus average price in cents per kilowatthour, faceted by sector. Each facet includes the mean average price offered by the companies to each sector. The industrial and transportation sector have the widest spread of electricity use while the Residential and Commercial sector use less electricity per customer. The industrial sector pays on average the least for their electricity with 9.25 cents per kilowatthour in comparison to 13.55 cents per kilowatthour in the residential sector where there are many customers which consume smaller amounts of electricity each."  />
 
-## 4. Number of customers vs price by sector
+## \[4. Number of customers vs price by sector – if we are bored, we can do this!
 
 - Q: Do bigger utility companies (meaning more customers) offer lower
   avg. prices due to scale?
@@ -584,15 +265,7 @@ energy_sector |>
   our_theme
 ```
 
-    ## `geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'
-
-    ## Warning: Removed 149 rows containing non-finite outside the scale range
-    ## (`stat_smooth()`).
-
-    ## Warning: Removed 149 rows containing missing values or values outside the scale range
-    ## (`geom_point()`).
-
-<img src="workspace_files/figure-gfm/price-by-#customers-1.png" alt="Scatterplot and trendline of Number of Customers in the Residential Sector per Utility Company versus average price in cents per kilowatthour. There is no correlation between the number of customers and the average price. The price that the utility companies offer depends on other factors. Most utility companies serve electricity to less than 50000 households, while some serve 250000 and more households."  />
+<img src="workspace_files/figure-gfm/price-by-customers-1.png" alt="Scatterplot and trendline of Number of Customers in the Residential Sector per Utility Company versus average price in cents per kilowatthour. There is no correlation between the number of customers and the average price. The price that the utility companies offer depends on other factors. Most utility companies serve electricity to less than 50000 households, while some serve 250000 and more households."  />
 
 ## 5. Per household consumption of electricity (megawatthours sold/customers) vs price
 
@@ -610,13 +283,5 @@ ggplot(table_Residential, aes(x = (`Sales (Megawatthours)`*1000)/`Customers (Cou
        caption = "Source : https://www.eia.gov/electricity/data.php#sales") +
   our_theme
 ```
-
-    ## Warning: Removed 41 rows containing non-finite outside the scale range
-    ## (`stat_binhex()`).
-
-    ## `geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'
-
-    ## Warning: Removed 41 rows containing non-finite outside the scale range
-    ## (`stat_smooth()`).
 
 <img src="workspace_files/figure-gfm/household-consumption-electricity-1.png" alt="Heatmap and trendline of average electricity consumption per customer in the Residential Sector in kilowatthours of each utility company versus average price in cents per kilowatthours offered by the respective utility company. Heatmap shows that most customers use around 14000 kilowatthours of electrcity annually paying between 10 to 14 cents per kilowatthour. There is a slight negative correlation. Household consumption is lower when the price is high."  />
