@@ -1,0 +1,239 @@
+---
+title: "Project Workspace"
+author: "Energyyy"
+output:
+  html_document: default
+---
+
+
+```{r knitr}
+library(knitr)
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+```
+
+```{r load-packages, message = FALSE}
+library(tidyverse)
+library(broom)
+library(tidyr)
+library(readxl)
+#install.packages("leaflet")
+library(leaflet)
+#install.packages("sf")
+library(sf)
+#install.packages("gganimate")
+library(gganimate)
+library(ggthemes)
+library(gapminder)
+```
+
+
+```{r read-data}
+table_Residential <- read_excel("/cloud/project/data/table_Residential.xlsx",
+                                na = c("."))
+table_Commercial <- read_excel("/cloud/project/data/table_Commercial.xlsx",
+                               na = c("."))
+table_Industrial <- read_excel("/cloud/project/data/table_Industrial.xlsx", 
+                               na = c("."))
+table_Transportation <- read_excel("/cloud/project/data/table_Transportation.xlsx", 
+                                   na = c("."))
+table_Disturbance <- read_excel("/cloud/project/data/table_Disturbance.xlsx",
+                                na= c(".", ". Hours,  . Minutes", "Unknow", ".        ."))
+table_CAIDI <- read_excel("/cloud/project/data/table_CAIDI.xlsx")
+
+USA_df <- sf::st_read("/cloud/project/data/USA_States_Generalized.shp")
+```
+
+This mutate function adds a column which contains the sector of the data.
+```{r mutate-to-sector}
+USA_df <- USA_df %>%
+ rename(`Census Division\r\nand State` = STATE_NAME)
+residential <- table_Residential %>%
+  mutate(Sector = c("Residential"))
+commercial <- table_Commercial %>%
+  mutate(Sector = c("Commercial"))
+transportation <- table_Transportation %>%
+  mutate(Sector = c("Transportation"))
+industrial <- table_Industrial %>%
+  mutate(Sector = c("Industrial"))
+```
+
+This code binds all the tables with sectors together. 
+```{r bind-rows}
+energy_sector <- bind_rows(residential, commercial, industrial, transportation)
+```
+
+
+```{r pivot-CAIDI}
+table_CAIDI <- table_CAIDI |>
+  pivot_longer(cols = `2013`:`2022`,
+              names_to = "Year",
+              values_to = "CAIDI")
+```
+
+  
+# 2b. CAIDI reliability in electricity networks throughout the US based on states
+Q: How does CAIDI vary throughout the US states? 
+
+```{r join-US-states-geometry-to-CAIDI, eval = TRUE}
+#Data contains states and regions. Thus, we filter for states only.
+table_CAIDI <- table_CAIDI %>%
+  filter(`Census Division\r\nand State` %in% c(
+  "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Illinois", "Montana", "District of Columbia"))
+
+USA_df <- USA_df %>%
+  select("Census Division\r\nand State")
+```
+
+
+```{r filter-MajorEventDays-FALSE, eval = TRUE}
+CAIDI_leaflet_df <- 
+  merge(USA_df, table_CAIDI, by = "Census Division\r\nand State")
+
+CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
+  filter(`Major Event Days` == FALSE)
+```
+
+```{r filter-each-year, eval = TRUE}
+CAIDI_2013 <- CAIDI_leaflet_df |>
+  filter(Year == "2013")
+###
+CAIDI_2014 <- CAIDI_leaflet_df |>
+  filter(Year == "2014")
+###
+CAIDI_2015 <- CAIDI_leaflet_df |>
+  filter(Year == "2015")
+###
+CAIDI_2016 <- CAIDI_leaflet_df |>
+  filter(Year == "2016")
+###
+CAIDI_2017 <- CAIDI_leaflet_df |>
+  filter(Year == "2017")
+###
+CAIDI_2018 <- CAIDI_leaflet_df |>
+  filter(Year == "2018")
+###
+CAIDI_2019 <- CAIDI_leaflet_df |>
+  filter(Year == "2019")
+###
+CAIDI_2020 <- CAIDI_leaflet_df |>
+  filter(Year == "2022")
+###
+CAIDI_2021 <- CAIDI_leaflet_df |>
+  filter(Year == "2021")
+###
+CAIDI_2022 <- CAIDI_leaflet_df |>
+  filter(Year == "2022")
+```
+
+
+```{r leaflet-CAIDI-bins&palette, eval = TRUE}
+CAIDI_leaflet_df %>%
+  summary("CAIDI") #to determine bin size
+  
+bins <- seq(from = 26, to = 245, by = 25)
+
+palCAIDI <- colorBin("OrRd", domain = CAIDI_leaflet_df$CAIDI, bins = bins, alpha = TRUE)
+```
+
+```{r leaflet-CAIDI-labels, eval = TRUE}
+labels_2013 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2013$`Census Division\r\nand State`, CAIDI_2013$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2014 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2014$`Census Division\r\nand State`, CAIDI_2014$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2015 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2015$`Census Division\r\nand State`, CAIDI_2015$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2016 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2016$`Census Division\r\nand State`, CAIDI_2016$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2017 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2017$`Census Division\r\nand State`, CAIDI_2017$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2018 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2018$`Census Division\r\nand State`, CAIDI_2018$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2019 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2019$`Census Division\r\nand State`, CAIDI_2019$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2020 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2020$`Census Division\r\nand State`, CAIDI_2020$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2021 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2021$`Census Division\r\nand State`, CAIDI_2021$CAIDI) %>% lapply(htmltools::HTML)
+
+labels_2022 <- sprintf("<strong>%s</strong><br/>%g", 
+                  CAIDI_2022$`Census Division\r\nand State`, CAIDI_2022$CAIDI) %>% lapply(htmltools::HTML)
+
+```
+
+
+```{r leaflet-CAIDI-map, fig.alt = "Interactive map of the Customer Average Interruption Duration Index including data from 2013 to 2022 for the lower 48 of the US states. This data does not include major events such as natural catastrphes. The index ranges from 0 to 250. West Virginia and Michigan are consistently suffering from low reliability in electricity supply while Florida and North Dakota have a low number of interruptions."}
+leaflet() %>%
+  addTiles() %>%
+  setView(lng = -98.6,
+          lat = 36.7,
+          zoom = 4) %>%
+  addPolygons(data = CAIDI_2013, 
+              group = "2013",
+              fillColor = ~palCAIDI(CAIDI_2013$CAIDI), 
+              color = "white", 
+              label = labels_2013) %>%
+   addPolygons(data = CAIDI_2014, 
+              group = "2014",
+              fillColor = ~palCAIDI(CAIDI_2014$CAIDI), 
+              color = "white", 
+              label = labels_2014) %>%
+   addPolygons(data = CAIDI_2015, 
+              group = "2015",
+              fillColor = ~palCAIDI(CAIDI_2015$CAIDI), 
+              color = "white", 
+              label = labels_2015) %>%
+   addPolygons(data = CAIDI_2016, 
+              group = "2016",
+              fillColor = ~palCAIDI(CAIDI_2016$CAIDI), 
+              color = "white", 
+              label = labels_2016) %>%
+  addPolygons(data = CAIDI_2017, 
+              group = "2017",
+              fillColor = ~palCAIDI(CAIDI_2017$CAIDI), 
+              color = "white", 
+              label = labels_2017) %>%
+   addPolygons(data = CAIDI_2018, 
+              group = "2018",
+              fillColor = ~palCAIDI(CAIDI_2018$CAIDI), 
+              color = "white", 
+              label = labels_2018) %>%
+   addPolygons(data = CAIDI_2019, 
+              group = "2019",
+              fillColor = ~palCAIDI(CAIDI_2019$CAIDI), 
+              color = "white", 
+              label = labels_2019) %>%
+   addPolygons(data = CAIDI_2020, 
+              group = "2020",
+              fillColor = ~palCAIDI(CAIDI_2020$CAIDI), 
+              color = "white", 
+              label = labels_2020) %>%
+   addPolygons(data = CAIDI_2021, 
+              group = "2021",
+              fillColor = ~palCAIDI(CAIDI_2021$CAIDI), 
+              color = "white", 
+              label = labels_2021) %>%
+  addPolygons(data = CAIDI_2022, 
+              group = "2022",
+              fillColor = ~palCAIDI(CAIDI_2022$CAIDI), 
+              color = "white", 
+              label = labels_2022) %>%
+  addLayersControl(
+    baseGroups = c("2013", "2014", "2015", "2016", "2017","2018","2019", "2020", "2021", "2022"),
+    options = layersControlOptions(collapsed = TRUE)
+  ) %>%
+  addLegend(
+    position = "bottomright",
+    pal = palCAIDI,
+    values = CAIDI_leaflet_df$CAIDI,
+    title = "Customer Average\nInterruption Duration\nIndex",
+    opacity = 1)
+
+```
