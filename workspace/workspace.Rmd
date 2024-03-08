@@ -7,15 +7,10 @@ output: html_document
 ```{r load-packages, message = FALSE}
 library(tidyverse)
 library(broom)
-#install.packages("lubridate")
-library(lubridate)
 library(tidyr)
 library(readxl)
 #install.packages("leaflet")
 library(leaflet)
-#install.packages("tigris")
-#library(tigris)
-#options(tigris_use_cache = TRUE)
 #install.packages("sf")
 library(sf)
 #install.packages("gganimate")
@@ -60,28 +55,19 @@ energy_sector <- bind_rows(residential, commercial, industrial, transportation)
 ```
 
 ```{r separate-duration-disturbance}
-#disturbance_unjoined <- table_Disturbance |>
-  #separate(col = Duration, into = c("Hours (Duration)", "Minutes (Duration)"), sep = ',') 
-
-#disturbance <- 
-  #rename(disturbance_unjoined, Entity = `Utility/Power Pool`) |>
-  #right_join(energy_sector, by = "Entity")
-
-#table_Disturbance <- table_Disturbance |>
-  #rename(Entity = `Utility/Power Pool`)
+table_Disturbance <- table_Disturbance |>
+  mutate(Entity = `Utility/Power Pool`)
 
 energy_sector_rev_sum <- energy_sector |> 
   select(Entity, Ownership, `Revenues (Thousands Dollars)`) |>
   group_by(Entity, Ownership) |>
   summarise(sum_revenue = sum(`Revenues (Thousands Dollars)`)) |>
   as.data.frame()
-
-glimpse(energy_sector_rev_sum)
 ```
 
 ```{r pivot-CAIDI}
 table_CAIDI <- table_CAIDI |>
- pivot_longer(cols = `2013`:`2022`,
+  pivot_longer(cols = `2013`:`2022`,
               names_to = "Year",
               values_to = "CAIDI")
 ```
@@ -89,7 +75,6 @@ table_CAIDI <- table_CAIDI |>
 ```{r make-our-own-theme}
 our_theme <- theme_grey() + 
   theme(text = element_text(color = "#1d91c0"), 
-        panel.grid = element_blank(),
         legend.text = element_text(color = "black"))
   
 ```
@@ -98,7 +83,7 @@ our_theme <- theme_grey() +
 ## 1. Ownership vs price of electricity /according to sector 
 - Q: Does ownership e.g. cooperatives influence the average price of electricity, does it benefit individuals/residential sector or is it more geared towards commercial sector…?`
 
-```{r ownership-average-price-state}
+```{r ownership-average-price-state, fig.alt = "Boxplot with trendline of average price in cents per kilowatthour in 2022 in each sector according to type of ownership. Types of ownership are ordered on a spectrum from mor cooperative to more investor-owned. Federally-owned companies and companies owned by political subdivisions seem to offer lower than average prices in all sectors. The industrial sector generally has lower average prices than the other sectors."}
 energy_sector |>
   filter(!is.na(Ownership)) |>
   mutate(
@@ -114,25 +99,19 @@ energy_sector |>
   facet_wrap(~Sector) +
   scale_color_manual(values = c("Cooperative" = "#ffffd9", "Municipal" = "#edf8b1", "Political Subdivision" = "#c7e9b4", "State" = "#7fcdbb", "Federal" = "#41b6c4", "Behind the Meter" = "#1d91c0", "Retail Power Marketer" = "#225ea8", "Investor Owned" = "#0c2c84")) +
   labs(
-    title = "Does ownership type of the utility company influence\nthe average price of electricity?",
-    subtitle = "Per sector based on 2022 data",
+    title = "Average Price (cents/kWh) according to Type of Ownership",
+    subtitle = "Per Sector based on 2022 data",
     caption = "Source : https://www.eia.gov/electricity/data.php#sales",
-    x = ""
-  ) +
+    x = "") +
   our_theme +
   theme(axis.text.x = element_blank(), 
-        axis.ticks.x = element_blank())
+        axis.ticks.x = element_blank(),
+        panel.grid = element_blank())
 #ggsave(filename = "Ownership vs price.png", device = "png")
 ```
 
 # 2a. Revenue and actual blackouts and ownership 
   - Q: does less profit and community owned mean less blackouts? Or does ownership tell us that big companies have more means to prevent blackouts?
-
-- aes(x = Revenue, y = n of blackouts, color = ownership) +
-- geom_point()
-
-- finish cleaning up company names in Excel
-- join tables by utility company name
 
 ```{r count-disturbances-per-companies}
 disturbance_count <- table_Disturbance |>
@@ -143,8 +122,9 @@ disturbance_complete <- disturbance_count |>
   inner_join(energy_sector_rev_sum)
 ```
 
-For the next plot we want to count the disturbances per utility company. However, we need to clean up the data first because some companies come up with different names. Hence, the mutate function. 
-```{r disturbances-vs-revenue-and-ownership}
+For the next plot we want to count the disturbances per utility company. 
+```{r disturbances-vs-revenue-and-ownership, fig.alt = "Scatterplot of number of Disturbances per utility company in relation to the type of ownership of the utility company and the revenue made by the company in 2022 in Millions of dollars. Size of the points reflects number of disturbances experienced in 2022. Investor-owned companies experience by far the most disturbances."}
+
 ggplot(disturbance_complete, aes(
   y = sum_revenue/1000000, 
   x = `Ownership`,
@@ -153,17 +133,15 @@ ggplot(disturbance_complete, aes(
   labs(title = "Number of Disturbances per Utility Company", 
        subtitle = "in relation to Ownership Type and Revenue", 
        x = "Type of Ownership", y = "Revenue in Million Dollars ($)", 
+       size = "Number of\nDisturbances",
        caption = "Source : https://www.eia.gov/electricity/data.php#sales") +
- theme_grey() + 
-  theme(text = element_text(color = "#1d91c0"), 
-        legend.text = element_text(color = "black"))
+  our_theme
 ```
   
 # 2b. CAIDI reliability in electricity networks throughout the US based on states
 Q: How does CAIDI vary throughout the US states? 
-Animate leaflet from 2013-2022. 
 
-```{r join-US-states-geometry-to-CAIDI, eval=FALSE}
+```{r join-US-states-geometry-to-CAIDI, eval = TRUE}
 #Data contains states and regions. Thus, we filter for states only.
 table_CAIDI <- table_CAIDI %>%
   filter(`Census Division\r\nand State` %in% c(
@@ -173,22 +151,15 @@ USA_df <- USA_df %>%
   select("Census Division\r\nand State")
 ```
 
-```{r filter-MajorEventDays-FALSE, eval=FALSE}
+```{r filter-MajorEventDays-FALSE, eval = TRUE}
 CAIDI_leaflet_df <- 
   merge(USA_df, table_CAIDI, by = "Census Division\r\nand State")
 
 CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
   filter(`Major Event Days` == FALSE)
-
-CAIDI_leaflet_df <- CAIDI_leaflet_df %>%
-  pivot_longer(
-    cols = starts_with("20"),
-    names_to = "Year",
-    values_to = "CAIDI"
-  )
 ```
 
-```{r filter-2013, eval=FALSE}
+```{r filter-each-year, eval = TRUE}
 CAIDI_2013 <- CAIDI_leaflet_df |>
   filter(Year == "2013")
 ###
@@ -221,72 +192,49 @@ CAIDI_2022 <- CAIDI_leaflet_df |>
 ```
 
 
-```{r leaflet-CAIDI-bins&palette, eval=FALSE}
+```{r leaflet-CAIDI-bins&palette, eval = TRUE}
 CAIDI_leaflet_df %>%
-  #filter(Year == "2013") %>%
-  summary("CAIDI")
+  summary("CAIDI") #to determine bin size
   
 bins <- seq(from = 26, to = 245, by = 25)
 
+palCAIDI <- colorBin("OrRd", domain = CAIDI_leaflet_df$CAIDI, bins = bins, alpha = TRUE)
 ```
 
-```{r pal-bins-setup-per-year, eval=FALSE}
-palCAIDI <- colorBin("OrRd", domain = CAIDI_leaflet_df$CAIDI, bins = bins, alpha = TRUE)
-
-
-palCAIDI_2013 <- colorBin("OrRd", domain = CAIDI_2013$CAIDI, bins = bins)
-
+```{r leaflet-CAIDI-labels, eval = TRUE}
 labels_2013 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2013$`Census Division\r\nand State`, CAIDI_2013$CAIDI) %>% lapply(htmltools::HTML)
-######
-palCAIDI_2014 <- colorBin("OrRd", domain = CAIDI_2014$CAIDI, bins = bins)
 
 labels_2014 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2014$`Census Division\r\nand State`, CAIDI_2014$CAIDI) %>% lapply(htmltools::HTML)
-###
-palCAIDI_2015 <- colorBin("OrRd", domain = CAIDI_2015$CAIDI, bins = bins)
 
 labels_2015 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2015$`Census Division\r\nand State`, CAIDI_2015$CAIDI) %>% lapply(htmltools::HTML)
-###
-palCAIDI_2016 <- colorBin("OrRd", domain = CAIDI_2016$CAIDI, bins = bins)
 
 labels_2016 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2016$`Census Division\r\nand State`, CAIDI_2016$CAIDI) %>% lapply(htmltools::HTML)
-###
-palCAIDI_2017 <- colorBin("OrRd", domain = CAIDI_2017$CAIDI, bins = bins)
 
 labels_2017 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2017$`Census Division\r\nand State`, CAIDI_2017$CAIDI) %>% lapply(htmltools::HTML)
-###
-palCAIDI_2018 <- colorBin("OrRd", domain = CAIDI_2018$CAIDI, bins = bins)
 
 labels_2018 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2018$`Census Division\r\nand State`, CAIDI_2018$CAIDI) %>% lapply(htmltools::HTML)
-###
-palCAIDI_2019 <- colorBin("OrRd", domain = CAIDI_2019$CAIDI, bins = bins)
 
 labels_2019 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2019$`Census Division\r\nand State`, CAIDI_2019$CAIDI) %>% lapply(htmltools::HTML)
-###
-palCAIDI_2020 <- colorBin("OrRd", domain = CAIDI_2020$CAIDI, bins = bins)
 
 labels_2020 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2020$`Census Division\r\nand State`, CAIDI_2020$CAIDI) %>% lapply(htmltools::HTML)
-###
-palCAIDI_2021 <- colorBin("OrRd", domain = CAIDI_2021$CAIDI, bins = bins)
 
 labels_2021 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2021$`Census Division\r\nand State`, CAIDI_2021$CAIDI) %>% lapply(htmltools::HTML)
-###
-palCAIDI_2022 <- colorBin("OrRd", domain = CAIDI_2022$CAIDI, bins = bins)
 
 labels_2022 <- sprintf("<strong>%s</strong><br/>%g", 
                   CAIDI_2022$`Census Division\r\nand State`, CAIDI_2022$CAIDI) %>% lapply(htmltools::HTML)
 
 ```
 
-```{r leaflet-caidi-map}
+```{r leaflet-CAIDI-map, fig.alt = "Interactive map of the Customer Average Interruption Duration Index including data from 2013 to 2022 for the lower 48 of the US states. This data does not include major events such as natural catastrphes. The index ranges from 0 to 250. West Virginia and Michigan are consistently suffering from low reliability in electricity supply while Florida and North Dakota have a low number of interruptions."}
 leaflet() %>%
   addTiles() %>%
   setView(lng = -98.6,
@@ -345,11 +293,17 @@ leaflet() %>%
   addLayersControl(
     baseGroups = c("2013", "2014", "2015", "2016", "2017","2018","2019", "2020", "2021", "2022"),
     options = layersControlOptions(collapsed = TRUE)
-  )
+  ) %>%
+  addLegend(
+    position = "bottomright",
+    pal = palCAIDI,
+    values = CAIDI_leaflet_df$CAIDI,
+    title = "Customer Average\nInterruption Duration\nIndex",
+    opacity = 1)
+
 ```
 
-
-```{r animate-gif-CAIDI, eval=FALSE}
+```{r animate-gif-CAIDI, eval = TRUE, fig.alt = "Map of the Customer Average Interruption Duration Index including data from 2013 to 2022 for the lower 48 of the US states. This data does not include major events such as natural catastrphes. The index ranges from 0 to 250. West Virginia and Michigan are consistently suffering from low reliability in electricity supply while Florida and North Dakota have a low number of interruptions."}
 # Create a base plot
 CAIDI_leaflet_df$Year <-as.numeric(CAIDI_leaflet_df$Year)
 
@@ -357,12 +311,19 @@ p <- CAIDI_leaflet_df |>
   ggplot(aes(fill = CAIDI,
              group = Year)) +
   geom_sf() +
-  
   xlim(125, 68) +
   ylim(24.5, 50) +
   scale_fill_viridis_c() +
-  theme_minimal() +
-  labs(title = "Attribute Map: {closest_state}")
+  our_theme +
+  theme(axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank(),
+        axis.text.y = element_blank(), 
+        axis.ticks.y = element_blank(),
+        panel.grid = element_blank(),
+        panel.background = element_rect(fill='white')) +
+  labs(title = "Customer Average Interruption Duration Index (CAIDI) map of lower 48 US states", 
+       subtitle = "Year: {closest_state}",
+       caption = "Source: https://www.eia.gov/electricity/data/annual/") 
 
 # Create an animated plot
 p <- p + transition_states(
@@ -370,26 +331,20 @@ p <- p + transition_states(
   transition_length = 3,
   state_length = 3)
 
-animate(p, duration = 30, renderer = gifski_renderer("map.gif"))
+#animate(p, duration = 30, renderer = gifski_renderer("map.gif"))
 
 ```
 
-
-
-
-
-
 ## 3. Amount of electricity used, cheaper prices?
   - Q: Is it cheaper to buy electricity depending on the sector? Is buying electricity in bulk cheaper? 
-  - ggplot(aes(x = Sales(mWh)/n of customers, y = average price, color = sectors))
-  - Include the label of the average price per sector 
-
+ 
 - compare this to experience in history: companies that consume lots of electricity usually get cheaper electricity prices because utilities had reliable demand from the industries
 - electricity producers want reliable consumers --> does this bias still exist?
 Book: "The Grid"
 
 
-```{r average-price-in-kWH-consumption}
+```{r average-price-in-kWH-consumption, fig.alt = "Scatterplot showing average kilowatthour consumption per customer versus average price in cents per kilowatthour, faceted by sector. Each facet includes the mean average price offered by the companies to each sector. The industrial and transportation sector have the widest spread of electricity use while the Residential and Commercial sector use less electricity per customer. The industrial sector pays on average the least for their electricity with 9.25 cents per kilowatthour in comparison to 13.55 cents per kilowatthour in the residential sector where there are many customers which consume smaller amounts of electricity each."}
+#creating the mean of average price in each sector
 line_test <- energy_sector |>
   summarise(mean(`Average Price (cents/kWh)`, na.rm = TRUE),.by = Sector)
 
@@ -398,62 +353,58 @@ line_test$mean <- line_test$`mean(\`Average Price (cents/kWh)\`, na.rm = TRUE)`
 line_test$label <-
   round(line_test$mean, 2)
 
+#create graph using mean of average price in each sector
 energy_sector |>
-  ggplot(aes(x = ((
-    `Sales (Megawatthours)`*1000)/`Customers (Count)`), y = `Average Price (cents/kWh)`, color = Sector)) +
+  ggplot(aes(x = (
+    `Sales (Megawatthours)`*1000/`Customers (Count)`), y = `Average Price (cents/kWh)`, color = Sector)) +
   geom_point() +
   geom_smooth() +
-  # geom_line(data = line_test, aes(y = mean)) +
   geom_hline(data = line_test, aes(yintercept = mean)) +
   geom_text(data = line_test, aes(50000000, y = label, label = label, vjust = -1), color = "black") +
   facet_wrap(~Sector) +
+  scale_color_viridis_d() +
   xlim(0, 400000000) +
   labs(
     title = "Average KWh Consumption per Customer vs Average Price",
     subtitle = "by Sector in 2022",
-    x = "Average KWh Consumption per Customer",
+    x = "Average kWh Consumption per Customer",
     y = "Average Price (cents/kWh)",
     caption = "Source : https://www.eia.gov/electricity/data.php#sales"
-  )
+  ) +
+  our_theme +
+  theme(panel.grid = element_blank())
 ```
 
-## [4. Number of customers vs price by sector -- if we are bored, we can do this!
+## 4. Number of customers vs price by sector
   - Q: Do bigger utility companies (meaning more customers) offer lower avg. prices due to scale?
-  - ggplot(aes(x = avg price, y = customers)), facet( ~ sector)]
   
-```{r price-by-#customers}
+```{r price-by-#customers, fig.alt = "Scatterplot and trendline of Number of Customers in the Residential Sector per Utility Company versus average price in cents per kilowatthour. There is no correlation between the number of customers and the average price. The price that the utility companies offer depends on other factors. Most utility companies serve electricity to less than 50000 households, while some serve 250000 and more households."}
 energy_sector |>
   filter(Sector == "Residential") |>
   ggplot(aes(x = `Customers (Count)`, y = `Average Price (cents/kWh)`)) +
   geom_point() +
   geom_smooth() +
+  xlim(0, 250000) +
   labs(title = "Average Price vs. Number of Customers", 
-       subtitle = "per Utility company", 
+       subtitle = "per Utility company for the Residential Sector in 2022", 
        x = "Number of Customers", 
        y = "Average Price (cents/kWh)",
-       caption = "Source : https://www.eia.gov/electricity/data.php#sales")
+       caption = "Source : https://www.eia.gov/electricity/data.php#sales") +
+  our_theme
 ```
 
 ## 5. Per household consumption of electricity (megawatthours sold/customers) vs price 
   - Q: Do consumers use less electricity if it is more expensive? 
-  - ggplot(aes(x = Sales/customers, y = avg. price))
   
-```{r household-consumption-electricity}
+```{r household-consumption-electricity, fig.alt = "Heatmap and trendline of average electricity consumption per customer in the Residential Sector in kilowatthours of each utility company versus average price in cents per kilowatthours offered by the respective utility company. Heatmap shows that most customers use around 14000 kilowatthours of electrcity annually paying between 10 to 14 cents per kilowatthour. There is a slight negative correlation. Household consumption is lower when the price is high."}
 ggplot(table_Residential, aes(x = (`Sales (Megawatthours)`*1000)/`Customers (Count)`, y = `Average Price (cents/kWh)`)) +
   geom_hex() +
   geom_smooth() +
-  labs(title = "Electricity Consumption vs. Average Price", 
-       subtitle = "in the Residential Sector", 
+  labs(title = "Electricity Consumption per Customer vs. Average Price", 
+       subtitle = "in the Residential Sector in 2022", 
        x = "Average Electricity Consumption per Customer (in kWh)", 
        y = "Average Price (cents/kWh)", 
        fill = "Number of\nUtility\nCompanies",
-       caption = "Source : https://www.eia.gov/electricity/data.php#sales")
+       caption = "Source : https://www.eia.gov/electricity/data.php#sales") +
+  our_theme
 ```
-
-### Stretch goal: 
-## 6. Heatmap of the US' electricity use
-  - Note: we might need long lat data to map the US states
-  - Average per capita Sales per state (sum up all sales, group by state, calculate average), each box of the heatmap is one state
-- goes together with 5.
-
-
