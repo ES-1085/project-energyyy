@@ -271,6 +271,8 @@ ggplot(disturbance_ownership_average, aes(
        x = "Average number of customers (in Thousands)", 
        y = "Average number of disturbances") +
   our_theme
+
+#ggsave(filename = "Average_customer_disturbances.png", device = "png")
 ```
 
 **A:** There seems to be a positive correlation between number of customers per type of ownership and number of disturbances. Investor-owned companies have a below-average number of disturbances, while companies owned by political subdivisions have an above average number of disturbances. Federally-owned and cooperative-owned utilities have low average numbers of customers and low numbers of disturbances.
@@ -351,6 +353,8 @@ energy_sector |>
   ) +
   our_theme +
   theme(panel.grid = element_blank())
+
+ggsave(filename = "price_per_cust_consumption.png", device = "png")
 ```
 
 **Q:** Yes, this tendency still exists today as the industrial sector with the highest electricity consumption per consumer still gets the lowest average prices. There does not seem to be a general trend of lower prices for higher electricity consumption per customer as none of the facets show a negative trendline.
@@ -393,6 +397,8 @@ ggplot(table_Residential, aes(x = (`Sales (Megawatthours)`*1000)/`Customers (Cou
        fill = "Number of\nUtility\nCompanies",
        caption = "Source : https://www.eia.gov/electricity/data.php#sales") +
   our_theme
+
+ggsave(filename = "heatmap_consumption.png", device = "png")
 ```
 
 **A:** There is a slight negative correlation between average electricity consumption per customer and average price. Most customers use around 14,000 kilowatthours of electricity annually paying between 10 to 14 cents per kilowatthour. The per household consumption of electricity is slightly lower when the price is high.

@@ -4,6 +4,8 @@ by Energyyy
 
 ## Summary
 
+**RQ:** Which factors affect electricity distribution and pricing to what extent in the US?
+
 Write-up of your project and findings go here. Think of this as the text
 of your presentation. The length should be roughly 5 minutes when read
 out loud. Although pacing varies, a 5-minute speech is roughly 750
@@ -29,15 +31,20 @@ The leaflet can be found [here](workspace/leaflet.html).
 
 ## Data
 
-Include a citation for your data here. See
-<http://libraryguides.vu.edu.au/c.php?g=386501&p=4347840> for guidance
-on proper citation for datasets. If you got your data off the web, make
-sure to note the retrieval date.
+Energy Information Administration. 2023. 2022 Utility Bundled Retail Sales- Residential [Data set]. EIA. https://www.eia.gov./electricity/sales_revenue_price/pdf/table_6.pdf. Retrieved on 01/30/2024.
+
+Energy Information Administration. 2023. 2022 Utility Bundled Retail Sales- Commercial [Data set]. EIA.https://www.eia.gov./electricity/sales_revenue_price/pdf/table_7.pdf. Retrieved on 01/30/2024.
+
+Energy Information Administration. 2023. 2022 Utility Bundled Retail Sales- Industrial [Data set]. EIA.https://www.eia.gov./electricity/sales_revenue_price/pdf/table_8.pdf. Retrieved on 01/30/2024.
+
+Energy Information Administration. 2023. 2022 Utility Bundled Retail Sales- Transportation [Data set]. EIA.https://www.eia.gov./electricity/sales_revenue_price/pdf/table_9.pdf. Retrieved on 01/30/2024.
+
+Energy Information Administration. 2023. Table 11.6 CAIDI Values (Minutes Per Interruption) of U.S. Distribution System by State, 2013 - 2022 [Data set]. EIA.https://www.eia.gov./electricity/annual/html/epa_11_06.html. Retrieved on 01/30/2024.
+
+Energy Information Administration. 2023. Table B.2 Major Disturbances and Unusual Occurrences, 2022 [Data set]. EIA.https://www.eia.gov./electricity/monthly/xls/table_b_2.xlsx. Retrieved on 01/30/2024.
+
+ESRI Data and Maps. 2017. USA States (Generalized) [Data set]. Esri. https://hub.arcgis.com/datasets/esri::usa-states-generalized/explore. Retrieved on 01/30/2024.
 
 ## References
 
-List any references here. You should, at a minimum, list your data
-source.
-
 Bakke, G., 2016. "The Grid: The Fraying Wires Between Americans and Our Energy Future". Bloomsbury, USA. 
-Energy Information Administration. 2023. 
