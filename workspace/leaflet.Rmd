@@ -169,7 +169,7 @@ labels_2022 <- sprintf("<strong>%s</strong><br/>%g",
 ```
 
 
-```{r leaflet-CAIDI-map, fig.alt = "Interactive map of the Customer Average Interruption Duration Index including data from 2013 to 2022 for the lower 48 of the US states. This data does not include major events such as natural catastrphes. The index ranges from 0 to 250. West Virginia and Michigan are consistently suffering from low reliability in electricity supply while Florida and North Dakota have a low number of interruptions."}
+```{r leaflet-CAIDI-map, fig.alt = "Interactive map of the Customer Average Interruption Duration Index including data from 2013 to 2022 for the lower 48 of the US states. This data does not include major events such as natural catastrophes. The index ranges from 0 to 250. West Virginia and Michigan are consistently suffering from low reliability in electricity supply while Florida and North Dakota have a low number of interruptions."}
 leaflet() %>%
   addTiles() %>%
   setView(lng = -98.6,

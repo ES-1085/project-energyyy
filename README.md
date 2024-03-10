@@ -1,6 +1,6 @@
-Project title
+The Grid
 ================
-by Team name
+by Energyyy
 
 ## Summary
 
@@ -24,7 +24,8 @@ your project.
 
 ## Presentation
 
-Our presentation can be found [here](presentation/presentation.html). You can update this link to a Google Slides link.
+Our presentation can be found [here](https://www.canva.com/design/DAF-3q-R1BY/zfIXS7Cn7erPg28yFuKkXQ/edit?utm_content=DAF-3q-R1BY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) on canva.
+The leaflet can be found [here](workspace/leaflet.html). 
 
 ## Data
 
@@ -37,3 +38,6 @@ sure to note the retrieval date.
 
 List any references here. You should, at a minimum, list your data
 source.
+
+Bakke, G., 2016. "The Grid: The Fraying Wires Between Americans and Our Energy Future". Bloomsbury, USA. 
+Energy Information Administration. 2023. 
