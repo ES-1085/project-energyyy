@@ -95,7 +95,7 @@ in relation to low and high prices.
 ## Presentation
 
 Our presentation can be found
-[here](https://www.canva.com/design/DAF-3q-R1BY/zfIXS7Cn7erPg28yFuKkXQ/edit?utm_content=DAF-3q-R1BY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[here](https://www.canva.com/design/DAF_JI5ifwk/mX4bhovu_dcmp6Dzkyk_5w/edit?utm_content=DAF_JI5ifwk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 on canva. The leaflet can be found [here](workspace/leaflet.html).
 
 ## Data
