@@ -36,15 +36,11 @@ The United States of America has one of the most diverse electric grids in the w
 ## Research Question 
 Which factors affect electricity distribution and pricing to what extent in the US?
 
-- black outs
-
 - sectors
 
 - regional differences in reliability
 
-- utility companies ownership
-
-- revenue
+- utility company's ownership
 
 # 3. Data
 ```{r read-data}
@@ -240,7 +236,7 @@ ggplot(aes(x = forcats::fct_infreq(Ownership), fill = Ownership)) +
 ```
 This shows us that the number of disturbances in investor-owned companies is not high simply because there are many companies with this type of ownership because there are three times as many cooperatives and they still do not have a lot of disturbances. 
 
-**Q:** Maybe most disturbances are related to investor-owned companies because they simply serve more customers?
+**Q:** Maybe, most disturbances are related to investor-owned companies because they simply serve more customers?
 
 ```{r number-of-customers-per-ownership, fig.alt = "Boxplot showing number of customers of each utility company versus ownership. Investor-owned companies have by far the most customers with an average of 500000 customers per utility company, some even serving more than 4 million households. All other ownership types serve less than 100000 customers on average."}
 energy_sector_customer_sum |>

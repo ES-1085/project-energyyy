@@ -87,3 +87,8 @@ SAIFI: number of customers affected/number of customers in the system or  % of c
 SAIDI: Minutes of power out * (number of customers affected/ number of customers in the system) OR Minutes of power out * SAIFI
 
 **CAIDI = SAIDI/SAIFI**
+
+
+**USA_States_Generalized**
+
+This dataframe contains general data for each of the US states and gives us the geometry to connect to our data. 

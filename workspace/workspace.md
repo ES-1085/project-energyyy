@@ -47,15 +47,11 @@ sectors, disturbances, and CAIDI - a reliability index.
 Which factors affect electricity distribution and pricing to what extent
 in the US?
 
-- black outs
-
 - sectors
 
 - regional differences in reliability
 
-- utility companies ownership
-
-- revenue
+- utility company’s ownership
 
 # 3. Data
 
@@ -343,7 +339,7 @@ companies is not high simply because there are many companies with this
 type of ownership because there are three times as many cooperatives and
 they still do not have a lot of disturbances.
 
-**Q:** Maybe most disturbances are related to investor-owned companies
+**Q:** Maybe, most disturbances are related to investor-owned companies
 because they simply serve more customers?
 
 ``` r
@@ -383,6 +379,10 @@ ggplot(disturbance_ownership_average, aes(
 ```
 
 <img src="workspace_files/figure-gfm/disturbances-customers-average-per-ownership-1.png" alt="Scatterplot with trendline showing average number of customers versus average number of disturbances per type of ownership. Investor-owned companies have a below-average number of disturbances, while companies owned by political subdivisions have an above average number of disturbances."  />
+
+``` r
+#ggsave(filename = "Average_customer_disturbances.png", device = "png")
+```
 
 **A:** There seems to be a positive correlation between number of
 customers per type of ownership and number of disturbances.
@@ -484,6 +484,10 @@ energy_sector |>
 
 <img src="workspace_files/figure-gfm/average-price-in-kWH-consumption-1.png" alt="Scatterplot showing average kilowatthour consumption per customer versus average price in cents per kilowatthour, faceted by sector. Each facet includes the mean average price offered by the companies to each sector. The industrial and transportation sector have the widest spread of electricity use while the Residential and Commercial sector use less electricity per customer. The industrial sector pays on average the least for their electricity with 9.25 cents per kilowatthour in comparison to 13.55 cents per kilowatthour in the residential sector where there are many customers which consume smaller amounts of electricity each."  />
 
+``` r
+ggsave(filename = "price_per_cust_consumption.png", device = "png")
+```
+
 **Q:** Yes, this tendency still exists today as the industrial sector
 with the highest electricity consumption per consumer still gets the
 lowest average prices. There does not seem to be a general trend of
@@ -541,6 +545,10 @@ ggplot(table_Residential, aes(x = (`Sales (Megawatthours)`*1000)/`Customers (Cou
 ```
 
 <img src="workspace_files/figure-gfm/household-consumption-electricity-1.png" alt="Heatmap and trendline of average electricity consumption per customer in the Residential Sector in kilowatthours of each utility company versus average price in cents per kilowatthours offered by the respective utility company. Heatmap shows that most customers use around 14000 kilowatthours of electrcity annually paying between 10 to 14 cents per kilowatthour. There is a slight negative correlation. Household consumption is lower when the price is high."  />
+
+``` r
+ggsave(filename = "heatmap_consumption.png", device = "png")
+```
 
 **A:** There is a slight negative correlation between average
 electricity consumption per customer and average price. Most customers
