@@ -1,8 +1,7 @@
 ---
 title: "Project Workspace"
 author: "Energyyy"
-output:
-  html_document: default
+output: html_document
 ---
 
 
